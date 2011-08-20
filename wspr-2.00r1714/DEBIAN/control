@@ -1,0 +1,10 @@
+Package: wspr
+Version: 2.00r1714
+Essential: no
+Priority: standard
+Section: corvix
+Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Homepage: corvix.eu
+Architecture: all
+Description: queue utility packages
+ -
