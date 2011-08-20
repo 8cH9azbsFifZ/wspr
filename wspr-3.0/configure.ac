@@ -27,15 +27,23 @@ AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_MACRO_DIR([m4])
 
 OLD_CFLAGS="$CFLAGS"
+
 dnl Checks for programs.
 AC_PROG_CC
 AC_LANG(C)
 AC_PROG_F77
 AC_USE_SYSTEM_EXTENSIONS
+
 dnl Make sure autoconf doesn't interfere with cflags -jmallett
 CFLAGS="$OLD_CFLAGS"
 
+# Check headers
+AC_HEADER_STDC
+AC_HEADER_DIRENT
+#AC_CHECK_HEADERS(klammeraufzu dazwischen x.h y.h)
+
 dnl Lets guess at some likely places for extra libs/includes XXX -db
+# FIXME: path must be adjusted adaptively
 CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 LIBS=" -lpthread ${LIBS}"
@@ -46,8 +54,7 @@ FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-under
 
 #AX_CHECK_GFORTRAN #FIXME: add check
 #AX_CHECK_PORTAUDIO
-AC_WSPR_PKG_CHECK([portaudio], [portaudio-2.0 >= 19], [yes], [yes], [enable support for Portaudio ] ) 
-# FIXME: fine tuning cf. fldigi
+#AC_WSPR_PKG_CHECK([portaudio], [portaudio-2.0 >= 19], [yes], [yes], [enable support for Portaudio ] ) 
 
 if test "$ac_cv_c_compiler_gnu" = yes; then
 	AC_MSG_CHECKING(if $CC is Apple GCC)
