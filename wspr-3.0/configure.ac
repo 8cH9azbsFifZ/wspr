@@ -1,7 +1,7 @@
 dnl $Id: configure.ac 1235 2009-05-17 12:28:29Z va3db $
 dnl Process this file with autoconf to produce a configure script.
 
-dnl AC_PREREQ(2.61)
+AC_PREREQ(2.61)
 
 dnl This should be a svn hook instead.
 dnl Sneakier way to get a Version into setup.py
@@ -16,8 +16,9 @@ AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_MACRO_DIR([m4])
 # not working
-#AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
-#AM_MAINTAINER_MODE
+AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
+AM_MAINTAINER_MODE
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
