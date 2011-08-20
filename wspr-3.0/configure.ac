@@ -10,27 +10,25 @@ AC_COPYRIGHT([$Id: configure.ac 1235 2009-05-17 12:28:29Z va3db $])
 AC_INIT([wspr],[3.0])
 fail=0
 
-AC_CANONICAL_BUILD
-AC_CANONICAL_HOST
-AC_CANONICAL_TARGET
-
 AC_PREFIX_DEFAULT(/usr/local/)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_MACRO_DIR([m4])
-# not working
+
+AC_CANONICAL_BUILD
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
 AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
-AC_PROG_CXX
 AC_PROG_CC
 AC_LANG(C)
 AC_PROG_F77
-AC_PROG_GFORTRAN
 dnl Make sure autoconf doesn't interfere with cflags -jmallett
 CFLAGS="$OLD_CFLAGS"
 

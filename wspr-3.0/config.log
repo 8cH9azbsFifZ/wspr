@@ -39,113 +39,119 @@ PATH: /bin
 ## Core tests. ##
 ## ----------- ##
 
-configure:2164: checking for a BSD-compatible install
-configure:2232: result: /usr/bin/install -c
-configure:2243: checking whether build environment is sane
-configure:2293: result: yes
-configure:2434: checking for a thread-safe mkdir -p
-configure:2473: result: /bin/mkdir -p
-configure:2486: checking for gawk
-configure:2502: found /usr/bin/gawk
-configure:2513: result: gawk
-configure:2524: checking whether make sets $(MAKE)
-configure:2546: result: yes
-configure:2627: checking whether to enable maintainer-specific portions of Makefiles
-configure:2636: result: no
-configure:2711: checking for gcc
-configure:2727: found /usr/bin/gcc
-configure:2738: result: gcc
-configure:2967: checking for C compiler version
-configure:2976: gcc --version >&5
+configure:2181: checking for a BSD-compatible install
+configure:2249: result: /usr/bin/install -c
+configure:2260: checking whether build environment is sane
+configure:2310: result: yes
+configure:2451: checking for a thread-safe mkdir -p
+configure:2490: result: /bin/mkdir -p
+configure:2503: checking for gawk
+configure:2519: found /usr/bin/gawk
+configure:2530: result: gawk
+configure:2541: checking whether make sets $(MAKE)
+configure:2563: result: yes
+configure:2644: checking whether to enable maintainer-specific portions of Makefiles
+configure:2653: result: no
+configure:2685: checking build system type
+configure:2699: result: i686-pc-linux-gnu
+configure:2719: checking host system type
+configure:2732: result: i686-pc-linux-gnu
+configure:2752: checking target system type
+configure:2765: result: i686-pc-linux-gnu
+configure:2840: checking for gcc
+configure:2856: found /usr/bin/gcc
+configure:2867: result: gcc
+configure:3096: checking for C compiler version
+configure:3105: gcc --version >&5
 gcc (Debian 4.4.5-8) 4.4.5
 Copyright (C) 2010 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:2987: $? = 0
-configure:2976: gcc -v >&5
+configure:3116: $? = 0
+configure:3105: gcc -v >&5
 Using built-in specs.
 Target: i486-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 4.4.5-8' --with-bugurl=file:///usr/share/doc/gcc-4.4/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.4 --enable-shared --enable-multiarch --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.4 --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-objc-gc --enable-targets=all --with-arch-32=i586 --with-tune=generic --enable-checking=release --build=i486-linux-gnu --host=i486-linux-gnu --target=i486-linux-gnu
 Thread model: posix
 gcc version 4.4.5 (Debian 4.4.5-8) 
-configure:2987: $? = 0
-configure:2976: gcc -V >&5
+configure:3116: $? = 0
+configure:3105: gcc -V >&5
 gcc: '-V' option must have argument
-configure:2987: $? = 1
-configure:2976: gcc -qversion >&5
+configure:3116: $? = 1
+configure:3105: gcc -qversion >&5
 gcc: unrecognized option '-qversion'
 gcc: no input files
-configure:2987: $? = 1
-configure:3007: checking whether the C compiler works
-configure:3029: gcc    conftest.c  >&5
-configure:3033: $? = 0
-configure:3081: result: yes
-configure:3084: checking for C compiler default output file name
-configure:3086: result: a.out
-configure:3092: checking for suffix of executables
-configure:3099: gcc -o conftest    conftest.c  >&5
-configure:3103: $? = 0
-configure:3125: result: 
-configure:3147: checking whether we are cross compiling
-configure:3155: gcc -o conftest    conftest.c  >&5
-configure:3159: $? = 0
-configure:3166: ./conftest
-configure:3170: $? = 0
-configure:3185: result: no
-configure:3190: checking for suffix of object files
-configure:3212: gcc -c   conftest.c >&5
-configure:3216: $? = 0
-configure:3237: result: o
-configure:3241: checking whether we are using the GNU C compiler
-configure:3260: gcc -c   conftest.c >&5
-configure:3260: $? = 0
-configure:3269: result: yes
-configure:3278: checking whether gcc accepts -g
-configure:3298: gcc -c -g  conftest.c >&5
-configure:3298: $? = 0
-configure:3339: result: yes
-configure:3356: checking for gcc option to accept ISO C89
-configure:3420: gcc  -c -g -O2  conftest.c >&5
-configure:3420: $? = 0
-configure:3433: result: none needed
-configure:3464: checking for style of include used by make
-configure:3492: result: GNU
-configure:3517: checking dependency style of gcc
-configure:3627: result: none
-configure:3701: checking for g77
-configure:3731: result: no
-configure:3701: checking for xlf
-configure:3731: result: no
-configure:3701: checking for f77
-configure:3731: result: no
-configure:3701: checking for frt
-configure:3731: result: no
-configure:3701: checking for pgf77
-configure:3731: result: no
-configure:3701: checking for cf77
-configure:3731: result: no
-configure:3701: checking for fort77
-configure:3731: result: no
-configure:3701: checking for fl32
-configure:3731: result: no
-configure:3701: checking for af77
-configure:3731: result: no
-configure:3701: checking for xlf90
-configure:3731: result: no
-configure:3701: checking for f90
-configure:3731: result: no
-configure:3701: checking for pgf90
-configure:3731: result: no
-configure:3701: checking for pghpf
-configure:3731: result: no
-configure:3701: checking for epcf90
-configure:3731: result: no
-configure:3701: checking for gfortran
-configure:3717: found /usr/bin/gfortran
-configure:3728: result: gfortran
-configure:3754: checking for Fortran 77 compiler version
-configure:3763: gfortran --version >&5
+configure:3116: $? = 1
+configure:3136: checking whether the C compiler works
+configure:3158: gcc    conftest.c  >&5
+configure:3162: $? = 0
+configure:3210: result: yes
+configure:3213: checking for C compiler default output file name
+configure:3215: result: a.out
+configure:3221: checking for suffix of executables
+configure:3228: gcc -o conftest    conftest.c  >&5
+configure:3232: $? = 0
+configure:3254: result: 
+configure:3276: checking whether we are cross compiling
+configure:3284: gcc -o conftest    conftest.c  >&5
+configure:3288: $? = 0
+configure:3295: ./conftest
+configure:3299: $? = 0
+configure:3314: result: no
+configure:3319: checking for suffix of object files
+configure:3341: gcc -c   conftest.c >&5
+configure:3345: $? = 0
+configure:3366: result: o
+configure:3370: checking whether we are using the GNU C compiler
+configure:3389: gcc -c   conftest.c >&5
+configure:3389: $? = 0
+configure:3398: result: yes
+configure:3407: checking whether gcc accepts -g
+configure:3427: gcc -c -g  conftest.c >&5
+configure:3427: $? = 0
+configure:3468: result: yes
+configure:3485: checking for gcc option to accept ISO C89
+configure:3549: gcc  -c -g -O2  conftest.c >&5
+configure:3549: $? = 0
+configure:3562: result: none needed
+configure:3593: checking for style of include used by make
+configure:3621: result: GNU
+configure:3646: checking dependency style of gcc
+configure:3756: result: none
+configure:3830: checking for g77
+configure:3860: result: no
+configure:3830: checking for xlf
+configure:3860: result: no
+configure:3830: checking for f77
+configure:3860: result: no
+configure:3830: checking for frt
+configure:3860: result: no
+configure:3830: checking for pgf77
+configure:3860: result: no
+configure:3830: checking for cf77
+configure:3860: result: no
+configure:3830: checking for fort77
+configure:3860: result: no
+configure:3830: checking for fl32
+configure:3860: result: no
+configure:3830: checking for af77
+configure:3860: result: no
+configure:3830: checking for xlf90
+configure:3860: result: no
+configure:3830: checking for f90
+configure:3860: result: no
+configure:3830: checking for pgf90
+configure:3860: result: no
+configure:3830: checking for pghpf
+configure:3860: result: no
+configure:3830: checking for epcf90
+configure:3860: result: no
+configure:3830: checking for gfortran
+configure:3846: found /usr/bin/gfortran
+configure:3857: result: gfortran
+configure:3883: checking for Fortran 77 compiler version
+configure:3892: gfortran --version >&5
 GNU Fortran (Debian 4.4.5-8) 4.4.5
 Copyright (C) 2010 Free Software Foundation, Inc.
 
@@ -154,45 +160,45 @@ You may redistribute copies of GNU Fortran
 under the terms of the GNU General Public License.
 For more information about these matters, see the file named COPYING
 
-configure:3774: $? = 0
-configure:3763: gfortran -v >&5
+configure:3903: $? = 0
+configure:3892: gfortran -v >&5
 Using built-in specs.
 Target: i486-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 4.4.5-8' --with-bugurl=file:///usr/share/doc/gcc-4.4/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.4 --enable-shared --enable-multiarch --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.4 --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-objc-gc --enable-targets=all --with-arch-32=i586 --with-tune=generic --enable-checking=release --build=i486-linux-gnu --host=i486-linux-gnu --target=i486-linux-gnu
 Thread model: posix
 gcc version 4.4.5 (Debian 4.4.5-8) 
-configure:3774: $? = 0
-configure:3763: gfortran -V >&5
+configure:3903: $? = 0
+configure:3892: gfortran -V >&5
 gfortran: '-V' option must have argument
-configure:3774: $? = 1
-configure:3763: gfortran -qversion >&5
+configure:3903: $? = 1
+configure:3892: gfortran -qversion >&5
 gfortran: unrecognized option '-qversion'
 gfortran: no input files
-configure:3774: $? = 1
-configure:3783: checking whether we are using the GNU Fortran 77 compiler
-configure:3796: gfortran -c  conftest.F >&5
-configure:3796: $? = 0
-configure:3805: result: yes
-configure:3811: checking whether gfortran accepts -g
-configure:3822: gfortran -c -g conftest.f >&5
-configure:3822: $? = 0
-configure:3830: result: yes
-configure:3875: checking if gcc is Apple GCC
-configure:3884: result: no
-configure:3900: checking for library containing strerror
-configure:3931: gcc -o conftest  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
-configure:3931: $? = 0
-configure:3948: result: none required
-configure:3956: checking for inline
-configure:3972: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:3972: $? = 0
-configure:3980: result: inline
-configure:4003: checking how to run the C preprocessor
-configure:4034: gcc -E -I/usr/local/include  conftest.c
-configure:4034: $? = 0
-configure:4048: gcc -E -I/usr/local/include  conftest.c
+configure:3903: $? = 1
+configure:3912: checking whether we are using the GNU Fortran 77 compiler
+configure:3925: gfortran -c  conftest.F >&5
+configure:3925: $? = 0
+configure:3934: result: yes
+configure:3940: checking whether gfortran accepts -g
+configure:3951: gfortran -c -g conftest.f >&5
+configure:3951: $? = 0
+configure:3959: result: yes
+configure:4004: checking if gcc is Apple GCC
+configure:4013: result: no
+configure:4029: checking for library containing strerror
+configure:4060: gcc -o conftest  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
+configure:4060: $? = 0
+configure:4077: result: none required
+configure:4085: checking for inline
+configure:4101: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4101: $? = 0
+configure:4109: result: inline
+configure:4132: checking how to run the C preprocessor
+configure:4163: gcc -E -I/usr/local/include  conftest.c
+configure:4163: $? = 0
+configure:4177: gcc -E -I/usr/local/include  conftest.c
 conftest.c:11:28: error: ac_nonexistent.h: No such file or directory
-configure:4048: $? = 1
+configure:4177: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -205,12 +211,12 @@ configure: failed program was:
 | #define VERSION "3.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:4073: result: gcc -E
-configure:4093: gcc -E -I/usr/local/include  conftest.c
-configure:4093: $? = 0
-configure:4107: gcc -E -I/usr/local/include  conftest.c
+configure:4202: result: gcc -E
+configure:4222: gcc -E -I/usr/local/include  conftest.c
+configure:4222: $? = 0
+configure:4236: gcc -E -I/usr/local/include  conftest.c
 conftest.c:11:28: error: ac_nonexistent.h: No such file or directory
-configure:4107: $? = 1
+configure:4236: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -223,209 +229,209 @@ configure: failed program was:
 | #define VERSION "3.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:4136: checking for grep that handles long lines and -e
-configure:4194: result: /bin/grep
-configure:4199: checking for egrep
-configure:4261: result: /bin/grep -E
-configure:4267: checking whether gcc needs -traditional
-configure:4301: result: no
-configure:4308: checking whether make sets $(MAKE)
-configure:4330: result: yes
-configure:4342: checking for rm
-configure:4360: found /bin/rm
-configure:4372: result: /bin/rm
-configure:4382: checking for cp
-configure:4400: found /bin/cp
-configure:4412: result: /bin/cp
-configure:4422: checking for mv
-configure:4440: found /bin/mv
-configure:4452: result: /bin/mv
-configure:4462: checking for ln
-configure:4480: found /bin/ln
-configure:4492: result: /bin/ln
-configure:4502: checking for sed
-configure:4520: found /bin/sed
-configure:4532: result: /bin/sed
-configure:4542: checking for ar
-configure:4560: found /usr/bin/ar
-configure:4572: result: /usr/bin/ar
-configure:4582: checking for ld
-configure:4600: found /usr/bin/ld
-configure:4612: result: /usr/bin/ld
-configure:4622: checking for test
-configure:4640: found /usr/bin/test
-configure:4653: result: /usr/bin/test
-configure:4663: checking for python
-configure:4681: found /usr/bin/python
-configure:4693: result: /usr/bin/python
-configure:4703: checking for f2py
-configure:4721: found /usr/bin/f2py
-configure:4733: result: /usr/bin/f2py
-configure:4743: checking OS
-configure:4750: checking for ANSI C header files
-configure:4770: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4770: $? = 0
-configure:4843: gcc -o conftest  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
-configure:4843: $? = 0
-configure:4843: ./conftest
-configure:4843: $? = 0
-configure:4854: result: yes
-configure:4868: checking for sys/types.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for sys/stat.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for stdlib.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for string.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for memory.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for strings.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for inttypes.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for stdint.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4868: checking for unistd.h
-configure:4868: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4868: $? = 0
-configure:4868: result: yes
-configure:4885: checking for inttypes.h
-configure:4885: result: yes
-configure:4885: checking for stdint.h
-configure:4885: result: yes
-configure:4885: checking sys/resource.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking sys/resource.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for sys/resource.h
-configure:4885: result: yes
-configure:4885: checking sys/param.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking sys/param.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for sys/param.h
-configure:4885: result: yes
-configure:4885: checking errno.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking errno.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for errno.h
-configure:4885: result: yes
-configure:4885: checking sys/syslog.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking sys/syslog.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for sys/syslog.h
-configure:4885: result: yes
-configure:4885: checking stddef.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking stddef.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for stddef.h
-configure:4885: result: yes
-configure:4885: checking libgen.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking libgen.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for libgen.h
-configure:4885: result: yes
-configure:4885: checking sys/wait.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking sys/wait.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for sys/wait.h
-configure:4885: result: yes
-configure:4885: checking wait.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking wait.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for wait.h
-configure:4885: result: yes
-configure:4885: checking stdio.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking stdio.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for stdio.h
-configure:4885: result: yes
-configure:4885: checking termios.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking termios.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for termios.h
-configure:4885: result: yes
-configure:4885: checking for sys/resource.h
-configure:4885: result: yes
-configure:4885: checking linux/ppdev.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking linux/ppdev.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for linux/ppdev.h
-configure:4885: result: yes
-configure:4885: checking dev/ppbus/ppi.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4265: checking for grep that handles long lines and -e
+configure:4323: result: /bin/grep
+configure:4328: checking for egrep
+configure:4390: result: /bin/grep -E
+configure:4396: checking whether gcc needs -traditional
+configure:4430: result: no
+configure:4437: checking whether make sets $(MAKE)
+configure:4459: result: yes
+configure:4471: checking for rm
+configure:4489: found /bin/rm
+configure:4501: result: /bin/rm
+configure:4511: checking for cp
+configure:4529: found /bin/cp
+configure:4541: result: /bin/cp
+configure:4551: checking for mv
+configure:4569: found /bin/mv
+configure:4581: result: /bin/mv
+configure:4591: checking for ln
+configure:4609: found /bin/ln
+configure:4621: result: /bin/ln
+configure:4631: checking for sed
+configure:4649: found /bin/sed
+configure:4661: result: /bin/sed
+configure:4671: checking for ar
+configure:4689: found /usr/bin/ar
+configure:4701: result: /usr/bin/ar
+configure:4711: checking for ld
+configure:4729: found /usr/bin/ld
+configure:4741: result: /usr/bin/ld
+configure:4751: checking for test
+configure:4769: found /usr/bin/test
+configure:4782: result: /usr/bin/test
+configure:4792: checking for python
+configure:4810: found /usr/bin/python
+configure:4822: result: /usr/bin/python
+configure:4832: checking for f2py
+configure:4850: found /usr/bin/f2py
+configure:4862: result: /usr/bin/f2py
+configure:4872: checking OS
+configure:4879: checking for ANSI C header files
+configure:4899: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4899: $? = 0
+configure:4972: gcc -o conftest  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
+configure:4972: $? = 0
+configure:4972: ./conftest
+configure:4972: $? = 0
+configure:4983: result: yes
+configure:4997: checking for sys/types.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for sys/stat.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for stdlib.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for string.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for memory.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for strings.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for inttypes.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for stdint.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:4997: checking for unistd.h
+configure:4997: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:4997: $? = 0
+configure:4997: result: yes
+configure:5014: checking for inttypes.h
+configure:5014: result: yes
+configure:5014: checking for stdint.h
+configure:5014: result: yes
+configure:5014: checking sys/resource.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking sys/resource.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for sys/resource.h
+configure:5014: result: yes
+configure:5014: checking sys/param.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking sys/param.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for sys/param.h
+configure:5014: result: yes
+configure:5014: checking errno.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking errno.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for errno.h
+configure:5014: result: yes
+configure:5014: checking sys/syslog.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking sys/syslog.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for sys/syslog.h
+configure:5014: result: yes
+configure:5014: checking stddef.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking stddef.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for stddef.h
+configure:5014: result: yes
+configure:5014: checking libgen.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking libgen.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for libgen.h
+configure:5014: result: yes
+configure:5014: checking sys/wait.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking sys/wait.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for sys/wait.h
+configure:5014: result: yes
+configure:5014: checking wait.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking wait.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for wait.h
+configure:5014: result: yes
+configure:5014: checking stdio.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking stdio.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for stdio.h
+configure:5014: result: yes
+configure:5014: checking termios.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking termios.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for termios.h
+configure:5014: result: yes
+configure:5014: checking for sys/resource.h
+configure:5014: result: yes
+configure:5014: checking linux/ppdev.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking linux/ppdev.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for linux/ppdev.h
+configure:5014: result: yes
+configure:5014: checking dev/ppbus/ppi.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
 conftest.c:68:27: error: dev/ppbus/ppi.h: No such file or directory
-configure:4885: $? = 1
+configure:5014: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -495,11 +501,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <dev/ppbus/ppi.h>
-configure:4885: result: no
-configure:4885: checking dev/ppbus/ppi.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
+configure:5014: result: no
+configure:5014: checking dev/ppbus/ppi.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
 conftest.c:35:27: error: dev/ppbus/ppi.h: No such file or directory
-configure:4885: $? = 1
+configure:5014: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -536,60 +542,60 @@ configure: failed program was:
 | #define HAVE_LINUX_PPDEV_H 1
 | /* end confdefs.h.  */
 | #include <dev/ppbus/ppi.h>
-configure:4885: result: no
-configure:4885: checking for dev/ppbus/ppi.h
-configure:4885: result: no
-configure:4885: checking for sys/stat.h
-configure:4885: result: yes
-configure:4885: checking fcntl.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking fcntl.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for fcntl.h
-configure:4885: result: yes
-configure:4885: checking sys/ioctl.h usability
-configure:4885: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking sys/ioctl.h presence
-configure:4885: gcc -E -I/usr/local/include  conftest.c
-configure:4885: $? = 0
-configure:4885: result: yes
-configure:4885: checking for sys/ioctl.h
-configure:4885: result: yes
-configure:4896: checking whether time.h and sys/time.h may both be included
-configure:4916: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4916: $? = 0
-configure:4923: result: yes
-configure:4932: checking samplerate.h usability
-configure:4932: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4932: $? = 0
-configure:4932: result: yes
-configure:4932: checking samplerate.h presence
-configure:4932: gcc -E -I/usr/local/include  conftest.c
-configure:4932: $? = 0
-configure:4932: result: yes
-configure:4932: checking for samplerate.h
-configure:4932: result: yes
-configure:4941: checking whether string.h and strings.h may both be included
-configure:4952: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4952: $? = 0
-configure:4960: result: yes
-configure:4970: checking stdarg.h usability
-configure:4970: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
-configure:4970: $? = 0
-configure:4970: result: yes
-configure:4970: checking stdarg.h presence
-configure:4970: gcc -E -I/usr/local/include  conftest.c
-configure:4970: $? = 0
-configure:4970: result: yes
-configure:4970: checking for stdarg.h
-configure:4970: result: yes
-configure:5203: creating ./config.status
+configure:5014: result: no
+configure:5014: checking for dev/ppbus/ppi.h
+configure:5014: result: no
+configure:5014: checking for sys/stat.h
+configure:5014: result: yes
+configure:5014: checking fcntl.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking fcntl.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for fcntl.h
+configure:5014: result: yes
+configure:5014: checking sys/ioctl.h usability
+configure:5014: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking sys/ioctl.h presence
+configure:5014: gcc -E -I/usr/local/include  conftest.c
+configure:5014: $? = 0
+configure:5014: result: yes
+configure:5014: checking for sys/ioctl.h
+configure:5014: result: yes
+configure:5025: checking whether time.h and sys/time.h may both be included
+configure:5045: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5045: $? = 0
+configure:5052: result: yes
+configure:5061: checking samplerate.h usability
+configure:5061: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5061: $? = 0
+configure:5061: result: yes
+configure:5061: checking samplerate.h presence
+configure:5061: gcc -E -I/usr/local/include  conftest.c
+configure:5061: $? = 0
+configure:5061: result: yes
+configure:5061: checking for samplerate.h
+configure:5061: result: yes
+configure:5070: checking whether string.h and strings.h may both be included
+configure:5081: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5081: $? = 0
+configure:5089: result: yes
+configure:5099: checking stdarg.h usability
+configure:5099: gcc -c  -Wall -O0 -g  -Wall -O0 -g -I/usr/local/include  conftest.c >&5
+configure:5099: $? = 0
+configure:5099: result: yes
+configure:5099: checking stdarg.h presence
+configure:5099: gcc -E -I/usr/local/include  conftest.c
+configure:5099: $? = 0
+configure:5099: result: yes
+configure:5099: checking for stdarg.h
+configure:5099: result: yes
+configure:5332: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -606,15 +612,16 @@ generated by GNU Autoconf 2.67.  Invocation command line was
 
 on debian
 
-config.status:805: creating Makefile
-config.status:805: creating src/Makefile
-config.status:976: executing depfiles commands
-configure:6364: error: Please check error messages and install missing packages.
+config.status:817: creating Makefile
+config.status:817: creating src/Makefile
+config.status:988: executing depfiles commands
+configure:6493: error: Please check error messages and install missing packages.
 
 ## ---------------- ##
 ## Cache variables. ##
 ## ---------------- ##
 
+ac_cv_build=i686-pc-linux-gnu
 ac_cv_c_compiler_gnu=yes
 ac_cv_c_inline=inline
 ac_cv_env_CC_set=
@@ -667,6 +674,7 @@ ac_cv_header_termios_h=yes
 ac_cv_header_time=yes
 ac_cv_header_unistd_h=yes
 ac_cv_header_wait_h=yes
+ac_cv_host=i686-pc-linux-gnu
 ac_cv_objext=o
 ac_cv_path_AR=/usr/bin/ar
 ac_cv_path_CP=/bin/cp
@@ -692,6 +700,7 @@ ac_cv_prog_f77_g=yes
 ac_cv_prog_gcc_traditional=no
 ac_cv_prog_make_make_set=yes
 ac_cv_search_strerror='none required'
+ac_cv_target=i686-pc-linux-gnu
 am_cv_CC_dependencies_compiler_type=none
 gcc_cv_header_string=yes
 
@@ -778,13 +787,21 @@ am__quote=''
 am__tar='${AMTAR} chof - "$$tardir"'
 am__untar='${AMTAR} xf -'
 bindir='${exec_prefix}/bin'
+build='i686-pc-linux-gnu'
 build_alias=''
+build_cpu='i686'
+build_os='linux-gnu'
+build_vendor='pc'
 datadir='${datarootdir}'
 datarootdir='${prefix}/share'
 docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
 dvidir='${docdir}'
 exec_prefix='${prefix}'
+host='i686-pc-linux-gnu'
 host_alias=''
+host_cpu='i686'
+host_os='linux-gnu'
+host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
@@ -803,7 +820,11 @@ psdir='${docdir}'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'
 sysconfdir='${prefix}/etc'
+target='i686-pc-linux-gnu'
 target_alias=''
+target_cpu='i686'
+target_os='linux-gnu'
+target_vendor='pc'
 
 ## ----------- ##
 ## confdefs.h. ##
