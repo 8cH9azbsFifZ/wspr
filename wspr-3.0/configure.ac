@@ -11,6 +11,7 @@ AC_INIT([wspr],[3.0])
 fail=0
 
 AC_PREFIX_DEFAULT(/usr/local/)
+AC_CONFIG_SRCDIR([src])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
