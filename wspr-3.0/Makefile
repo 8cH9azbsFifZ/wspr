@@ -1,0 +1,175 @@
+MV ?= mv
+MKDIR ?= mkdir
+INSTALL=	install
+CC ?= gcc
+FFLAGS	= -g -O2
+LDFLAGS	= -L/usr/local/lib 
+LIBS	=  -lpthread  -lfftw3f
+CPPFLAGS = -I/usr/local/include 
+CFLAGS	=  -Wall -O0 -g  -Wall -O0 -g
+PREFIX	= /usr/local/
+# ${CFLAGS}# WSPR specific C flags
+CFLAGS	+= -DBIGSYM=1 -fPIC
+DEFS = -DPACKAGE_NAME=\"wspr\" -DPACKAGE_TARNAME=\"wspr\" -DPACKAGE_VERSION=\"3.0\" -DPACKAGE_STRING=\"wspr\ 3.0\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYS_RESOURCE_H=1 -DHAVE_SYS_PARAM_H=1 -DHAVE_ERRNO_H=1 -DHAVE_SYS_SYSLOG_H=1 -DHAVE_STDDEF_H=1 -DHAVE_LIBGEN_H=1 -DHAVE_SYS_WAIT_H=1 -DHAVE_WAIT_H=1 -DHAVE_STDIO_H=1 -DHAVE_TERMIOS_H=1 -DHAVE_SYS_RESOURCE_H=1 -DHAVE_LINUX_PPDEV_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_FCNTL_H=1 -DHAVE_SYS_IOCTL_H=1 -DTIME_WITH_SYS_TIME=1 -DSTRING_WITH_STRINGS=1 -DNDEBUG=1
+CFLAGS += ${DEFS}
+CPPFLAGS += ${DEFS} -I.
+
+# WSPR specific Fortran flags
+FFLAGS += -fbounds-check
+
+all:	wspr wsprcode fmt fmtave fcal fmeasure wspr0 hftoa ccf wwv
+
+build:	wspr
+
+wspr:	WsprMod/w.so
+
+# Default rules
+%.o: %.c
+	${CC} ${CFLAGS} -c $<
+%.o: %.f
+	${FC} ${FFLAGS} -c $<
+%.o: %.F
+	${FC} ${FFLAGS} -c $<
+%.o: %.f90
+	${FC} ${FFLAGS} -c $<
+%.o: %.F90
+	${FC} ${FFLAGS} -c $<
+
+OS=Linux
+FC=@FC@
+FCV=@FCV@
+FC_LIB_PATH	+= @FC_LIB_PATH@
+
+LDFLAGS	+= -L${FC_LIB_PATH}
+
+PYTHON	?= /usr/bin/python
+RM	?= /bin/rm
+F2PY	= /usr/bin/f2py
+
+OBJS1 = wspr0.o wspr0_tx.o sound.o ptt_unix.o gmtime2.o wfile5.o \
+	cs_stubs.o genmept.o wqencode.o wqdecode.o inter_mept.o \
+	encode232.o gran.o packcall.o packgrid.o pack50.o packpfx.o \
+	hash.o unpackcall.o unpackgrid.o unpackpfx.o unpack50.o \
+	grid2deg.o deg2grid.o nhash.o nchar.o wspr0_rx.o getrms.o \
+	mept162.o mix162.o spec162.o sync162.o twkfreq.o \
+	decode162.o getutc.o set.o xfft.o four2a.o flat3.o ps162.o \
+	pctile.o fchisq.o db.o fano232.o sort.o ssort.o ccf2.o
+
+OBJS3 = WSPRcode.o deg2grid.o pack50.o packcall.o packgrid.o \
+	unpack50.o unpackcall.o unpackgrid.o nchar.o \
+	grid2deg.o wqencode.o wqdecode.o nhash.o hash.o \
+	packname.o unpackname.o packtext2.o unpacktext2.o \
+	encode232.o inter_mept.o packprop.o unpackprop.o \
+	packpfx.o unpackpfx.o cs_stubs.o fano232.o
+
+wsprcode: $(OBJS3)
+	$(FC) -o wsprcode $(OBJS3)
+
+F2PYONLY = wspr1 getfile paterminate audiodev
+
+SRCS2F90 = wspr1.f90 wspr2.f90 decode.f90 getutc.f90 gran.f90 rx.f90 \
+	startdec.f90 startrx.f90 starttx.f90 tx.f90 getfile.f90 \
+	paterminate.f90 wqencode.f90 chklevel.f90 genwspr.f90 \
+	wqdecode.f90 hash.f90 packname.f90 packtext2.f90 \
+	unpackname.f90 unpacktext2.f90 audiodev.f90 fil1.f90 \
+	packpfx.f90 packprop.f90 unpackpfx.f90 unpackprop.f90 \
+	msgtrim.f90 thnix.f90 iqdemod.f90 phasetx.f90 speciq.f90 \
+	xcor162.f90 rxtxcoord.f90
+
+OBJS2F90 = ${SRCS2F90:.f90=.o}
+
+SRCS2F77 = mept162.f getrms.f wfile5.f mix162.f \
+	sync162.f decode162.f spec162.f set.f xfft.f \
+	ps162.f pctile.f peakup.f db.f \
+	inter_mept.f fano232.f unpack50.f unpackcall.f \
+	unpackgrid.f four2a.f flat3.f sort.f deg2grid.f \
+	ssort.f gencwid.f morse.f \
+	packcall.f packgrid.f pack50.f encode232.f \
+	nchar.f grid2deg.f \
+	fchisq.f ccf2.f twkfreq.f azdist.f geodist.f
+
+OBJS2F77 = ${SRCS2F77:.f=.o} deep65.o
+
+SRCS2C = padevsub.c start_threads.c sound.c gmtime2.c ptt_unix.c \
+	nhash.c fthread.c
+OBJS2C  = ${SRCS2C:.c=.o}
+
+WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
+	${F2PY} -c --quiet --noopt --debug -m w \
+	--f77flags="${FFLAGS}" --f90flags="${FFLAGS}" \
+	--fcompiler=${FCV} --f77exec=${FC} --f90exec=${FC} \
+	--opt="-fbounds-check ${FFLAGS}" \
+	${CPPFLAGS} ${LDFLAGS} ${LIBS} \
+	only: $(F2PYONLY) : \
+	$(SRCS2F90) $(SRCS2F77) $(SRCS2C)
+	${MKDIR} -p build/lib/WsprMod
+	${MV} w.so WsprMod/w.so
+
+fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
+	$(FC) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
+	sound.o ${LIBS}
+
+fmtave: fmtave.f90
+	$(FC) -o fmtave fmtave.f90
+
+fcal: fcal.f90
+	$(FC) -o fcal fcal.f90
+
+fmeasure: fmeasure.f90
+	$(FC) -o fmeasure fmeasure.f90
+
+wspr0:	$(OBJS1)
+	$(FC) -o wspr0 $(FFLAGS) $(OBJS1) -lportaudio -lfftw3f
+
+OBJS4 = hftoa.o write_wav.o sound.o fil1.o averms.o getutc.o gmtime2.o
+
+hftoa:  $(OBJS4)
+	$(FC) -o hftoa $(FFLAGS) $(OBJS4) -lportaudio 
+
+OBJS5 = ccf.o read_wav.o averms.o four2a.o thnix_stub.o db.o ffa.o \
+        fold1pps.o resample.o
+
+ccf:    $(OBJS5)
+	$(FC) -o ccf $(FFLAGS) $(OBJS5) -lfftw3f -lsamplerate
+
+OBJS6 = wwv.o read_wav.o averms.o db.o ffa.o fold1pps.o getutc.o \
+	gmtime2.o sound.o resample.o calobs.o four2a.o clean.o \
+	pctile.o sort.o ssort.o
+
+wwv:    $(OBJS6)
+	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
+
+install: WsprMod/w.so
+	${RM} -rf build/
+	${PYTHON} setup.py install
+	${INSTALL} wspr ${PREFIX}/bin
+
+deb: wspr.py WsprMod/w.so WsprMod/g.py WsprMod/__init__.py \
+	WsprMod/advanced.py \
+	WsprMod/options.py WsprMod/palettes.py WsprMod/PmwBlt.py \
+	WsprMod/PmwColor.py WsprMod/Pmw.py DEB/DEBIAN/control \
+	hamlib_rig_numbers wsprrc fmt fmtave fcal fmeasure \
+	gocal 0230 DEB/WSPR/wspr
+	cp wspr.py wsprrc hamlib_rig_numbers wsprcode DEB/WSPR
+	cp fmt fmtave fcal fmeasure gocal 0230 DEB/WSPR
+	cp WsprMod/w.so DEB/WSPR/WsprMod
+	cp WsprMod/*.py DEB/WSPR/WsprMod
+	cp -pr DEB DEB1
+	rm -rf DEB1/WSPR/save/.svn
+	rm -rf DEB1/WSPR/lib/.svn
+	rm -rf DEB1/WSPR/.svn
+	rm -rf DEB1/WSPR/WsprMod/.svn
+	rm -rf DEB1/.svn
+	rm -rf DEB1/DEBIAN/.svn
+	dpkg-deb --build DEB1 wspr_ver_rev_i386.deb
+	rm -rf DEB1
+
+.PHONY : clean
+clean:
+	${RM} -f *.o *.pyc *.pyo WsprMod/*.pyc WsprMod/*.pyo \
+	    WsprMod/w.so WsprMod/*.so w.so *~ \
+	    wsprcode fmt fmtave fcal fmeasure wspr0
+	${RM} -rf build/
+
+distclean:
+	${RM} -f config.log config.status Makefile
