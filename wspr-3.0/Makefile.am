@@ -1,4 +1,4 @@
-ACLOCAL_AMFLAGS = -I m4 -I m4/intl
+#ACLOCAL_AMFLAGS = -I m4 -I m4/intl
 # AC_CONFIG_MACRO_DIR([m4])
 
 SUBDIRS = src
