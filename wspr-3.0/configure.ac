@@ -11,18 +11,20 @@ AC_INIT([wspr],[3.0])
 fail=0
 
 AC_PREFIX_DEFAULT(/usr/local/)
-AC_CONFIG_SRCDIR([src])
+AC_SUBST([AC_CONFIG_ARGS], [$ac_configure_args])
+
 AC_CONFIG_AUX_DIR([build-aux])
-AC_CONFIG_FILES([Makefile src/Makefile])
-AC_CONFIG_MACRO_DIR([m4])
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
 AC_CANONICAL_TARGET
 
 AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
-AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+AM_MAINTAINER_MODE
+AC_CONFIG_SRCDIR([src])
+AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_MACRO_DIR([m4])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
