@@ -4733,7 +4733,7 @@ FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\
 FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC"
 #-Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC
 
-AX_CHECK_GFORTRAN #FIXME: add check
+AX_CHECK_GFORTRAN
 AX_CHECK_PORTAUDIO
 #AC_WSPR_PKG_CHECK([portaudio], [portaudio-2.0 >= 19], [yes], [yes], [enable support for Portaudio ] ) 
 
