@@ -3868,7 +3868,8 @@ FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-under
 
 AX_CHECK_GFORTRAN
 #AX_CHECK_PORTAUDIO
-AC_WSPR_PKG_CHECK(portaudio, portaudio-2.0 >= 19, yes, yes, enable support for Portaudio ) 
+AC_WSPR_PKG_CHECK(portaudio, portaudio-2.0 >= 19, yes, yes, 
+		enable support for Portaudio  ) 
 # FIXME: fine tuning cf. fldigi
 
 if test "$ac_cv_c_compiler_gnu" = yes; then
