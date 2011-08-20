@@ -15,8 +15,9 @@ AC_CONFIG_SRCDIR([src])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_MACRO_DIR([m4])
-AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
-AM_MAINTAINER_MODE
+# not working
+#AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
+#AM_MAINTAINER_MODE
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
