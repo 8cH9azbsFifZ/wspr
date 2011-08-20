@@ -13,6 +13,7 @@ fail=0
 AC_PREFIX_DEFAULT(/usr/local/)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_FILES([Makefile src/Makefile])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
