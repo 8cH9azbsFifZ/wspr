@@ -1,0 +1,10 @@
+Package: wspr
+Version: 3.0
+Essential: no
+Priority: standard
+Section: FIXME 
+Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Homepage: FIXME
+Architecture: all
+Description: FIXME
+ FIXME 
