@@ -14,6 +14,7 @@ AC_PREFIX_DEFAULT(/usr/local/)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_FILES([Makefile src/Makefile])
+AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
 
 OLD_CFLAGS="$CFLAGS"
 dnl Checks for programs.
