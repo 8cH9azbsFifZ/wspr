@@ -38,7 +38,9 @@ FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-under
 #-Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC
 
 AX_CHECK_GFORTRAN
-AX_CHECK_PORTAUDIO
+#AX_CHECK_PORTAUDIO
+AC_WSPR_PKG_CHECK([portaudio], [portaudio-2.0 >= 19], [yes], [yes], [enable support for Portaudio ]) 
+# FIXME: fine tuning cf. fldigi
 
 if test "$ac_cv_c_compiler_gnu" = yes; then
 	AC_MSG_CHECKING(if $CC is Apple GCC)
@@ -179,7 +181,8 @@ dnl do summary
 echo
 echo
 
-if test $HAS_PORTAUDIO -eq 1; then
+#if test $HAS_PORTAUDIO -eq 1; then
+if test "x$ac_cv_portaudio" = "xyes"; then # NB: x => no empty stuff => no shell error
 	AC_DEFINE(HAS_PORTAUDIO, 1, )
 	AC_DEFINE(HAS_PORTAUDIO_H, 1, )
 	AC_DEFINE(HAS_PORTAUDIO_LIB, 1, )
