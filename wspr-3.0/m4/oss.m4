@@ -1,6 +1,6 @@
-AC_DEFUN([AC_FLDIGI_OSS], [
-  AC_REQUIRE([AC_FLDIGI_MACOSX])
-  AC_REQUIRE([AC_FLDIGI_WIN32])
+AC_DEFUN([AC_WSPR_OSS], [
+  AC_REQUIRE([AC_WSPR_MACOSX])
+  AC_REQUIRE([AC_WSPR_WIN32])
   if test "x$target_darwin" = "xno" && test "x$target_win32" = "xno"; then
       AC_ARG_ENABLE([oss],
                     AC_HELP_STRING([--disable-oss], [disable support for OSS @<:@autodetect@:>@]),

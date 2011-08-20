@@ -53,7 +53,7 @@ AC_DEFUN([CHECK_TLS], [
 ])
 
 
-AC_DEFUN([AC_FLDIGI_TLS], [
+AC_DEFUN([AC_WSPR_TLS], [
   AC_ARG_ENABLE([tls],
                 AC_HELP_STRING([--enable-tls], [enable use of TLS @<:@autodetect@:>@]),
                 [case "${enableval}" in

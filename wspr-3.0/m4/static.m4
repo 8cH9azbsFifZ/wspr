@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_STATIC], [
+AC_DEFUN([AC_WSPR_STATIC], [
   AC_ARG_ENABLE([static],
                 AC_HELP_STRING([--enable-static], [enable static linking for some libraries]),
                 [case "${enableval}" in

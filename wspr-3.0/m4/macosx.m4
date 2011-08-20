@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_MACOSX], [
+AC_DEFUN([AC_WSPR_MACOSX], [
 case "$target_os" in
   darwin*)
       target_darwin="yes"

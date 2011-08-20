@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_WIN32], [
+AC_DEFUN([AC_WSPR_WIN32], [
 case "$target_os" in
      *mingw*)
         target_win32="yes"

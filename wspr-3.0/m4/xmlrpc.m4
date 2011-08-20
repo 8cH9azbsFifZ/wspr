@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_XMLRPC_CONFIG], [
+AC_DEFUN([AC_WSPR_XMLRPC_CONFIG], [
   ac_cv_xmlrpc=no
 
   if test "x$XMLRPC_CFLAGS" != "x" && test "x$XMLRPC_LIBS" != "x"; then
@@ -19,7 +19,7 @@ AC_DEFUN([AC_FLDIGI_XMLRPC_CONFIG], [
   fi
 ])
 
-AC_DEFUN([AC_FLDIGI_XMLRPC], [
+AC_DEFUN([AC_WSPR_XMLRPC], [
   AC_ARG_VAR([XMLRPC_C_CONFIG], [Path to xmlrpc-c-config utility])
   AC_ARG_VAR([XMLRPC_CFLAGS], [C compiler flags for libxmlrpc-c, overrriding xmlrpc-c-config])
   AC_ARG_VAR([XMLRPC_LIBS], [linker flags for libxmlrpc-c, overrriding xmlrpc-c-config])
@@ -36,7 +36,7 @@ AC_DEFUN([AC_FLDIGI_XMLRPC], [
       AC_DEFINE(USE_XMLRPC, 0, [Define to 1 if we are using xmlrpc])
       ac_cv_xmlrpc=no
   else
-      AC_FLDIGI_XMLRPC_CONFIG
+      AC_WSPR_XMLRPC_CONFIG
       if test "x$ac_cv_want_xmlrpc" = "xcheck"; then
           if test "x$ac_cv_xmlrpc" = "xyes"; then
               AC_DEFINE(USE_XMLRPC, 1, [Define to 1 if we are using xmlrpc])

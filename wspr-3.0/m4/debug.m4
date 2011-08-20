@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_RDYNAMIC], [
+AC_DEFUN([AC_WSPR_RDYNAMIC], [
   LDFLAGS_saved="$LDFLAGS"
   LDFLAGS="$LDFLAGS -rdynamic"
 
@@ -25,8 +25,8 @@ AC_DEFUN([AC_FLDIGI_RDYNAMIC], [
 ])
 
 
-AC_DEFUN([AC_FLDIGI_DEBUG], [
-  AC_REQUIRE([AC_FLDIGI_OPT])
+AC_DEFUN([AC_WSPR_DEBUG], [
+  AC_REQUIRE([AC_WSPR_OPT])
   AC_ARG_ENABLE([debug],
                 AC_HELP_STRING([--enable-debug], [turn on debugging]),
                 [case "${enableval}" in
@@ -85,7 +85,7 @@ AC_DEFUN([AC_FLDIGI_DEBUG], [
       AC_MSG_RESULT([$gflag])
       DEBUG_CFLAGS="-O0 -fno-inline-functions $gflag -Wall"
 
-      AC_FLDIGI_RDYNAMIC
+      AC_WSPR_RDYNAMIC
       if test "x$ac_cv_rdynamic" = "xyes"; then
           RDYNAMIC=-rdynamic
       fi

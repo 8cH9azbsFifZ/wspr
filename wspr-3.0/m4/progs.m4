@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_PROGRAMS], [
+AC_DEFUN([AC_WSPR_PROGRAMS], [
   AC_ARG_ENABLE([fldigi],
                 AC_HELP_STRING([--disable-fldigi], [do not build fldigi]),
                 [case "${enableval}" in
@@ -7,7 +7,7 @@ AC_DEFUN([AC_FLDIGI_PROGRAMS], [
                  esac],
                  [ac_cv_want_fldigi=yes])
 
-  AM_CONDITIONAL([WANT_FLDIGI], [test "x$ac_cv_want_fldigi" = "xyes"])
+  AM_CONDITIONAL([WANT_WSPR], [test "x$ac_cv_want_fldigi" = "xyes"])
 
   AC_ARG_ENABLE([flarq],
                 AC_HELP_STRING([--disable-flarq], [do not build flarq]),

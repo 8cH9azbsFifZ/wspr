@@ -1,4 +1,4 @@
-AC_DEFUN([AC_FLDIGI_INTL], [
+AC_DEFUN([AC_WSPR_INTL], [
   AC_ARG_VAR([INTL_CFLAGS], [C compiler flags for libintl, overriding gettext macros])
   AC_ARG_VAR([INTL_LIBS], [linker flags for libintl, overriding gettext macros])
 

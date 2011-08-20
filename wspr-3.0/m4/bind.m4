@@ -1,6 +1,6 @@
 dnl Look for a working std::bind or std::tr1::bind.
 
-AC_DEFUN([AC_FLDIGI_BIND], [
+AC_DEFUN([AC_WSPR_BIND], [
   AC_LANG_PUSH(C++)
   AC_MSG_CHECKING([for std::bind in <functional>])
   AC_COMPILE_IFELSE( [AC_LANG_PROGRAM([[#include <functional>
