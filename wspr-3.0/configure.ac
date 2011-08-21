@@ -1,14 +1,10 @@
-dnl $Id: configure.ac 1235 2009-05-17 12:28:29Z va3db $
-dnl Process this file with autoconf to produce a configure script.
-
 AC_PREREQ(2.61)
 
-dnl This should be a svn hook instead.
-dnl Sneakier way to get a Version into setup.py
 AC_COPYRIGHT([$Id: configure.ac 1235 2009-05-17 12:28:29Z va3db $])
+# make something to change version in setup.py
 
 AC_INIT([wspr],[3.0])
-fail=0
+fail=0 # FIXME: remove this variable
 
 AC_PREFIX_DEFAULT(/usr/local/)
 AC_SUBST([AC_CONFIG_ARGS], [$ac_configure_args])
@@ -34,7 +30,7 @@ AC_LANG(C)
 AC_PROG_F77
 AC_USE_SYSTEM_EXTENSIONS
 
-dnl Make sure autoconf doesn't interfere with cflags -jmallett
+dnl Make sure autoconf doesn't interfere with cflags -jmallett # FIXME: remove this variable
 CFLAGS="$OLD_CFLAGS"
 
 # Check headers

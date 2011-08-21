@@ -2126,7 +2126,7 @@ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $
 ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
-fail=0
+fail=0 # FIXME: remove this variable
 
 
 AC_CONFIG_ARGS=$ac_configure_args

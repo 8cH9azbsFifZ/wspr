@@ -15,9 +15,6 @@
 
 
 
-#ACLOCAL_AMFLAGS = -I m4 -I m4/intl
-# AC_CONFIG_MACRO_DIR([m4])
-
 pkgdatadir = $(datadir)/wspr
 pkgincludedir = $(includedir)/wspr
 pkglibdir = $(libdir)/wspr
@@ -696,6 +693,9 @@ uninstall-am:
 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
 	pdf-am ps ps-am tags tags-recursive uninstall uninstall-am
 
+
+#ACLOCAL_AMFLAGS = -I m4 -I m4/intl
+AC_CONFIG_MACRO_DIR([m4])
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
