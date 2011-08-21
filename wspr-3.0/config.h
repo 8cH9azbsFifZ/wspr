@@ -1,9 +1,15 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define to 1 if you have the <dev/ppbus/ppi.h> header file. */
+/* #undef HAVE_DEV_PPBUS_PPI_H */
+
 /* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
    */
 #define HAVE_DIRENT_H 1
+
+/* Define to 1 if you have the <errno.h> header file. */
+#define HAVE_ERRNO_H 1
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -17,6 +23,9 @@
 /* Define to 1 if you have the `fftw3f' library (-lfftw3f). */
 #define HAVE_LIBFFTW3F 1
 
+/* Define to 1 if you have the <libgen.h> header file. */
+#define HAVE_LIBGEN_H 1
+
 /* Define to 1 if you have the `portaudio' library (-lportaudio). */
 #define HAVE_LIBPORTAUDIO 1
 
@@ -25,6 +34,9 @@
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
+
+/* Define to 1 if you have the <linux/ppdev.h> header file. */
+#define HAVE_LINUX_PPDEV_H 1
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
@@ -71,8 +83,14 @@
 /* Define to 1 if you have the <sys/param.h> header file. */
 #define HAVE_SYS_PARAM_H 1
 
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#define HAVE_SYS_RESOURCE_H 1
+
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <sys/syslog.h> header file. */
+#define HAVE_SYS_SYSLOG_H 1
 
 /* Define to 1 if you have the <sys/time.h> header file. */
 #define HAVE_SYS_TIME_H 1
@@ -80,8 +98,17 @@
 /* Define to 1 if you have the <sys/types.h> header file. */
 #define HAVE_SYS_TYPES_H 1
 
+/* Define to 1 if you have the <sys/wait.h> header file. */
+#define HAVE_SYS_WAIT_H 1
+
+/* Define to 1 if you have the <termios.h> header file. */
+#define HAVE_TERMIOS_H 1
+
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
+
+/* Define to 1 if you have the <wait.h> header file. */
+#define HAVE_WAIT_H 1
 
 /* Name of package */
 #define PACKAGE "wspr"

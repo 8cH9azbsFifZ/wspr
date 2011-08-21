@@ -57,7 +57,7 @@ AC_HEADER_STDC
 AC_HEADER_DIRENT
 AC_HEADER_TIME
 AC_CHECK_HEADER([samplerate.h], [HAS_SAMPLERATE_H=1], [HAS_SAMPLERATE_H=0])
-AC_CHECK_HEADERS([stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h ])
+AC_CHECK_HEADERS([stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_INT16_T

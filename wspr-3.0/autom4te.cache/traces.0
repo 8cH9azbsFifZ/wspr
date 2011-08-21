@@ -588,6 +588,10 @@ m4trace:configure.ac:60: -1- AH_OUTPUT([HAVE_SYS_RESOURCE_H], [/* Define to 1 if
 @%:@undef HAVE_SYS_RESOURCE_H])
 m4trace:configure.ac:60: -1- AH_OUTPUT([HAVE_INTTYPES_H], [/* Define to 1 if you have the <inttypes.h> header file. */
 @%:@undef HAVE_INTTYPES_H])
+m4trace:configure.ac:60: -1- AH_OUTPUT([HAVE_LINUX_PARPORT_H], [/* Define to 1 if you have the <linux/parport.h> header file. */
+@%:@undef HAVE_LINUX_PARPORT_H])
+m4trace:configure.ac:60: -1- AH_OUTPUT([HAVE_DEV_PPBUS_PPBCONF_H], [/* Define to 1 if you have the <dev/ppbus/ppbconf.h> header file. */
+@%:@undef HAVE_DEV_PPBUS_PPBCONF_H])
 m4trace:configure.ac:63: -1- AC_DEFINE_TRACE_LITERAL([int16_t])
 m4trace:configure.ac:63: -1- m4_pattern_allow([^int16_t$])
 m4trace:configure.ac:63: -1- AH_OUTPUT([int16_t], [/* Define to the type of a signed integer type of width exactly 16 bits if
