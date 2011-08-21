@@ -26,6 +26,8 @@ AC_PROG_F77
 AC_PROG_FC([gfortran g77])
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
+AC_ISC_POSIX
+AC_C_INLINE
 AC_PATH_PROG(RM, rm)
 AC_PATH_PROG(CP, cp)
 AC_PATH_PROG(MV, mv)
@@ -52,7 +54,10 @@ AC_CHECK_LIB([samplerate], [main])
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h])
+AC_HEADER_DIRENT
+AC_HEADER_TIME
+AC_CHECK_HEADER([samplerate.h], [HAS_SAMPLERATE_H=1], [HAS_SAMPLERATE_H=0])
+AC_CHECK_HEADERS([stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_INT16_T

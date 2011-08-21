@@ -37,7 +37,6 @@ wspr:	WsprMod/w.so
 
 OS=Linux
 FC=gfortran
-FCV=@FCV@
 FC_LIB_PATH	+= @FC_LIB_PATH@
 
 LDFLAGS	+= -L${FC_LIB_PATH}
@@ -97,7 +96,7 @@ OBJS2C  = ${SRCS2C:.c=.o}
 WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	${F2PY} -c --quiet --noopt --debug -m w \
 	--f77flags="${FFLAGS}" --f90flags="${FFLAGS}" \
-	--fcompiler=${FCV} --f77exec=${FC} --f90exec=${FC} \
+	--fcompiler=${FC} --f77exec=${FC} --f90exec=${FC} \
 	--opt="-fbounds-check ${FFLAGS}" \
 	${CPPFLAGS} ${LDFLAGS} ${LIBS} \
 	only: $(F2PYONLY) : \
