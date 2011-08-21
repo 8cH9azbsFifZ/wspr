@@ -137,6 +137,8 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 F2PY = /usr/bin/f2py
+F77 = gfortran
+FFLAGS = -g -O2
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
@@ -176,6 +178,7 @@ abs_top_builddir = /root/wspr/deb/wspr/wspr-3.0
 abs_top_srcdir = /root/wspr/deb/wspr/wspr-3.0
 ac_ct_CC = gcc
 ac_ct_CXX = g++
+ac_ct_F77 = gfortran
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -713,6 +716,7 @@ uninstall-am:
 
 
 #ACLOCAL_AMFLAGS = -I m4 -I m4/intl
+AC_CONFIG_MACRO_DIR([m4])
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

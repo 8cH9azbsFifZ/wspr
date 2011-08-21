@@ -4,3 +4,5 @@
 git add .
 git commit -a -m autogen.sh
 aclocal && automake && autoconf && ./configure
+cat Makefile | sed grep -v AC_CONFIG_MACRO_DIR > 1 && mv 1 Makefile
+make
