@@ -154,6 +154,7 @@ deb: wspr.py WsprMod/w.so WsprMod/g.py WsprMod/__init__.py \
 	cp WsprMod/w.so DEB/WSPR/WsprMod
 	cp WsprMod/*.py DEB/WSPR/WsprMod
 	cp -pr DEB DEB1
+#FIXME: Remove this stuff
 	rm -rf DEB1/WSPR/save/.svn
 	rm -rf DEB1/WSPR/lib/.svn
 	rm -rf DEB1/WSPR/.svn
