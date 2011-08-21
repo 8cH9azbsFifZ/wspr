@@ -23,6 +23,22 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PATH_PROG(RM, rm)
+AC_PATH_PROG(CP, cp)
+AC_PATH_PROG(MV, mv)
+AC_PATH_PROG(LN, ln)
+AC_PATH_PROG(SED, sed)
+AC_PATH_PROG(AR, ar)
+AC_PATH_PROG(LD, ld)
+AC_PATH_PROG(TEST, [test], [test])
+AC_PATH_PROG(PYTHON, python)
+AC_PATH_PROG(F2PY, f2py)
+AC_SUBST(VERSION, "${version}")
+AC_MSG_CHECKING([OS])
+OS=`uname`
+AC_SUBST(OS, "${OS}")
+
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lfftw3f':
@@ -33,6 +49,7 @@ AC_CHECK_LIB([portaudio], [main])
 AC_CHECK_LIB([samplerate], [main])
 
 # Checks for header files.
+AC_HEADER_STDC
 AC_CHECK_HEADERS([fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
