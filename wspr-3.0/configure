@@ -599,6 +599,7 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+PREFIX
 EGREP
 GREP
 CPP
@@ -6143,7 +6144,7 @@ else
 fi
 
 
-for ac_header in stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h
+for ac_header in stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h
 do :
   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
@@ -6279,6 +6280,17 @@ _ACEOF
   esac
 
 
+PREFIX="${prefix}"
+
+CPPFLAGS="${CPPFLAGS}"
+
+LDFLAGS="${LDFLAGS}"
+
+LIBS="${LIBS}"
+
+
+
+
 # Checks for library functions.
 for ac_header in stdlib.h
 do :
@@ -6361,6 +6373,8 @@ done
 
 
 ac_config_files="$ac_config_files Makefile src/Makefile"
+
+
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure

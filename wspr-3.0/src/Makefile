@@ -7,7 +7,7 @@ LDFLAGS	=
 LIBS	= -lsamplerate -lportaudio -lfftw3f  -lfftw3f
 CPPFLAGS = 
 CFLAGS	= -g -O2
-PREFIX	= @PREFIX@
+PREFIX	= NONE
 # ${CFLAGS}# WSPR specific C flags
 CFLAGS	+= -DBIGSYM=1 -fPIC
 DEFS = -DHAVE_CONFIG_H
