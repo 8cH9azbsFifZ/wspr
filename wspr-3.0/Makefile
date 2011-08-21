@@ -114,6 +114,7 @@ ACLOCAL = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run aclocal-
 AC_CONFIG_ARGS = 
 AMTAR = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run tar
 AM_DEFAULT_VERBOSITY = 0
+AR = /usr/bin/ar
 AUTOCONF = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run autoconf
 AUTOHEADER = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run autoheader
 AUTOMAKE = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run automake-1.11
@@ -121,6 +122,7 @@ AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -g -O2
+CP = /bin/cp
 CPP = gcc -E
 CPPFLAGS = 
 CXX = g++
@@ -134,19 +136,24 @@ ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
 EXEEXT = 
+F2PY = /usr/bin/f2py
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
+LD = /usr/bin/ld
 LDFLAGS = 
 LIBOBJS = 
 LIBS = -lsamplerate -lportaudio -lfftw3f 
+LN = /bin/ln
 LTLIBOBJS = 
 MAKEINFO = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
+MV = /bin/mv
 OBJEXT = o
+OS = Linux
 PACKAGE = wspr
 PACKAGE_BUGREPORT = BUG-REPORT-ADDRESS
 PACKAGE_NAME = wspr
@@ -155,10 +162,14 @@ PACKAGE_TARNAME = wspr
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.0
 PATH_SEPARATOR = :
+PYTHON = /usr/bin/python
+RM = /bin/rm
+SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = 
-VERSION = 3.0
+TEST = /usr/bin/test
+VERSION = 
 abs_builddir = /root/wspr/deb/wspr/wspr-3.0
 abs_srcdir = /root/wspr/deb/wspr/wspr-3.0
 abs_top_builddir = /root/wspr/deb/wspr/wspr-3.0
@@ -702,7 +713,6 @@ uninstall-am:
 
 
 #ACLOCAL_AMFLAGS = -I m4 -I m4/intl
-#AC_CONFIG_MACRO_DIR([m4])
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

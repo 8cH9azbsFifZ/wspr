@@ -35,16 +35,16 @@ wspr:	WsprMod/w.so
 %.o: %.F90
 	${FC} ${FFLAGS} -c $<
 
-OS=@OS@
+OS=Linux
 FC=@FC@
 FCV=@FCV@
 FC_LIB_PATH	+= @FC_LIB_PATH@
 
 LDFLAGS	+= -L${FC_LIB_PATH}
 
-PYTHON	?= @PYTHON@
-RM	?= @RM@
-F2PY	= @F2PY@
+PYTHON	?= /usr/bin/python
+RM	?= /bin/rm
+F2PY	= /usr/bin/f2py
 
 OBJS1 = wspr0.o wspr0_tx.o sound.o ptt_unix.o gmtime2.o wfile5.o \
 	cs_stubs.o genmept.o wqencode.o wqdecode.o inter_mept.o \
