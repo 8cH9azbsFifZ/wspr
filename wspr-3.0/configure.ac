@@ -2,26 +2,33 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.67])
-AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([src/padevsub.c])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_AUX_DIR([build-aux])
+
+AC_PREFIX_DEFAULT(/usr/local/)
+AC_SUBST([AC_CONFIG_ARGS], [$ac_configure_args])
+
+# Check build environment
+AC_CANONICAL_BUILD
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
+# Init automake
+AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 # Checks for programs.
 AC_PROG_CXX
 AC_PROG_CC
-AC_PROG_AWK
 AC_PROG_INSTALL
-AC_PROG_CPP
-AC_PROG_LN_S
-AC_PROG_MKDIR_P
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lfftw3f':
 AC_CHECK_LIB([fftw3f], [main])
 # FIXME: Replace `main' with a function in `-lportaudio':
 AC_CHECK_LIB([portaudio], [main])
-# FIXME: Replace `main' with a function in `-lpthread':
-AC_CHECK_LIB([pthread], [main])
 # FIXME: Replace `main' with a function in `-lsamplerate':
 AC_CHECK_LIB([samplerate], [main])
 
