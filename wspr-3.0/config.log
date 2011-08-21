@@ -871,13 +871,13 @@ configure: failed program was:
 configure:6150: result: no
 configure:6150: checking for dev/ppbus/ppbconf.h
 configure:6150: result: no
-configure:6162: checking for int16_t
-configure:6162: gcc -c -g -O2  conftest.c >&5
-configure:6162: $? = 0
-configure:6162: gcc -c -g -O2  conftest.c >&5
+configure:6172: checking for int16_t
+configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6172: $? = 0
+configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: error: size of array 'test_array' is negative
-configure:6162: $? = 1
+configure:6172: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -973,15 +973,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6162: result: yes
-configure:6173: checking for int32_t
-configure:6173: gcc -c -g -O2  conftest.c >&5
-configure:6173: $? = 0
-configure:6173: gcc -c -g -O2  conftest.c >&5
+configure:6172: result: yes
+configure:6183: checking for int32_t
+configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6183: $? = 0
+configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: warning: integer overflow in expression
 conftest.c:89: error: size of array 'test_array' is negative
-configure:6173: $? = 1
+configure:6183: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1077,15 +1077,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6173: result: yes
-configure:6184: checking for int64_t
-configure:6184: gcc -c -g -O2  conftest.c >&5
-configure:6184: $? = 0
-configure:6184: gcc -c -g -O2  conftest.c >&5
+configure:6183: result: yes
+configure:6194: checking for int64_t
+configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6194: $? = 0
+configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: warning: integer overflow in expression
 conftest.c:89: error: size of array 'test_array' is negative
-configure:6184: $? = 1
+configure:6194: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1181,14 +1181,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6184: result: yes
-configure:6195: checking for int8_t
-configure:6195: gcc -c -g -O2  conftest.c >&5
-configure:6195: $? = 0
-configure:6195: gcc -c -g -O2  conftest.c >&5
+configure:6194: result: yes
+configure:6205: checking for int8_t
+configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6205: $? = 0
+configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: error: size of array 'test_array' is negative
-configure:6195: $? = 1
+configure:6205: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1284,14 +1284,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6195: result: yes
-configure:6206: checking for pid_t
-configure:6206: gcc -c -g -O2  conftest.c >&5
-configure:6206: $? = 0
-configure:6206: gcc -c -g -O2  conftest.c >&5
+configure:6205: result: yes
+configure:6216: checking for pid_t
+configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6216: $? = 0
+configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:87: error: expected expression before ')' token
-configure:6206: $? = 1
+configure:6216: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1384,14 +1384,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6206: result: yes
-configure:6217: checking for size_t
-configure:6217: gcc -c -g -O2  conftest.c >&5
-configure:6217: $? = 0
-configure:6217: gcc -c -g -O2  conftest.c >&5
+configure:6216: result: yes
+configure:6227: checking for size_t
+configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6227: $? = 0
+configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:87: error: expected expression before ')' token
-configure:6217: $? = 1
+configure:6227: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1484,41 +1484,41 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6217: result: yes
-configure:6228: checking for uint16_t
-configure:6228: gcc -c -g -O2  conftest.c >&5
-configure:6228: $? = 0
-configure:6228: result: yes
-configure:6240: checking for uint32_t
-configure:6240: gcc -c -g -O2  conftest.c >&5
-configure:6240: $? = 0
-configure:6240: result: yes
-configure:6254: checking for uint64_t
-configure:6254: gcc -c -g -O2  conftest.c >&5
-configure:6254: $? = 0
-configure:6254: result: yes
-configure:6268: checking for uint8_t
-configure:6268: gcc -c -g -O2  conftest.c >&5
-configure:6268: $? = 0
-configure:6268: result: yes
-configure:6297: checking for stdlib.h
-configure:6297: result: yes
-configure:6307: checking for GNU libc compatible malloc
-configure:6331: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6331: $? = 0
-configure:6331: ./conftest
-configure:6331: $? = 0
-configure:6341: result: yes
-configure:6365: checking for gettimeofday
-configure:6365: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6365: $? = 0
-configure:6365: result: yes
-configure:6365: checking for strchr
-configure:6365: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6227: result: yes
+configure:6238: checking for uint16_t
+configure:6238: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6238: $? = 0
+configure:6238: result: yes
+configure:6250: checking for uint32_t
+configure:6250: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6250: $? = 0
+configure:6250: result: yes
+configure:6264: checking for uint64_t
+configure:6264: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6264: $? = 0
+configure:6264: result: yes
+configure:6278: checking for uint8_t
+configure:6278: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6278: $? = 0
+configure:6278: result: yes
+configure:6307: checking for stdlib.h
+configure:6307: result: yes
+configure:6317: checking for GNU libc compatible malloc
+configure:6341: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6341: $? = 0
+configure:6341: ./conftest
+configure:6341: $? = 0
+configure:6351: result: yes
+configure:6375: checking for gettimeofday
+configure:6375: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6375: $? = 0
+configure:6375: result: yes
+configure:6375: checking for strchr
+configure:6375: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
 conftest.c:77: warning: conflicting types for built-in function 'strchr'
-configure:6365: $? = 0
-configure:6365: result: yes
-configure:6502: creating ./config.status
+configure:6375: $? = 0
+configure:6375: result: yes
+configure:6512: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1686,7 +1686,7 @@ CCDEPMODE='depmode=none'
 CFLAGS='-g -O2'
 CP='/bin/cp'
 CPP='gcc -E'
-CPPFLAGS=''
+CPPFLAGS='-I/usr/local/include '
 CXX='g++'
 CXXDEPMODE='depmode=none'
 CXXFLAGS='-g -O2'
@@ -1709,9 +1709,9 @@ INSTALL_PROGRAM='${INSTALL}'
 INSTALL_SCRIPT='${INSTALL}'
 INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
 LD='/usr/bin/ld'
-LDFLAGS=''
+LDFLAGS='-L/usr/local/lib '
 LIBOBJS=''
-LIBS='-lsamplerate -lportaudio -lfftw3f '
+LIBS=' -lpthread -lsamplerate -lportaudio -lfftw3f '
 LN='/bin/ln'
 LTLIBOBJS=''
 MAKEINFO='${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run makeinfo'

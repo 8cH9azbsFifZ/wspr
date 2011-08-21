@@ -6158,6 +6158,16 @@ fi
 done
 
 
+# Dirty hack FIXME
+CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
+LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
+LIBS=" -lpthread ${LIBS}"
+FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\
+                        -Wall -fbounds-check -fno-second-underscore -fPIC"
+FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC"
+#-Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC
+
+
 # Checks for typedefs, structures, and compiler characteristics.
 ac_fn_c_find_intX_t "$LINENO" "16" "ac_cv_c_int16_t"
 case $ac_cv_c_int16_t in #(

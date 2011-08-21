@@ -3,9 +3,9 @@ MKDIR ?= mkdir
 INSTALL=	install
 CC ?= gcc
 FFLAGS	= -g -O2
-LDFLAGS	= 
-LIBS	= -lsamplerate -lportaudio -lfftw3f  -lfftw3f
-CPPFLAGS = 
+LDFLAGS	= -L/usr/local/lib 
+LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  -lfftw3f
+CPPFLAGS = -I/usr/local/include 
 CFLAGS	= -g -O2
 PREFIX	= NONE
 # ${CFLAGS}# WSPR specific C flags
@@ -154,6 +154,7 @@ deb: wspr.py WsprMod/w.so WsprMod/g.py WsprMod/__init__.py \
 	cp WsprMod/w.so DEB/WSPR/WsprMod
 	cp WsprMod/*.py DEB/WSPR/WsprMod
 	cp -pr DEB DEB1
+#FIXME: Remove this stuff
 	rm -rf DEB1/WSPR/save/.svn
 	rm -rf DEB1/WSPR/lib/.svn
 	rm -rf DEB1/WSPR/.svn

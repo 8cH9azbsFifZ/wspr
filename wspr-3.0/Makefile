@@ -124,7 +124,7 @@ CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CP = /bin/cp
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS = -I/usr/local/include 
 CXX = g++
 CXXDEPMODE = depmode=none
 CXXFLAGS = -g -O2
@@ -148,9 +148,9 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS = 
+LDFLAGS = -L/usr/local/lib 
 LIBOBJS = 
-LIBS = -lsamplerate -lportaudio -lfftw3f 
+LIBS =  -lpthread -lsamplerate -lportaudio -lfftw3f 
 LN = /bin/ln
 LTLIBOBJS = 
 MAKEINFO = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run makeinfo

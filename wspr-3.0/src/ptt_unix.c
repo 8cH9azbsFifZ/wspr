@@ -22,6 +22,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
+
+#include "../config.h"
+
 #if HAVE_STDIO_H
 # include <stdio.h>
 #endif
@@ -62,7 +65,9 @@ int lp_ptt (int fd, int onoff);
 # include <sys/param.h>
 #endif
 
-#include <string.h>
+#ifdef HAVE_STRING_H
+# include <string.h>
+#endif
 /* parport functions */
 
 int dev_is_parport(int fd);
