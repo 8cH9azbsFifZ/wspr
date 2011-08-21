@@ -36,7 +36,7 @@ wspr:	WsprMod/w.so
 	${FC} ${FFLAGS} -c $<
 
 OS=Linux
-FC=@FC@
+FC=gfortran
 FCV=@FCV@
 FC_LIB_PATH	+= @FC_LIB_PATH@
 
