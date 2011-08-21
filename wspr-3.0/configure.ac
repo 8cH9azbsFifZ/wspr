@@ -1,449 +1,49 @@
-AC_PREREQ(2.61)
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
 
-AC_COPYRIGHT([$Id: configure.ac 1235 2009-05-17 12:28:29Z va3db $])
-# make something to change version in setup.py
+AC_PREREQ([2.67])
+AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_CONFIG_SRCDIR([src/padevsub.c])
+AC_CONFIG_HEADERS([config.h])
 
-AC_INIT([wspr],[3.0])
-fail=0 # FIXME: remove this variable
-
-AC_PREFIX_DEFAULT(/usr/local/)
-AC_SUBST([AC_CONFIG_ARGS], [$ac_configure_args])
-
-AC_CONFIG_AUX_DIR([build-aux])
-
-AC_CANONICAL_BUILD
-AC_CANONICAL_HOST
-AC_CANONICAL_TARGET
-
-AM_INIT_AUTOMAKE([-Wall foreign std-options 1.9.6])
-m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
-AM_MAINTAINER_MODE
-AC_CONFIG_SRCDIR([src])
-AC_CONFIG_FILES([Makefile src/Makefile])
-AC_CONFIG_MACRO_DIR([m4])
-
-OLD_CFLAGS="$CFLAGS"
-
-dnl Checks for programs.
+# Checks for programs.
+AC_PROG_CXX
 AC_PROG_CC
-AC_LANG(C)
-AC_PROG_F77
-AC_USE_SYSTEM_EXTENSIONS
-
-dnl Make sure autoconf doesn't interfere with cflags -jmallett # FIXME: remove this variable
-CFLAGS="$OLD_CFLAGS"
-
-# Check headers
-AC_HEADER_STDC
-AC_HEADER_DIRENT
-#AC_CHECK_HEADERS(klammeraufzu dazwischen x.h y.h)
-
-dnl Lets guess at some likely places for extra libs/includes XXX -db
-# FIXME: path must be adjusted adaptively
-CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
-LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
-LIBS=" -lpthread ${LIBS}"
-FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\
-			-Wall -fbounds-check -fno-second-underscore -fPIC"
-FFLAGS_G95="${FFLAGS} -Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC"
-#-Wall -Wno-precision-loss -fbounds-check -fno-second-underscore -fPIC
-
-AX_CHECK_GFORTRAN
-#AX_CHECK_PORTAUDIO
-AC_WSPR_PKG_CHECK([portaudio], [portaudio-2.0 >= 19], [yes], [yes], [enable support for Portaudio ] ) 
-
-if test "$ac_cv_c_compiler_gnu" = yes; then
-	AC_MSG_CHECKING(if $CC is Apple GCC)
-	
-	if expr "`$CC -v 2>&1 | tail -1`" : ".*Apple" >/dev/null; then
-		AppleGCC=yes
-	else
-		AppleGCC=no
-	fi
-
-	AC_MSG_RESULT($AppleGCC)
-
-	CFLAGS="$CFLAGS -Wall -O0"
-fi
-
-dnl If we support -g, use it!
-if test "$ac_cv_prog_cc_g" = yes; then
-		CFLAGS="$CFLAGS -g"
-fi
-
-dnl jdc -- If CFLAGS is defined, best use it everywhere...
-dnl NOTE: jv says it must be added to the *END*, because things like
-dnl "gcc -O9 -O2" will result in -O2 getting preference.  How stupid.
-if test ! -z "$CFLAGS"; then
-	CFLAGS="$CFLAGS $CFLAGS"
-fi
-
-
-
-AC_ISC_POSIX
-AC_C_INLINE
-AC_PROG_GCC_TRADITIONAL
-AC_PROG_MAKE_SET
+AC_PROG_AWK
 AC_PROG_INSTALL
-AC_PATH_PROG(RM, rm)
-AC_PATH_PROG(CP, cp)
-AC_PATH_PROG(MV, mv)
-AC_PATH_PROG(LN, ln)
-AC_PATH_PROG(SED, sed)
-AC_PATH_PROG(AR, ar)
-AC_PATH_PROG(LD, ld)
-AC_PATH_PROG(TEST, [test], [test])
-AC_PATH_PROG(PYTHON, python)
-AC_PATH_PROG(F2PY, f2py)
-AC_SUBST(VERSION, "${version}")
-AC_MSG_CHECKING([OS])
-OS=`uname`
-AC_SUBST(OS, "${OS}")
+AC_PROG_CPP
+AC_PROG_LN_S
+AC_PROG_MKDIR_P
 
-dnl Checks for header files.
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lfftw3f':
+AC_CHECK_LIB([fftw3f], [main])
+# FIXME: Replace `main' with a function in `-lportaudio':
+AC_CHECK_LIB([portaudio], [main])
+# FIXME: Replace `main' with a function in `-lpthread':
+AC_CHECK_LIB([pthread], [main])
+# FIXME: Replace `main' with a function in `-lsamplerate':
+AC_CHECK_LIB([samplerate], [main])
 
-AC_HEADER_STDC
+# Checks for header files.
+AC_CHECK_HEADERS([fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h])
 
-AC_CHECK_HEADERS([inttypes.h stdint.h sys/resource.h sys/param.h errno.h \
-sys/syslog.h stddef.h libgen.h sys/wait.h wait.h stdio.h termios.h \
-sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h fcntl.h sys/ioctl.h ])
+# Checks for typedefs, structures, and compiler characteristics.
+AC_TYPE_INT16_T
+AC_TYPE_INT32_T
+AC_TYPE_INT64_T
+AC_TYPE_INT8_T
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+AC_TYPE_UINT16_T
+AC_TYPE_UINT32_T
+AC_TYPE_UINT64_T
+AC_TYPE_UINT8_T
 
-AC_HEADER_TIME
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([gettimeofday strchr])
 
-AC_CHECK_HEADER([samplerate.h], [HAS_SAMPLERATE_H=1], [HAS_SAMPLERATE_H=0])
-
-dnl See whether we can include both string.h and strings.h.
-AC_CACHE_CHECK([whether string.h and strings.h may both be included],
-gcc_cv_header_string,
-[
-	AC_COMPILE_IFELSE(
-	[#include <string.h>
-	#include <strings.h>], 
-	[gcc_cv_header_string=yes],
-	[gcc_cv_header_string=no])
-])
-
-if test "$gcc_cv_header_string" = "yes"; then
-	AC_DEFINE(STRING_WITH_STRINGS, 1, [Define to 1 if string.h may be included along with strings.h])
-fi
-
-
-dnl Check for stdarg.h - if we can't find it, halt configure
-AC_CHECK_HEADER(stdarg.h, , [AC_MSG_ERROR([** stdarg.h could not be found - wsjt will not compile without it **])])
-
-dnl Debug-related options
-dnl =====================
-
-AC_ARG_ENABLE(clobber,
-AC_HELP_STRING([--enable-clobber], [Don't preserve old binaries on make install]),
-[clobber=$enableval], [clobber=no])
-
-if test "$clobber" = yes; then
-	AC_SUBST(CLOBBER, yes)
-fi
-
-AC_ARG_ENABLE(assert,
-AC_HELP_STRING([--enable-assert],[Enable assert().]),
-[assert=$enableval], [assert=no])
-
-if test "$assert" = no; then
-	AC_DEFINE(NDEBUG, 1, [Define this to disable debugging support.])
-fi
-
-if test "$prefix" = "NONE"; then 
-	prefix=${ac_default_prefix}
-else
-
-dnl Don't get bitten by Cygwin's stupidity if the user specified
-dnl a custom prefix with a trailing slash
-
-	prefix=`echo $prefix | sed 's/\/$//'`
-	AC_DEFINE_UNQUOTED(PREFIX, "$prefix", [Prefix where wsjt is installed.])
-	
-fi
-
-dnl now set conf.h,, CPPFLAGS and CFLAGS flags as needed
-dnl ====================================================
-
-dnl sanity tests.
-dnl
-echo
-
-if test -z $FC ; then
-	fail=1
-	echo "You need g95 or gfortran to compile this program!"
-fi
-
-if test "$F2PY" = ""; then
-	AC_SUBST(F2PY, "python f2py.py")
-fi
-
-dnl 
-AC_SUBST(PREFIX, "${prefix}")
-AC_SUBST(CPPFLAGS, "${CPPFLAGS}")
-AC_SUBST(LDFLAGS, "${LDFLAGS}")
-AC_SUBST(LIBS, "${LIBS}")
-AC_SUBST(CFLAGS)
-AC_SUBST(FFLAGS)
+AC_CONFIG_FILES([Makefile
+                 src/Makefile])
 AC_OUTPUT
-
-dnl do summary
-
-echo
-echo
-
-echo "portaudio: $HAS_PORTAUDIO (ok?)"
-
-if test $HAS_PORTAUDIO -eq 1; then
-#if test "x$ac_cv_portaudio" = "xyes"; then # NB: x => no empty stuff => no shell error
-	AC_DEFINE(HAS_PORTAUDIO, 1, )
-	AC_DEFINE(HAS_PORTAUDIO_H, 1, )
-	AC_DEFINE(HAS_PORTAUDIO_LIB, 1, )
-else
-	fail=1
-	echo "This program needs portaudio v19 to compile."
-	echo "Please use --with-portaudio-include-dir= and"
-	echo " --with-portaudio-lib-dir= to set the paths."
-fi
-
-dnl
-dnl If fail a pre-requisite then fail
-dnl
-if test $fail -eq 1; then
-	AC_MSG_ERROR([Please check error messages and install missing packages.])
-fi
-
-if test $g95 = "yes"; then
-	echo "Using g95 as fortran compiler.";
-fi
-
-if test $gfortran = "yes"; then
-	echo "Using gfortran as fortran compiler.";
-fi
-
-echo
-
-echo
-echo "Compiling $PACKAGE_NAME $PACKAGE_VERSION"
-echo
-
-echo "Installing into: $prefix"
-
-echo
-dnl {{{ ax_check_gfortran
-AC_DEFUN([AX_CHECK_GFORTRAN],[
-
-AC_ARG_ENABLE(g95,
-AC_HELP_STRING([--enable-g95],[Use G95 compiler if available.]),
-[g95=$enableval], [g95=no])
-
-AC_ARG_ENABLE(gfortran,
-AC_HELP_STRING([--enable-gfortran],[Use gfortran compiler if available.]),
-[gfortran=$enableval], [gfortran=no])
-
-dnl
-dnl Pick up FC from the environment if present
-dnl I'll add a test to confirm this is a gfortran later -db
-dnl
-
-FCV=""
-
-if test -n $[{FC}] ; then
-	gfortran_name_part=`echo $[{FC}] | cut -c 1-8`
-	if test $[{gfortran_name_part}] = "gfortran" ; then
-		gfortran_name=$[{FC}]
-       		FC_LIB_PATH=`$[{FC}] -print-file-name=`
-		g95=no
-		gfortran=yes
-		FFLAGS="$[{FFLAGS_GFORTRAN}]"
-		FCV="gnu95"
-	else
-		unset $[{FC}]
-	fi
-fi
-
-dnl
-dnl Note regarding the apparent silliness with FCV.
-dnl The FCV value for g95 might be system dependent, this is
-dnl still to be fully explored. If not, then the FCV_G95
-dnl stuff can go away. -db
-dnl
-
-AC_MSG_CHECKING([uname -s])
-case `uname -s` in
-	CYGWIN*)
-		AC_MSG_RESULT(Cygwin)
-		CYGWIN=yes
-	;;
-	SunOS*)
-		AC_MSG_RESULT(SunOS or Solaris)
-		AC_DEFINE(__EXTENSIONS__, 1, [This is needed to use strtok_r on Solaris.])
-	;;
-dnl
-dnl Pick up current gfortran from ports infrastructure for fbsd
-dnl
-        FreeBSD*)
-		if test -z $[{gfortran_name}] ; then
-			gfortran_name=`grep FC: /usr/ports/Mk/bsd.gcc.mk | head -1 |awk '{print $[2]}'`
-		fi
-		FCV_G95="g95"
-	;;
-	*)
-		FCV_G95="g95"
-		AC_MSG_RESULT(no)
-	;;
-esac
-
-dnl
-dnl look for gfortran if nothing else was given
-dnl
-
-if test -z $[gfortran_name] ; then
-	gfortran_name="gfortran"
-fi
-
-AC_PATH_PROG(G95, g95)
-AC_PATH_PROG(GFORTRAN, $[{gfortran_name}])
-
-if test ! -z $[{GFORTRAN}] ; then
-	echo "*** gfortran compiler found at $[{GFORTRAN}]"
-	if test "$[{gfortran}]" = yes; then
-       		FC_LIB_PATH=`$[{GFORTRAN}] -print-file-name=`
-		FC=`basename $[{GFORTRAN}]`
-		g95=no
-		FFLAGS="$[{FFLAGS_GFORTRAN}]"
-		FCV="gnu95"
-	fi
-else
-	echo "*** No gfortran compiler found"
-fi
-
-if test ! -z $[{G95}] ; then
-	echo "*** g95 compiler found at $[{G95}]"
-	if test "$[{g95}]" = yes; then
-       		FC_LIB_PATH=`$[{G95}] -print-file-name=`
-		FC=`basename $[{G95}]`
-		gfortran=no
-		FFLAGS="$[{FFLAGS_G95}]"
-		FCV=$[{FCV_G95}]
-	fi
-else
-	echo "*** No g95 compiler found"
-fi
-
-dnl
-dnl if FC is not set by now, pick a compiler for user
-dnl
-if test -z $[{FC}] ; then
-	if test ! -z $[{GFORTRAN}] ; then
-		if test "$[{g95}]" = yes; then
-			echo "You enabled g95, but no g95 compiler found, defaulting to gfortran instead"
-		fi
-       		FC_LIB_PATH=`$[{GFORTRAN}] -print-file-name=`
-	        FC=`basename $[{GFORTRAN}]`
-		g95=no
-		gfortran=yes
-		FFLAGS="$[{FFLAGS_GFORTRAN}]"
-		FCV="gnu95"
-	elif test ! -z $G95 ; then
-		if test "$[{gfortran}]" = yes; then
-			echo "You enabled gfortran, but no gfortran compiler found, defaulting to g95 instead"
-		fi
-       		FC_LIB_PATH=`$[{G95}] -print-file-name=`
-	        FC=`basename $[{G95}]`
-		g95=yes
-		gfortran=no
-		FFLAGS="$[{FFLAGS_G95}]"
-		FCV=$[{FCV_G95}]
-	fi
-fi
-
-AC_DEFINE_UNQUOTED(FC_LIB_PATH, "${FC_LIB_PATH}", [Path to fortran libs.])
-AC_SUBST(FC_LIB_PATH, "${FC_LIB_PATH}")
-AC_DEFINE_UNQUOTED(FC, "${FC}", [Fortran compiler.])
-AC_SUBST(FC, "${FC}")
-AC_SUBST(FCV, "${FCV}")
-
-])dnl }}}
-
-
-dnl {{{ ax_check_portaudio
-AC_DEFUN([AX_CHECK_PORTAUDIO],[
-
-HAS_PORTAUDIO_H=0
-HAS_PORTAUDIO_LIB=0
-HAS_PORTAUDIO=0
-
-AC_MSG_CHECKING([for a v19 portaudio ])
-
-portaudio_lib_dir="/usr/lib"
-portaudio_include_dir="/usr/include"
-
-AC_ARG_WITH([portaudio-include-dir],
-AC_HELP_STRING([--with-portaudio-include-dir=<path>],
-    [path to portaudio include files]),
-    [portaudio_include_dir=$with_portaudio_include_dir])
-
-AC_ARG_WITH([portaudio-lib-dir],
-AC_HELP_STRING([--with-portaudio-lib-dir=<path>],
-    [path to portaudio lib files]),
-    [portaudio_lib_dir=$with_portaudio_lib_dir])
-
-if test -e $[{portaudio_include_dir}]/portaudio.h; then
-	HAS_PORTAUDIO_H=1
-fi
-
-if test -e $[{portaudio_lib_dir}]/libportaudio.so \
-    -o -e $[{portaudio_lib_dir}]/libportaudio.a;then
-	HAS_PORTAUDIO_LIB=1
-fi
-
-if test $[{HAS_PORTAUDIO_H}] -eq 1 -a $[{HAS_PORTAUDIO_LIB}] -eq 1; then
-	LDFLAGS="-L$[{portaudio_lib_dir}] $[{LDFLAGS}]"
-	LIBS="$[{LIBS}] -lportaudio"
-	CPPFLAGS="-I$[{portaudio_include_dir}] $[{CPPFLAGS}]"
-	AC_CHECK_LIB(portaudio, Pa_GetVersion, \
-		[HAS_PORTAUDIO_VERSION=1], [HAS_PORTAUDIO_VERSION=0])
-	if test $[{HAS_PORTAUDIO_VERSION}] -eq 0; then
-		AC_MSG_RESULT([This is likely portaudio v18; you need portaudio v19])
-	else
-		HAS_PORTAUDIO=1
-	fi
-else
-	AC_MSG_RESULT([portaudio not found trying FreeBSD paths ])
-	portaudio_lib_dir="/usr/local/lib/portaudio2"
-	portaudio_include_dir="/usr/local/include/portaudio2"
-dnl
-dnl Try again to make sure portaudio dirs are valid
-dnl
-	AC_MSG_CHECKING([for a v19 portaudio in FreeBSD paths.])
-	HAS_PORTAUDIO_H=0
-	HAS_PORTAUDIO_LIB=0
-
-	if test -e $[{portaudio_include_dir}]/portaudio.h; then
-		HAS_PORTAUDIO_H=1
-	fi
-
-	if test -e $[{portaudio_lib_dir}]/libportaudio.so \
-	    -o -e $[{portaudio_lib_dir}]/libportaudio.a;then
-		HAS_PORTAUDIO_LIB=1
-	fi
-
-	if test $[{HAS_PORTAUDIO_H}] -eq 1 -a $[{HAS_PORTAUDIO_LIB}] -eq 1; then
-		AC_MSG_RESULT([found portaudio in FreeBSD paths, double checking it is v19 ])
-		LDFLAGS="-L$[{portaudio_lib_dir}] $[{LDFLAGS}]"
-		LIBS="$[{LIBS}] -lportaudio"
-		CPPFLAGS="-I$[{portaudio_include_dir}] $[{CPPFLAGS}]"
-		AC_CHECK_LIB(portaudio, Pa_GetVersion, \
-			[HAS_PORTAUDIO_VERSION=1], [HAS_PORTAUDIO_VERSION=0])
-		if test $[{HAS_PORTAUDIO_VERSION}] -eq 0; then
-			AC_MSG_RESULT([How did you end up with a portaudio v18 here?])
-		else
-			AC_MSG_RESULT([found v19])
-			HAS_PORTAUDIO=1
-			HAS_PORTAUDIO_H=1
-		fi
-	fi
-fi
-
-])dnl }}}
