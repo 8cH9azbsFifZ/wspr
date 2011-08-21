@@ -1,6 +1,9 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+/* Define to 1 if you have the <dev/ppbus/ppbconf.h> header file. */
+/* #undef HAVE_DEV_PPBUS_PPBCONF_H */
+
 /* Define to 1 if you have the <dev/ppbus/ppi.h> header file. */
 /* #undef HAVE_DEV_PPBUS_PPI_H */
 
@@ -34,6 +37,9 @@
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
+
+/* Define to 1 if you have the <linux/parport.h> header file. */
+#define HAVE_LINUX_PARPORT_H 1
 
 /* Define to 1 if you have the <linux/ppdev.h> header file. */
 #define HAVE_LINUX_PPDEV_H 1
