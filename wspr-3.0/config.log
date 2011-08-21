@@ -254,55 +254,63 @@ configure:4852: $? = 0
 configure:4860: result: yes
 configure:4885: checking whether make sets $(MAKE)
 configure:4907: result: yes
-configure:4918: checking for rm
-configure:4936: found /bin/rm
-configure:4948: result: /bin/rm
-configure:4958: checking for cp
-configure:4976: found /bin/cp
-configure:4988: result: /bin/cp
-configure:4998: checking for mv
-configure:5016: found /bin/mv
-configure:5028: result: /bin/mv
-configure:5038: checking for ln
-configure:5056: found /bin/ln
-configure:5068: result: /bin/ln
-configure:5078: checking for sed
-configure:5096: found /bin/sed
-configure:5108: result: /bin/sed
-configure:5118: checking for ar
-configure:5136: found /usr/bin/ar
-configure:5148: result: /usr/bin/ar
-configure:5158: checking for ld
-configure:5176: found /usr/bin/ld
-configure:5188: result: /usr/bin/ld
-configure:5198: checking for test
-configure:5216: found /usr/bin/test
-configure:5229: result: /usr/bin/test
-configure:5239: checking for python
-configure:5257: found /usr/bin/python
-configure:5269: result: /usr/bin/python
-configure:5279: checking for f2py
-configure:5297: found /usr/bin/f2py
-configure:5309: result: /usr/bin/f2py
-configure:5319: checking OS
-configure:5329: checking for main in -lfftw3f
-configure:5348: gcc -o conftest -g -O2   conftest.c -lfftw3f   >&5
-configure:5348: $? = 0
-configure:5357: result: yes
-configure:5369: checking for main in -lportaudio
-configure:5388: gcc -o conftest -g -O2   conftest.c -lportaudio  -lfftw3f  >&5
-configure:5388: $? = 0
-configure:5397: result: yes
-configure:5409: checking for main in -lsamplerate
-configure:5428: gcc -o conftest -g -O2   conftest.c -lsamplerate  -lportaudio -lfftw3f  >&5
-configure:5428: $? = 0
-configure:5437: result: yes
-configure:5455: checking how to run the C preprocessor
-configure:5486: gcc -E  conftest.c
+configure:4917: checking for library containing strerror
+configure:4948: gcc -o conftest -g -O2   conftest.c  >&5
+configure:4948: $? = 0
+configure:4965: result: none required
+configure:4973: checking for inline
+configure:4989: gcc -c -g -O2  conftest.c >&5
+configure:4989: $? = 0
+configure:4997: result: inline
+configure:5017: checking for rm
+configure:5035: found /bin/rm
+configure:5047: result: /bin/rm
+configure:5057: checking for cp
+configure:5075: found /bin/cp
+configure:5087: result: /bin/cp
+configure:5097: checking for mv
+configure:5115: found /bin/mv
+configure:5127: result: /bin/mv
+configure:5137: checking for ln
+configure:5155: found /bin/ln
+configure:5167: result: /bin/ln
+configure:5177: checking for sed
+configure:5195: found /bin/sed
+configure:5207: result: /bin/sed
+configure:5217: checking for ar
+configure:5235: found /usr/bin/ar
+configure:5247: result: /usr/bin/ar
+configure:5257: checking for ld
+configure:5275: found /usr/bin/ld
+configure:5287: result: /usr/bin/ld
+configure:5297: checking for test
+configure:5315: found /usr/bin/test
+configure:5328: result: /usr/bin/test
+configure:5338: checking for python
+configure:5356: found /usr/bin/python
+configure:5368: result: /usr/bin/python
+configure:5378: checking for f2py
+configure:5396: found /usr/bin/f2py
+configure:5408: result: /usr/bin/f2py
+configure:5418: checking OS
+configure:5427: checking for main in -lfftw3f
+configure:5446: gcc -o conftest -g -O2   conftest.c -lfftw3f   >&5
+configure:5446: $? = 0
+configure:5455: result: yes
+configure:5467: checking for main in -lportaudio
+configure:5486: gcc -o conftest -g -O2   conftest.c -lportaudio  -lfftw3f  >&5
 configure:5486: $? = 0
-configure:5500: gcc -E  conftest.c
+configure:5495: result: yes
+configure:5507: checking for main in -lsamplerate
+configure:5526: gcc -o conftest -g -O2   conftest.c -lsamplerate  -lportaudio -lfftw3f  >&5
+configure:5526: $? = 0
+configure:5535: result: yes
+configure:5553: checking how to run the C preprocessor
+configure:5584: gcc -E  conftest.c
+configure:5584: $? = 0
+configure:5598: gcc -E  conftest.c
 conftest.c:14:28: error: ac_nonexistent.h: No such file or directory
-configure:5500: $? = 1
+configure:5598: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -318,12 +326,12 @@ configure: failed program was:
 | #define HAVE_LIBSAMPLERATE 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:5525: result: gcc -E
-configure:5545: gcc -E  conftest.c
-configure:5545: $? = 0
-configure:5559: gcc -E  conftest.c
+configure:5623: result: gcc -E
+configure:5643: gcc -E  conftest.c
+configure:5643: $? = 0
+configure:5657: gcc -E  conftest.c
 conftest.c:14:28: error: ac_nonexistent.h: No such file or directory
-configure:5559: $? = 1
+configure:5657: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -339,131 +347,163 @@ configure: failed program was:
 | #define HAVE_LIBSAMPLERATE 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:5588: checking for grep that handles long lines and -e
-configure:5646: result: /bin/grep
-configure:5651: checking for egrep
-configure:5713: result: /bin/grep -E
-configure:5718: checking for ANSI C header files
-configure:5738: gcc -c -g -O2  conftest.c >&5
-configure:5738: $? = 0
-configure:5811: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-configure:5811: $? = 0
-configure:5811: ./conftest
-configure:5811: $? = 0
-configure:5822: result: yes
-configure:5835: checking for sys/types.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for sys/stat.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for stdlib.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for string.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for memory.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for strings.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for inttypes.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for stdint.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5835: checking for unistd.h
-configure:5835: gcc -c -g -O2  conftest.c >&5
-configure:5835: $? = 0
-configure:5835: result: yes
-configure:5850: checking fcntl.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking fcntl.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for fcntl.h
-configure:5850: result: yes
-configure:5850: checking for inttypes.h
-configure:5850: result: yes
-configure:5850: checking limits.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking limits.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for limits.h
-configure:5850: result: yes
-configure:5850: checking stddef.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking stddef.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for stddef.h
-configure:5850: result: yes
-configure:5850: checking for stdint.h
-configure:5850: result: yes
-configure:5850: checking for stdlib.h
-configure:5850: result: yes
-configure:5850: checking for string.h
-configure:5850: result: yes
-configure:5850: checking sys/ioctl.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking sys/ioctl.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for sys/ioctl.h
-configure:5850: result: yes
-configure:5850: checking sys/param.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking sys/param.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for sys/param.h
-configure:5850: result: yes
-configure:5850: checking sys/time.h usability
-configure:5850: gcc -c -g -O2  conftest.c >&5
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking sys/time.h presence
-configure:5850: gcc -E  conftest.c
-configure:5850: $? = 0
-configure:5850: result: yes
-configure:5850: checking for sys/time.h
-configure:5850: result: yes
-configure:5850: checking for unistd.h
-configure:5850: result: yes
-configure:5862: checking for int16_t
-configure:5862: gcc -c -g -O2  conftest.c >&5
-configure:5862: $? = 0
-configure:5862: gcc -c -g -O2  conftest.c >&5
+configure:5686: checking for grep that handles long lines and -e
+configure:5744: result: /bin/grep
+configure:5749: checking for egrep
+configure:5811: result: /bin/grep -E
+configure:5816: checking for ANSI C header files
+configure:5836: gcc -c -g -O2  conftest.c >&5
+configure:5836: $? = 0
+configure:5909: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+configure:5909: $? = 0
+configure:5909: ./conftest
+configure:5909: $? = 0
+configure:5920: result: yes
+configure:5931: checking for dirent.h that defines DIR
+configure:5950: gcc -c -g -O2  conftest.c >&5
+configure:5950: $? = 0
+configure:5958: result: yes
+configure:5971: checking for library containing opendir
+configure:6002: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6002: $? = 0
+configure:6019: result: none required
+configure:6086: checking whether time.h and sys/time.h may both be included
+configure:6106: gcc -c -g -O2  conftest.c >&5
+configure:6106: $? = 0
+configure:6113: result: yes
+configure:6126: checking for sys/types.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for sys/stat.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for stdlib.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for string.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for memory.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for strings.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for inttypes.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for stdint.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6126: checking for unistd.h
+configure:6126: gcc -c -g -O2  conftest.c >&5
+configure:6126: $? = 0
+configure:6126: result: yes
+configure:6138: checking samplerate.h usability
+configure:6138: gcc -c -g -O2  conftest.c >&5
+configure:6138: $? = 0
+configure:6138: result: yes
+configure:6138: checking samplerate.h presence
+configure:6138: gcc -E  conftest.c
+configure:6138: $? = 0
+configure:6138: result: yes
+configure:6138: checking for samplerate.h
+configure:6138: result: yes
+configure:6149: checking stdarg.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking stdarg.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for stdarg.h
+configure:6149: result: yes
+configure:6149: checking fcntl.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking fcntl.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for fcntl.h
+configure:6149: result: yes
+configure:6149: checking for inttypes.h
+configure:6149: result: yes
+configure:6149: checking limits.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking limits.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for limits.h
+configure:6149: result: yes
+configure:6149: checking stddef.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking stddef.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for stddef.h
+configure:6149: result: yes
+configure:6149: checking for stdint.h
+configure:6149: result: yes
+configure:6149: checking for stdlib.h
+configure:6149: result: yes
+configure:6149: checking for string.h
+configure:6149: result: yes
+configure:6149: checking sys/ioctl.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking sys/ioctl.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for sys/ioctl.h
+configure:6149: result: yes
+configure:6149: checking sys/param.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking sys/param.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for sys/param.h
+configure:6149: result: yes
+configure:6149: checking sys/time.h usability
+configure:6149: gcc -c -g -O2  conftest.c >&5
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking sys/time.h presence
+configure:6149: gcc -E  conftest.c
+configure:6149: $? = 0
+configure:6149: result: yes
+configure:6149: checking for sys/time.h
+configure:6149: result: yes
+configure:6149: checking for unistd.h
+configure:6149: result: yes
+configure:6161: checking for int16_t
+configure:6161: gcc -c -g -O2  conftest.c >&5
+configure:6161: $? = 0
+configure:6161: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: error: size of array 'test_array' is negative
-configure:5862: $? = 1
+conftest.c:76: error: size of array 'test_array' is negative
+configure:6161: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -478,6 +518,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -487,6 +529,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -543,15 +586,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5862: result: yes
-configure:5873: checking for int32_t
-configure:5873: gcc -c -g -O2  conftest.c >&5
-configure:5873: $? = 0
-configure:5873: gcc -c -g -O2  conftest.c >&5
+configure:6161: result: yes
+configure:6172: checking for int32_t
+configure:6172: gcc -c -g -O2  conftest.c >&5
+configure:6172: $? = 0
+configure:6172: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: warning: integer overflow in expression
-conftest.c:73: error: size of array 'test_array' is negative
-configure:5873: $? = 1
+conftest.c:76: warning: integer overflow in expression
+conftest.c:76: error: size of array 'test_array' is negative
+configure:6172: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -566,6 +609,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -575,6 +620,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -631,15 +677,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5873: result: yes
-configure:5884: checking for int64_t
-configure:5884: gcc -c -g -O2  conftest.c >&5
-configure:5884: $? = 0
-configure:5884: gcc -c -g -O2  conftest.c >&5
+configure:6172: result: yes
+configure:6183: checking for int64_t
+configure:6183: gcc -c -g -O2  conftest.c >&5
+configure:6183: $? = 0
+configure:6183: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: warning: integer overflow in expression
-conftest.c:73: error: size of array 'test_array' is negative
-configure:5884: $? = 1
+conftest.c:76: warning: integer overflow in expression
+conftest.c:76: error: size of array 'test_array' is negative
+configure:6183: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -654,6 +700,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -663,6 +711,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -719,14 +768,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5884: result: yes
-configure:5895: checking for int8_t
-configure:5895: gcc -c -g -O2  conftest.c >&5
-configure:5895: $? = 0
-configure:5895: gcc -c -g -O2  conftest.c >&5
+configure:6183: result: yes
+configure:6194: checking for int8_t
+configure:6194: gcc -c -g -O2  conftest.c >&5
+configure:6194: $? = 0
+configure:6194: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: error: size of array 'test_array' is negative
-configure:5895: $? = 1
+conftest.c:76: error: size of array 'test_array' is negative
+configure:6194: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -741,6 +790,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -750,6 +801,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -806,14 +858,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5895: result: yes
-configure:5906: checking for pid_t
-configure:5906: gcc -c -g -O2  conftest.c >&5
-configure:5906: $? = 0
-configure:5906: gcc -c -g -O2  conftest.c >&5
+configure:6194: result: yes
+configure:6205: checking for pid_t
+configure:6205: gcc -c -g -O2  conftest.c >&5
+configure:6205: $? = 0
+configure:6205: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:71: error: expected expression before ')' token
-configure:5906: $? = 1
+conftest.c:74: error: expected expression before ')' token
+configure:6205: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -828,6 +880,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -837,6 +891,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -890,14 +945,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5906: result: yes
-configure:5917: checking for size_t
-configure:5917: gcc -c -g -O2  conftest.c >&5
-configure:5917: $? = 0
-configure:5917: gcc -c -g -O2  conftest.c >&5
+configure:6205: result: yes
+configure:6216: checking for size_t
+configure:6216: gcc -c -g -O2  conftest.c >&5
+configure:6216: $? = 0
+configure:6216: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:71: error: expected expression before ')' token
-configure:5917: $? = 1
+conftest.c:74: error: expected expression before ')' token
+configure:6216: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -912,6 +967,8 @@ configure: failed program was:
 | #define HAVE_LIBPORTAUDIO 1
 | #define HAVE_LIBSAMPLERATE 1
 | #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
 | #define HAVE_STDLIB_H 1
@@ -921,6 +978,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_LIMITS_H 1
@@ -974,41 +1032,41 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5917: result: yes
-configure:5928: checking for uint16_t
-configure:5928: gcc -c -g -O2  conftest.c >&5
-configure:5928: $? = 0
-configure:5928: result: yes
-configure:5940: checking for uint32_t
-configure:5940: gcc -c -g -O2  conftest.c >&5
-configure:5940: $? = 0
-configure:5940: result: yes
-configure:5954: checking for uint64_t
-configure:5954: gcc -c -g -O2  conftest.c >&5
-configure:5954: $? = 0
-configure:5954: result: yes
-configure:5968: checking for uint8_t
-configure:5968: gcc -c -g -O2  conftest.c >&5
-configure:5968: $? = 0
-configure:5968: result: yes
-configure:5986: checking for stdlib.h
-configure:5986: result: yes
-configure:5996: checking for GNU libc compatible malloc
-configure:6020: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6020: $? = 0
-configure:6020: ./conftest
-configure:6020: $? = 0
-configure:6030: result: yes
-configure:6054: checking for gettimeofday
-configure:6054: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6054: $? = 0
-configure:6054: result: yes
-configure:6054: checking for strchr
-configure:6054: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
-conftest.c:61: warning: conflicting types for built-in function 'strchr'
-configure:6054: $? = 0
-configure:6054: result: yes
-configure:6189: creating ./config.status
+configure:6216: result: yes
+configure:6227: checking for uint16_t
+configure:6227: gcc -c -g -O2  conftest.c >&5
+configure:6227: $? = 0
+configure:6227: result: yes
+configure:6239: checking for uint32_t
+configure:6239: gcc -c -g -O2  conftest.c >&5
+configure:6239: $? = 0
+configure:6239: result: yes
+configure:6253: checking for uint64_t
+configure:6253: gcc -c -g -O2  conftest.c >&5
+configure:6253: $? = 0
+configure:6253: result: yes
+configure:6267: checking for uint8_t
+configure:6267: gcc -c -g -O2  conftest.c >&5
+configure:6267: $? = 0
+configure:6267: result: yes
+configure:6285: checking for stdlib.h
+configure:6285: result: yes
+configure:6295: checking for GNU libc compatible malloc
+configure:6319: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6319: $? = 0
+configure:6319: ./conftest
+configure:6319: $? = 0
+configure:6329: result: yes
+configure:6353: checking for gettimeofday
+configure:6353: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6353: $? = 0
+configure:6353: result: yes
+configure:6353: checking for strchr
+configure:6353: gcc -o conftest -g -O2   conftest.c -lsamplerate -lportaudio -lfftw3f  >&5
+conftest.c:64: warning: conflicting types for built-in function 'strchr'
+configure:6353: $? = 0
+configure:6353: result: yes
+configure:6488: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1025,11 +1083,11 @@ generated by GNU Autoconf 2.67.  Invocation command line was
 
 on debian
 
-config.status:913: creating Makefile
-config.status:913: creating src/Makefile
-config.status:913: creating config.h
-config.status:1093: config.h is unchanged
-config.status:1141: executing depfiles commands
+config.status:916: creating Makefile
+config.status:916: creating src/Makefile
+config.status:916: creating config.h
+config.status:1096: config.h is unchanged
+config.status:1144: executing depfiles commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1037,6 +1095,7 @@ config.status:1141: executing depfiles commands
 
 ac_cv_build=i686-pc-linux-gnu
 ac_cv_c_compiler_gnu=yes
+ac_cv_c_inline=inline
 ac_cv_c_int16_t=yes
 ac_cv_c_int32_t=yes
 ac_cv_c_int64_t=yes
@@ -1083,10 +1142,13 @@ ac_cv_fc_compiler_gnu=yes
 ac_cv_func_gettimeofday=yes
 ac_cv_func_malloc_0_nonnull=yes
 ac_cv_func_strchr=yes
+ac_cv_header_dirent_dirent_h=yes
 ac_cv_header_fcntl_h=yes
 ac_cv_header_inttypes_h=yes
 ac_cv_header_limits_h=yes
 ac_cv_header_memory_h=yes
+ac_cv_header_samplerate_h=yes
+ac_cv_header_stdarg_h=yes
 ac_cv_header_stdc=yes
 ac_cv_header_stddef_h=yes
 ac_cv_header_stdint_h=yes
@@ -1098,6 +1160,7 @@ ac_cv_header_sys_param_h=yes
 ac_cv_header_sys_stat_h=yes
 ac_cv_header_sys_time_h=yes
 ac_cv_header_sys_types_h=yes
+ac_cv_header_time=yes
 ac_cv_header_unistd_h=yes
 ac_cv_host=i686-pc-linux-gnu
 ac_cv_lib_fftw3f_main=yes
@@ -1130,6 +1193,8 @@ ac_cv_prog_cxx_g=yes
 ac_cv_prog_f77_g=yes
 ac_cv_prog_fc_g=yes
 ac_cv_prog_make_make_set=yes
+ac_cv_search_opendir='none required'
+ac_cv_search_strerror='none required'
 ac_cv_target=i686-pc-linux-gnu
 ac_cv_type_pid_t=yes
 ac_cv_type_size_t=yes
@@ -1280,6 +1345,8 @@ target_vendor='pc'
 #define HAVE_LIBPORTAUDIO 1
 #define HAVE_LIBSAMPLERATE 1
 #define STDC_HEADERS 1
+#define HAVE_DIRENT_H 1
+#define TIME_WITH_SYS_TIME 1
 #define HAVE_SYS_TYPES_H 1
 #define HAVE_SYS_STAT_H 1
 #define HAVE_STDLIB_H 1
@@ -1289,6 +1356,7 @@ target_vendor='pc'
 #define HAVE_INTTYPES_H 1
 #define HAVE_STDINT_H 1
 #define HAVE_UNISTD_H 1
+#define HAVE_STDARG_H 1
 #define HAVE_FCNTL_H 1
 #define HAVE_INTTYPES_H 1
 #define HAVE_LIMITS_H 1

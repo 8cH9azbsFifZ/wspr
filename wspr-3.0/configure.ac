@@ -57,7 +57,7 @@ AC_HEADER_STDC
 AC_HEADER_DIRENT
 AC_HEADER_TIME
 AC_CHECK_HEADER([samplerate.h], [HAS_SAMPLERATE_H=1], [HAS_SAMPLERATE_H=0])
-AC_CHECK_HEADERS([stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h])
+AC_CHECK_HEADERS([stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h ])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_INT16_T
@@ -71,10 +71,19 @@ AC_TYPE_UINT32_T
 AC_TYPE_UINT64_T
 AC_TYPE_UINT8_T
 
+AC_SUBST(PREFIX, "${prefix}")
+AC_SUBST(CPPFLAGS, "${CPPFLAGS}")
+AC_SUBST(LDFLAGS, "${LDFLAGS}")
+AC_SUBST(LIBS, "${LIBS}")
+AC_SUBST(CFLAGS)
+AC_SUBST(FFLAGS)
+
 # Checks for library functions.
 AC_FUNC_MALLOC
 AC_CHECK_FUNCS([gettimeofday strchr])
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile])
+
+
 AC_OUTPUT
