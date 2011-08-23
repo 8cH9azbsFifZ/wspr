@@ -1,7 +1,7 @@
 To compile wspr you will need:
 * libfftw
 * portaudio
-* gfortran
+* gfortran or g95
 * matplotlib
 * scipy
 * pymc ??
@@ -9,7 +9,7 @@ To compile wspr you will need:
 * ipython ??
 * nose ??
 * DateUtils
-* numpy ??
+* numpy (f2py)
 * python imaging
 * libsamplerate
 * hamlib
@@ -18,5 +18,10 @@ To compile wspr you will need:
 MAC OSX
 =======
 * Install xcode (1)
+* Install portaudio (2)
+* Install gfortran (or g95)
+* Install Fortran2Python
+ sudo port install py-numpy
 
 (1) http://developer.apple.com/support/mac/tools
+(2) http://www.portaudio.com/download.html

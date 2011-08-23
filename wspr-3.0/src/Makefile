@@ -10,7 +10,7 @@ LDFLAGS	= -L/usr/local/lib
 LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  
 CPPFLAGS = -I../ -I/usr/local/include 
 CFLAGS	= -I../ -I/usr/local/include -g -O2
-PREFIX	= /usr
+PREFIX	= /usr/local
 # ${CFLAGS}# WSPR specific C flags
 CFLAGS	+= -DBIGSYM=1 -fPIC
 DEFS = -DHAVE_CONFIG_H
@@ -40,7 +40,7 @@ wspr:	WsprMod/w.so
 
 OS=Linux
 FC=gfortran
-FC_LIB_PATH	+= @FC_LIB_PATH@
+FC_LIB_PATH	+= 
 
 LDFLAGS	+= -L${FC_LIB_PATH}
 
