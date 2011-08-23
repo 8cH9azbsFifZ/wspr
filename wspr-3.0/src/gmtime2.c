@@ -22,8 +22,12 @@ typedef struct _SYSTEMTIME
 #ifdef Win32
 extern void __stdcall GetSystemTime(SYSTEMTIME *st);
 #else
-#include <sys/time.h>
-#include <time.h>
+# ifdef HAVE_SYS_TIME_H
+#  include <sys/time.h>
+# endif
+# ifdef HAVE_TIME_H
+#  include <time.h>
+# endif
 
 void GetSystemTime(SYSTEMTIME *st){
   struct timeval tmptimeofday;
