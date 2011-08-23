@@ -101,6 +101,7 @@ WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	${CPPFLAGS} ${LDFLAGS} ${LIBS} \
 	only: $(F2PYONLY) : \
 	$(SRCS2F90) $(SRCS2F77) $(SRCS2C)
+	${MKDIR} -p WsprMod
 	${MV} w.so WsprMod/w.so
 
 fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
