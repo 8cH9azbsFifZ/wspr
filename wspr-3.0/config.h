@@ -125,6 +125,9 @@
 /* Define to 1 if you have the <wait.h> header file. */
 #define HAVE_WAIT_H 1
 
+/* Define to 1 if you have the <windows.h> header file. */
+/* #undef HAVE_WINDOWS_H */
+
 /* Name of package */
 #define PACKAGE "wspr"
 

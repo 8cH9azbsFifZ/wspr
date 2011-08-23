@@ -427,6 +427,107 @@ configure:6150: $? = 0
 configure:6150: result: yes
 configure:6150: checking for pthread.h
 configure:6150: result: yes
+configure:6150: checking windows.h usability
+configure:6150: gcc -c -g -O2  conftest.c >&5
+conftest.c:60:21: error: windows.h: No such file or directory
+configure:6150: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "wspr"
+| #define PACKAGE_TARNAME "wspr"
+| #define PACKAGE_VERSION "3.0"
+| #define PACKAGE_STRING "wspr 3.0"
+| #define PACKAGE_BUGREPORT "BUG-REPORT-ADDRESS"
+| #define PACKAGE_URL ""
+| #define PACKAGE "wspr"
+| #define VERSION "3.0"
+| #define HAVE_LIBFFTW3F 1
+| #define HAVE_LIBPORTAUDIO 1
+| #define HAVE_LIBSAMPLERATE 1
+| #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_PTHREAD_H 1
+| /* end confdefs.h.  */
+| #include <stdio.h>
+| #ifdef HAVE_SYS_TYPES_H
+| # include <sys/types.h>
+| #endif
+| #ifdef HAVE_SYS_STAT_H
+| # include <sys/stat.h>
+| #endif
+| #ifdef STDC_HEADERS
+| # include <stdlib.h>
+| # include <stddef.h>
+| #else
+| # ifdef HAVE_STDLIB_H
+| #  include <stdlib.h>
+| # endif
+| #endif
+| #ifdef HAVE_STRING_H
+| # if !defined STDC_HEADERS && defined HAVE_MEMORY_H
+| #  include <memory.h>
+| # endif
+| # include <string.h>
+| #endif
+| #ifdef HAVE_STRINGS_H
+| # include <strings.h>
+| #endif
+| #ifdef HAVE_INTTYPES_H
+| # include <inttypes.h>
+| #endif
+| #ifdef HAVE_STDINT_H
+| # include <stdint.h>
+| #endif
+| #ifdef HAVE_UNISTD_H
+| # include <unistd.h>
+| #endif
+| #include <windows.h>
+configure:6150: result: no
+configure:6150: checking windows.h presence
+configure:6150: gcc -E  conftest.c
+conftest.c:27:21: error: windows.h: No such file or directory
+configure:6150: $? = 1
+configure: failed program was:
+| /* confdefs.h */
+| #define PACKAGE_NAME "wspr"
+| #define PACKAGE_TARNAME "wspr"
+| #define PACKAGE_VERSION "3.0"
+| #define PACKAGE_STRING "wspr 3.0"
+| #define PACKAGE_BUGREPORT "BUG-REPORT-ADDRESS"
+| #define PACKAGE_URL ""
+| #define PACKAGE "wspr"
+| #define VERSION "3.0"
+| #define HAVE_LIBFFTW3F 1
+| #define HAVE_LIBPORTAUDIO 1
+| #define HAVE_LIBSAMPLERATE 1
+| #define STDC_HEADERS 1
+| #define HAVE_DIRENT_H 1
+| #define TIME_WITH_SYS_TIME 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_PTHREAD_H 1
+| /* end confdefs.h.  */
+| #include <windows.h>
+configure:6150: result: no
+configure:6150: checking for windows.h
+configure:6150: result: no
 configure:6150: checking stdio.h usability
 configure:6150: gcc -c -g -O2  conftest.c >&5
 configure:6150: $? = 0
@@ -1598,7 +1699,6 @@ on debian
 config.status:933: creating Makefile
 config.status:933: creating src/Makefile
 config.status:933: creating config.h
-config.status:1113: config.h is unchanged
 config.status:1161: executing depfiles commands
 
 ## ---------------- ##
@@ -1688,6 +1788,7 @@ ac_cv_header_time=yes
 ac_cv_header_time_h=yes
 ac_cv_header_unistd_h=yes
 ac_cv_header_wait_h=yes
+ac_cv_header_windows_h=no
 ac_cv_host=i686-pc-linux-gnu
 ac_cv_lib_fftw3f_main=yes
 ac_cv_lib_portaudio_main=yes
