@@ -41,6 +41,7 @@ AC_PATH_PROG(LD, ld)
 AC_PATH_PROG(TEST, [test], [test])
 AC_PATH_PROG(PYTHON, python)
 AC_PATH_PROG(F2PY, f2py)
+AC_SUBST(NAME, "${name}")
 AC_SUBST(VERSION, "${version}")
 AC_MSG_CHECKING([OS])
 OS=`uname`
