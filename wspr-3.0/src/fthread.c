@@ -5,9 +5,15 @@
 *
 * Adapted from code by V. Ganesh
 */
-#include <stdio.h>
-#include <pthread.h>
-#include <stdlib.h>
+#if HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#if HAVE_PTHREAD_H
+# include <pthread.h>
+#endif
+#if HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
 
 // Create a new fortran thread through a subroutine.
 void fthread_create_(void *(*thread_func)(void *), pthread_t *theThread) 
