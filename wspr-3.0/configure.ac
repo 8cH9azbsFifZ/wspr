@@ -96,7 +96,7 @@ AC_SUBST(FFLAGS)
 AC_FUNC_MALLOC
 AC_CHECK_FUNCS([gettimeofday strchr])
 
-AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([src/setup.py], [chmod +x src/setup.py])
 
 AC_OUTPUT
