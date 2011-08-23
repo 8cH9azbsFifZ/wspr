@@ -604,7 +604,6 @@ EGREP
 GREP
 CPP
 OS
-NAME
 F2PY
 PYTHON
 TEST
@@ -5415,8 +5414,6 @@ $as_echo "no" >&6; }
 fi
 
 
-NAME="${name}"
-
 VERSION="${version}"
 
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking OS" >&5
@@ -6294,6 +6291,13 @@ _ACEOF
   esac
 
 
+if test "x$prefix" = "xNONE" ; then
+  prefix="/usr/local"
+fi
+if test "x$exec_prefix" = "xNONE" ; then
+  exec_prefix=$prefix
+fi
+PREFIX=$prefix
 
 
 
