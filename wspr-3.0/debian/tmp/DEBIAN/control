@@ -1,0 +1,17 @@
+Package: wspr
+Version: 3.0-0
+Architecture: i386
+Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Installed-Size: 28
+Depends: libfftw3-3, libportaudio2, python-tk, python-imaging-tk, python-numpy
+Recommends: libhamlib-utils
+Section: hamradio
+Priority: extra
+Homepage: http://physics.princeton.edu/pulsar/K1JT/
+Description: Weak Signal Propagation Reporter
+ WSPR (pronounced "whisper") stands for "Weak Signal Propagation Reporter."
+ This program is designed for sending and receiving low-power transmissions
+ to test propagation paths on the MF and HF bands.  Users with internet access
+ can watch results in real time at WSPRnet.  Version 2.11 of WSPR includes FMT,
+ a package of command-line utilities that can help you make highly accurate
+ frequency measurements without expensive laboratory equipment.

@@ -7,6 +7,7 @@ Build-Depends: libfftw3-dev, portaudio19-dev, debhelper (>= 7.0.50), libsamplera
 
 Package: wspr
 Depends: libfftw3-3, libportaudio2, python-tk, python-imaging-tk, python-numpy
+Recommends: libhamlib-utils 
 Architecture: any
 Description: Weak Signal Propagation Reporter
  WSPR (pronounced "whisper") stands for "Weak Signal Propagation Reporter." 
