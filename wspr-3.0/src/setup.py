@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-version = "WSPR Version " + "2.00" + ", by K1JT"
+version = "3.0"
 
 from distutils.core import setup
 from distutils.file_util import copy_file

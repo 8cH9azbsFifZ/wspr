@@ -37,10 +37,10 @@ target_triplet = i686-pc-linux-gnu
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-	$(top_srcdir)/configure $(top_srcdir)/src/Makefile.in AUTHORS \
-	COPYING ChangeLog INSTALL NEWS build-aux/config.guess \
-	build-aux/config.sub build-aux/install-sh build-aux/missing \
-	install-sh
+	$(top_srcdir)/configure $(top_srcdir)/src/Makefile.in \
+	$(top_srcdir)/src/setup.py.in AUTHORS COPYING ChangeLog \
+	INSTALL NEWS build-aux/config.guess build-aux/config.sub \
+	build-aux/install-sh build-aux/missing install-sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -49,7 +49,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = src/Makefile
+CONFIG_CLEAN_FILES = src/Makefile src/setup.py
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
@@ -289,6 +289,8 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 distclean-hdr:
 	-rm -f config.h stamp-h1
 src/Makefile: $(top_builddir)/config.status $(top_srcdir)/src/Makefile.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
+src/setup.py: $(top_builddir)/config.status $(top_srcdir)/src/setup.py.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 # This directory's subdirectories are mostly independent; you can cd

@@ -707,8 +707,8 @@ m4trace:configure.ac:97: -1- AH_OUTPUT([HAVE_GETTIMEOFDAY], [/* Define to 1 if y
 @%:@undef HAVE_GETTIMEOFDAY])
 m4trace:configure.ac:97: -1- AH_OUTPUT([HAVE_STRCHR], [/* Define to 1 if you have the `strchr\' function. */
 @%:@undef HAVE_STRCHR])
-m4trace:configure.ac:99: -1- AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+m4trace:configure.ac:99: -1- AC_CONFIG_FILES([Makefile src/Makefile])
+m4trace:configure.ac:100: -1- AC_CONFIG_FILES([src/setup.py], [chmod +x src/setup.py])
 m4trace:configure.ac:102: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
 m4trace:configure.ac:102: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
 m4trace:configure.ac:102: -1- m4_pattern_allow([^LIB@&t@OBJS$])

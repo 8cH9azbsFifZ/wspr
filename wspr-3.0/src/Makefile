@@ -140,8 +140,12 @@ wwv:    $(OBJS6)
 
 install: WsprMod/w.so
 	${RM} -rf build/
-	${PYTHON} setup.py install
+	${PYTHON} setup.py install --prefix=${PREFI}}
 	${INSTALL} wspr ${PREFIX}/bin
+
+#uninstall:
+# FIXME: implement
+#	rm -rf `./setup.py packagedir`
 
 .PHONY : clean
 clean:

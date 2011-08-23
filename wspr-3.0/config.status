@@ -404,7 +404,7 @@ on `(hostname || uname -n) 2>/dev/null | sed 1q`
 "
 
 # Files that config.status was made for.
-config_files=" Makefile src/Makefile"
+config_files=" Makefile src/Makefile src/setup.py"
 config_headers=" config.h"
 config_commands=" depfiles"
 
@@ -561,6 +561,7 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+    "src/setup.py") CONFIG_FILES="$CONFIG_FILES src/setup.py" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5 ;;
   esac
@@ -1260,6 +1261,7 @@ $as_echo X"$file" |
   done
 }
  ;;
+    "src/setup.py":F) chmod +x src/setup.py ;;
 
   esac
 done # for ac_tag
