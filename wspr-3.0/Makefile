@@ -15,6 +15,9 @@
 
 
 
+#ACLOCAL_AMFLAGS = -I m4 -I m4/intl
+#AC_CONFIG_MACRO_DIR([m4])
+
 pkgdatadir = $(datadir)/wspr
 pkgincludedir = $(includedir)/wspr
 pkglibdir = $(libdir)/wspr
@@ -31,9 +34,9 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i486-pc-linux-gnu
-host_triplet = i486-pc-linux-gnu
-target_triplet = i486-pc-linux-gnu
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
+target_triplet = i686-pc-linux-gnu
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
@@ -111,7 +114,7 @@ GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run aclocal-1.11
-AC_CONFIG_ARGS =  '--build=i486-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--libexecdir=${prefix}/lib/wspr' '--disable-maintainer-mode' '--disable-dependency-tracking' 'build_alias=i486-linux-gnu' 'CXXFLAGS=-g -O2' 'LDFLAGS=' 'CPPFLAGS=' 'CFLAGS=-g -O2' 'FFLAGS=-g -O2'
+AC_CONFIG_ARGS = 
 AMTAR = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run tar
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
@@ -167,7 +170,7 @@ PACKAGE_TARNAME = wspr
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.0
 PATH_SEPARATOR = :
-PREFIX = /usr
+PREFIX = /usr/local
 PYTHON = /usr/bin/python
 RM = /bin/rm
 RMDIR = /bin/rmdir
@@ -191,9 +194,9 @@ am__quote =
 am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
 bindir = ${exec_prefix}/bin
-build = i486-pc-linux-gnu
-build_alias = i486-linux-gnu
-build_cpu = i486
+build = i686-pc-linux-gnu
+build_alias = 
+build_cpu = i686
 build_os = linux-gnu
 build_vendor = pc
 builddir = .
@@ -201,34 +204,34 @@ datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
-exec_prefix = /usr
-host = i486-pc-linux-gnu
+exec_prefix = /usr/local
+host = i686-pc-linux-gnu
 host_alias = 
-host_cpu = i486
+host_cpu = i686
 host_os = linux-gnu
 host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
-infodir = ${prefix}/share/info
+infodir = ${datarootdir}/info
 install_sh = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/install-sh
 libdir = ${exec_prefix}/lib
-libexecdir = ${prefix}/lib/wspr
+libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
-localstatedir = /var
-mandir = ${prefix}/share/man
+localstatedir = ${prefix}/var
+mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
-sysconfdir = /etc
-target = i486-pc-linux-gnu
+sysconfdir = ${prefix}/etc
+target = i686-pc-linux-gnu
 target_alias = 
-target_cpu = i486
+target_cpu = i686
 target_os = linux-gnu
 target_vendor = pc
 top_build_prefix = 
@@ -722,9 +725,6 @@ uninstall-am:
 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
 	pdf-am ps ps-am tags tags-recursive uninstall uninstall-am
 
-
-#ACLOCAL_AMFLAGS = -I m4 -I m4/intl
-AC_CONFIG_MACRO_DIR([m4])
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
