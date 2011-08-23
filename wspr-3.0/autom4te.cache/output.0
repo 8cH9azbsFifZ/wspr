@@ -6144,7 +6144,7 @@ else
 fi
 
 
-for ac_header in stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h
+for ac_header in pthread.h stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h
 do :
   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"

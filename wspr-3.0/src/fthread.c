@@ -5,6 +5,8 @@
 *
 * Adapted from code by V. Ganesh
 */
+#include "config.h"
+
 #if HAVE_STDIO_H
 # include <stdio.h>
 #endif
