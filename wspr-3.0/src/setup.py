@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+from distutils.core import setup
+from distutils.file_util import copy_file
+import os
+
+version = "wspr 3.0"
+
+if __name__ == '__main__':
+	import sys
+	setup(name='Wspr',
+	version=version,
+	description='Wspr Python Module for Weak Signal detection',
+	long_description='''
+WSPR is a computer program designed to facilitate Amateur Radio
+communication under extreme weak-signal conditions. 
+''',
+	author='Joe Taylor',
+	author_email='joe@Princeton.EDU',
+	license='GPL',
+	url='http://physics.princeton.edu/pulsar/K1JT',
+	scripts=['wspr.py'],
+	      packages=['WsprMod'],
+	)
+
