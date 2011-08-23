@@ -148,9 +148,12 @@ wwv:    $(OBJS6)
 install: WsprMod/w.so
 	${RM} -rf build/*
 	${PYTHON} setup.py install --record setup.py.files.log --prefix=${PREFIX}/
+	${INSTALL} WsprMod/w.so `find ${PREFIX} -name WsprMod -type d`
+	# FIXME: dirty hack -> fix this in setup.py.in
 	${INSTALL} wspr ${PREFIX}/bin
 
 uninstall:
+	${RM} `find ${PREFIX} -name WsprMod -type d`/w.so
 	${RM} -rf `cat setup.py.files.log`
 	${RM} ${PREFIX}/bin/wspr
 
