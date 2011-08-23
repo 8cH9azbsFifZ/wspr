@@ -35,7 +35,9 @@ on 1 byte), but shoehorning those bytes into integers efficiently is messy.
 */
 #define SELF_TEST 1
 
-#include "config.h"
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
 
 #ifdef HAVE_STDIO_H
 # include <stdio.h>      /* defines printf for tests */

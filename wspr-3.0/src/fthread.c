@@ -5,7 +5,10 @@
 *
 * Adapted from code by V. Ganesh
 */
-#include "config.h"
+
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
 
 #if HAVE_STDIO_H
 # include <stdio.h>
