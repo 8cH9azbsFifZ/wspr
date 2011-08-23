@@ -1,7 +1,9 @@
-MV ?= mv
-CP ?= mv
-MKDIR ?= mkdir
-INSTALL=	install
+MV ?= /bin/mv
+CP ?= /bin/cp
+RM	?= /bin/rm
+RM	?= /bin/rmdir
+MKDIR ?= /bin/mkdir
+INSTALLi ?= /usr/bin/install -c
 CC ?= gcc
 FFLAGS	= -g -O2
 LDFLAGS	= -L/usr/local/lib 
@@ -43,7 +45,6 @@ FC_LIB_PATH	+= @FC_LIB_PATH@
 LDFLAGS	+= -L${FC_LIB_PATH}
 
 PYTHON	?= /usr/bin/python
-RM	?= /bin/rm
 F2PY	= /usr/bin/f2py
 
 OBJS1 = wspr0.o wspr0_tx.o sound.o ptt_unix.o gmtime2.o wfile5.o \
@@ -151,6 +152,7 @@ install: WsprMod/w.so
 
 uninstall:
 	${RM} -rf `cat setup.py.files.log`
+	${RM} ${PREFIX}/bin/wspr
 
 
 .PHONY : clean
@@ -161,4 +163,4 @@ clean:
 	${RM} -rf build/*
 
 distclean:
-	${RM} -f config.log config.status Makefile
+	${RM} -f config.log config.status Makefile setup.py.files.log
