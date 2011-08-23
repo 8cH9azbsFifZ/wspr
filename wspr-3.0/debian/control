@@ -1,10 +1,10 @@
 Package: wspr
 Version: 3.0
 Essential: no
-Priority: standard
-Section: FIXME 
+Priority: extra 
+Section: hamradio 
 Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
-Homepage: FIXME
-Architecture: all
-Description: FIXME
- FIXME 
+Homepage: http://physics.princeton.edu/pulsar/K1JT/
+Architecture: any
+Description: Weak Signal Propagation Reporter
+ WSPR (pronounced "whisper") stands for "Weak Signal Propagation Reporter." This program is designed for sending and receiving low-power transmissions to test propagation paths on the MF and HF bands.  Users with internet access can watch results in real time at WSPRnet.  Version 2.11 of WSPR includes FMT, a package of command-line utilities that can help you make highly accurate frequency measurements without expensive laboratory equipment.
