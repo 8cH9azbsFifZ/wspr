@@ -1,10 +1,11 @@
 MV ?= mv
+CP ?= mv
 MKDIR ?= mkdir
 INSTALL=	install
 CC ?= gcc
 FFLAGS	= -g -O2
 LDFLAGS	= -L/usr/local/lib 
-LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  -lfftw3f
+LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  
 CPPFLAGS = -I../ -I/usr/local/include 
 CFLAGS	= -I../ -I/usr/local/include -g -O2
 PREFIX	= /usr/local
@@ -102,7 +103,7 @@ WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	only: $(F2PYONLY) : \
 	$(SRCS2F90) $(SRCS2F77) $(SRCS2C)
 	${MKDIR} -p build/lib/WsprMod
-	${MV} w.so WsprMod/w.so
+	${CP} w.so WsprMod/w.so
 
 fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
 	$(FC) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
@@ -119,17 +120,20 @@ fmeasure: fmeasure.f90
 
 wspr0:	$(OBJS1)
 	$(FC) -o wspr0 $(FFLAGS) $(OBJS1) -lportaudio -lfftw3f
+#FIXME: libs
 
 OBJS4 = hftoa.o write_wav.o sound.o fil1.o averms.o getutc.o gmtime2.o
 
 hftoa:  $(OBJS4)
 	$(FC) -o hftoa $(FFLAGS) $(OBJS4) -lportaudio 
+#FIXME: libs
 
 OBJS5 = ccf.o read_wav.o averms.o four2a.o thnix_stub.o db.o ffa.o \
         fold1pps.o resample.o
 
 ccf:    $(OBJS5)
 	$(FC) -o ccf $(FFLAGS) $(OBJS5) -lfftw3f -lsamplerate
+#FIXME: libs
 
 OBJS6 = wwv.o read_wav.o averms.o db.o ffa.o fold1pps.o getutc.o \
 	gmtime2.o sound.o resample.o calobs.o four2a.o clean.o \
@@ -137,15 +141,17 @@ OBJS6 = wwv.o read_wav.o averms.o db.o ffa.o fold1pps.o getutc.o \
 
 wwv:    $(OBJS6)
 	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
+#FIXME: libs
+#FIXME: libs
 
 install: WsprMod/w.so
 	${RM} -rf build/*
 	${PYTHON} setup.py install --record setup.py.files.log --prefix=${PREFIX}/
 	${INSTALL} wspr ${PREFIX}/bin
 
-#uninstall:
-# FIXME: implement
-#	rm -rf `./setup.py packagedir`
+uninstall:
+	${RM} -rf `cat setup.py.files.log`
+
 
 .PHONY : clean
 clean:
