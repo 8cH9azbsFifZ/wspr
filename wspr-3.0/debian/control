@@ -1,10 +1,12 @@
-Package: wspr
 Source: wspr
-Version: 3.0
+Section: hamradio 
 Essential: no
 Priority: extra 
-Section: hamradio 
 Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Build-Depends: libfftw3-dev, portaudio19-dev, debhelper (>= 7.0.50), libsamplerate0-dev, libc6 (>= 2.3.4), libstdc++6 (>= 4.4.0)
+
+Package: wspr
+Depends: libfftw3-3, libportaudio2, python-tk, python-imaging-tk, python-numpy
 Architecture: any
 Description: Weak Signal Propagation Reporter
  WSPR (pronounced "whisper") stands for "Weak Signal Propagation Reporter." 
