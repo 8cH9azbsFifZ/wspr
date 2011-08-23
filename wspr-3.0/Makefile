@@ -121,7 +121,7 @@ AUTOMAKE = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run automak
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=none
-CFLAGS = -g -O2
+CFLAGS = -I../ -I/usr/local/include -g -O2
 CP = /bin/cp
 CPP = gcc -E
 CPPFLAGS = -I../ -I/usr/local/include 

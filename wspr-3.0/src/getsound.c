@@ -34,9 +34,17 @@
  *
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "portaudio.h"
+#include "config.h"
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+#ifdef HAVE_LIBPORTAUDIO
+# include "portaudio.h"
+#endif
 
 #define SAMPLE_RATE  (12000)
 #define FRAMES_PER_BUFFER (1024)
