@@ -1699,6 +1699,7 @@ on debian
 config.status:933: creating Makefile
 config.status:933: creating src/Makefile
 config.status:933: creating config.h
+config.status:1113: config.h is unchanged
 config.status:1161: executing depfiles commands
 
 ## ---------------- ##

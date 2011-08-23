@@ -1,5 +1,11 @@
-#include <stdio.h>
-#include <samplerate.h>
+#include "config.h"
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#ifdef HAVE_LIBSAMPLERATE
+# include <samplerate.h>
+#endif
 
 int resample_( float din[], float dout[], double *samfac, int *jz, int *ntype)
 {
