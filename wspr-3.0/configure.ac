@@ -1,6 +1,9 @@
 # todo
+# 2x build dir ??
+# w.so?
 # make install
 # make uninstall
+# 2x lfftw3f in Makefile?kkk
 
 AC_PREREQ([2.67])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
