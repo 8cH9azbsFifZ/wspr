@@ -10,7 +10,7 @@ LDFLAGS	= -L/usr/local/lib
 LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  
 CPPFLAGS = -I../ -I/usr/local/include 
 CFLAGS	= -I../ -I/usr/local/include -g -O2
-PREFIX	= /usr/local
+PREFIX	= /usr
 # ${CFLAGS}# WSPR specific C flags
 CFLAGS	+= -DBIGSYM=1 -fPIC
 DEFS = -DHAVE_CONFIG_H
@@ -144,6 +144,9 @@ wwv:    $(OBJS6)
 	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
 #FIXME: libs
 #FIXME: libs
+
+check:
+	echo "No check..."
 
 install: WsprMod/w.so
 	${RM} -rf build/*

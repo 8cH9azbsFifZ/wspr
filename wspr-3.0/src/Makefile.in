@@ -145,6 +145,9 @@ wwv:    $(OBJS6)
 #FIXME: libs
 #FIXME: libs
 
+check:
+	echo "No check..."
+
 install: WsprMod/w.so
 	${RM} -rf build/*
 	${PYTHON} setup.py install --record setup.py.files.log --prefix=${PREFIX}/

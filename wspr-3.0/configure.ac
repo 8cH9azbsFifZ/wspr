@@ -1,8 +1,5 @@
 # todo
-# 2x build dir ??
-# w.so?
-# make install
-# make uninstall
+# insert have_config_h check in all c files
 
 AC_PREREQ([2.67])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
