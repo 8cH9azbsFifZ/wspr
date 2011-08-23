@@ -1,5 +1,8 @@
-#                                               -*- Autoconf -*-
-# Process this file with autoconf to produce a configure script.
+# todo
+# setup.py
+# make install
+# make uninstall
+# version number
 
 AC_PREREQ([2.67])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])

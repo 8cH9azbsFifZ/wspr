@@ -679,7 +679,6 @@ build_os
 build_vendor
 build_cpu
 build
-AC_CONFIG_ARGS
 target_alias
 host_alias
 build_alias
@@ -2494,8 +2493,7 @@ ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
 
-AC_CONFIG_ARGS=$ac_configure_args
-
+#AC_SUBST([AC_CONFIG_ARGS], [$ac_configure_args])
 
 # Check build environment
 # Make sure we can run config.sub.

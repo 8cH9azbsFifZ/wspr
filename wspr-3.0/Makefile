@@ -111,7 +111,6 @@ GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run aclocal-1.11
-AC_CONFIG_ARGS = 
 AMTAR = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run tar
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
@@ -720,6 +719,7 @@ uninstall-am:
 
 
 #ACLOCAL_AMFLAGS = -I m4 -I m4/intl
+AC_CONFIG_MACRO_DIR([m4])
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
