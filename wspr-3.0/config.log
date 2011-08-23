@@ -900,9 +900,9 @@ configure:6150: result: no
 configure:6150: checking for dev/ppbus/ppbconf.h
 configure:6150: result: no
 configure:6172: checking for int16_t
-configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6172: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6172: $? = 0
-configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6172: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:91: error: size of array 'test_array' is negative
 configure:6172: $? = 1
@@ -1005,9 +1005,9 @@ configure: failed program was:
 | }
 configure:6172: result: yes
 configure:6183: checking for int32_t
-configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6183: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6183: $? = 0
-configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6183: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:91: warning: integer overflow in expression
 conftest.c:91: error: size of array 'test_array' is negative
@@ -1111,9 +1111,9 @@ configure: failed program was:
 | }
 configure:6183: result: yes
 configure:6194: checking for int64_t
-configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6194: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6194: $? = 0
-configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6194: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:91: warning: integer overflow in expression
 conftest.c:91: error: size of array 'test_array' is negative
@@ -1217,9 +1217,9 @@ configure: failed program was:
 | }
 configure:6194: result: yes
 configure:6205: checking for int8_t
-configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6205: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6205: $? = 0
-configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6205: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:91: error: size of array 'test_array' is negative
 configure:6205: $? = 1
@@ -1322,9 +1322,9 @@ configure: failed program was:
 | }
 configure:6205: result: yes
 configure:6216: checking for pid_t
-configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6216: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6216: $? = 0
-configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6216: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: error: expected expression before ')' token
 configure:6216: $? = 1
@@ -1424,9 +1424,9 @@ configure: failed program was:
 | }
 configure:6216: result: yes
 configure:6227: checking for size_t
-configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6227: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6227: $? = 0
-configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6227: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:89: error: expected expression before ')' token
 configure:6227: $? = 1
@@ -1526,35 +1526,35 @@ configure: failed program was:
 | }
 configure:6227: result: yes
 configure:6238: checking for uint16_t
-configure:6238: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6238: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6238: $? = 0
 configure:6238: result: yes
 configure:6250: checking for uint32_t
-configure:6250: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6250: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6250: $? = 0
 configure:6250: result: yes
 configure:6264: checking for uint64_t
-configure:6264: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6264: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6264: $? = 0
 configure:6264: result: yes
 configure:6278: checking for uint8_t
-configure:6278: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
+configure:6278: gcc -c -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6278: $? = 0
 configure:6278: result: yes
 configure:6307: checking for stdlib.h
 configure:6307: result: yes
 configure:6317: checking for GNU libc compatible malloc
-configure:6341: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6341: gcc -o conftest -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
 configure:6341: $? = 0
 configure:6341: ./conftest
 configure:6341: $? = 0
 configure:6351: result: yes
 configure:6375: checking for gettimeofday
-configure:6375: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6375: gcc -o conftest -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
 configure:6375: $? = 0
 configure:6375: result: yes
 configure:6375: checking for strchr
-configure:6375: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6375: gcc -o conftest -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
 conftest.c:79: warning: conflicting types for built-in function 'strchr'
 configure:6375: $? = 0
 configure:6375: result: yes
@@ -1728,7 +1728,7 @@ CCDEPMODE='depmode=none'
 CFLAGS='-g -O2'
 CP='/bin/cp'
 CPP='gcc -E'
-CPPFLAGS='-I/usr/local/include '
+CPPFLAGS='-I../ -I/usr/local/include '
 CXX='g++'
 CXXDEPMODE='depmode=none'
 CXXFLAGS='-g -O2'
@@ -1895,3 +1895,21 @@ target_vendor='pc'
 #define HAVE_STRCHR 1
 
 configure: exit 0
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by wspr config.status 3.0, which was
+generated by GNU Autoconf 2.67.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status config.h
+
+on debian
+
+config.status:932: creating config.h
+config.status:1112: config.h is unchanged

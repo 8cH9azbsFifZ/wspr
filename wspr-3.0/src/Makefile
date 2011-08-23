@@ -5,7 +5,7 @@ CC ?= gcc
 FFLAGS	= -g -O2
 LDFLAGS	= -L/usr/local/lib 
 LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  -lfftw3f
-CPPFLAGS = -I/usr/local/include 
+CPPFLAGS = -I../ -I/usr/local/include 
 CFLAGS	= -g -O2
 PREFIX	= NONE
 # ${CFLAGS}# WSPR specific C flags

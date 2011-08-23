@@ -61,6 +61,7 @@ AC_CHECK_HEADERS([pthread.h stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.
 
 # Dirty hack FIXME
 CPPFLAGS="-I../ -I/usr/local/include ${CPPFLAGS}"
+CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 LIBS=" -lpthread ${LIBS}"
 FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\

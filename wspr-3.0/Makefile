@@ -124,7 +124,7 @@ CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CP = /bin/cp
 CPP = gcc -E
-CPPFLAGS = -I/usr/local/include 
+CPPFLAGS = -I../ -I/usr/local/include 
 CXX = g++
 CXXDEPMODE = depmode=none
 CXXFLAGS = -g -O2
