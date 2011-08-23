@@ -4,7 +4,7 @@ INSTALL=	install
 CC ?= @CC@
 FFLAGS	= @FFLAGS@
 LDFLAGS	= @LDFLAGS@
-LIBS	= @LIBS@ 
+LIBS	= @LIBS@ -lfftw3f
 CPPFLAGS = @CPPFLAGS@
 CFLAGS	= @CFLAGS@
 PREFIX	= @PREFIX@
@@ -101,9 +101,7 @@ WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	${CPPFLAGS} ${LDFLAGS} ${LIBS} \
 	only: $(F2PYONLY) : \
 	$(SRCS2F90) $(SRCS2F77) $(SRCS2C)
-	${MKDIR} -p build/lib/WsprMod 
-#FIXME 
-	${MKDIR} -p WsprMod
+	${MKDIR} -p build/lib/WsprMod
 	${MV} w.so WsprMod/w.so
 
 fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
@@ -141,9 +139,8 @@ wwv:    $(OBJS6)
 	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
 
 install: WsprMod/w.so
-#	${RM} -rf build/
-	${PYTHON} setup.py install
-#FIXME install stuff
+	${RM} -rf build/
+	${PYTHON} setup.py install --prefix=${PREFIX}/
 	${INSTALL} wspr ${PREFIX}/bin
 
 #uninstall:
