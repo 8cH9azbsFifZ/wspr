@@ -1,10 +1,9 @@
 #!/usr/bin/env python
-
-version = "3.0"
-
 from distutils.core import setup
 from distutils.file_util import copy_file
 import os
+
+version = "wspr 3.0"
 
 def wspr_install(install):
 #

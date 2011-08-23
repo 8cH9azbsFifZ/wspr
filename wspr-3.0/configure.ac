@@ -1,8 +1,6 @@
 # todo
-# setup.py
 # make install
 # make uninstall
-# version number
 
 AC_PREREQ([2.67])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
@@ -41,7 +39,6 @@ AC_PATH_PROG(LD, ld)
 AC_PATH_PROG(TEST, [test], [test])
 AC_PATH_PROG(PYTHON, python)
 AC_PATH_PROG(F2PY, f2py)
-AC_SUBST(NAME, "${name}")
 AC_SUBST(VERSION, "${version}")
 AC_MSG_CHECKING([OS])
 OS=`uname`
@@ -86,6 +83,13 @@ AC_TYPE_UINT32_T
 AC_TYPE_UINT64_T
 AC_TYPE_UINT8_T
 
+if test "x$prefix" = "xNONE" ; then
+  prefix="/usr/local"
+fi
+if test "x$exec_prefix" = "xNONE" ; then
+  exec_prefix=$prefix
+fi
+PREFIX=$prefix
 AC_SUBST(PREFIX)
 AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)

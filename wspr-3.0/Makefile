@@ -156,6 +156,7 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} /root/wspr/deb/wspr/wspr-3.0/build-aux/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 MV = /bin/mv
+NAME = 
 OBJEXT = o
 OS = Linux
 PACKAGE = wspr
