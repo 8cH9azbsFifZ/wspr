@@ -151,7 +151,7 @@ check:
 install: WsprMod/w.so
 	${RM} -rf build/*
 	${PYTHON} setup.py install --record setup.py.files.log --prefix=${PREFIX}/
-	${INSTALL} WsprMod/w.so `find ${PREFIX} -name WsprMod -type d`
+        ${INSTALL} WsprMod/w.so ${PREFIX}/lib/python*/*-packages/WsprMod/
 	# FIXME: dirty hack -> fix this in setup.py.in
 	${INSTALL} wspr ${PREFIX}/bin
 
