@@ -140,8 +140,10 @@ wwv:    $(OBJS6)
 
 install: WsprMod/w.so
 	${RM} -rf build/
-	${PYTHON} setup.py install --prefix=${PREFIX}/
+	#${PYTHON} setup.py install --prefix=${PREFIX}/
+	${PYTHON} setup.py install
 	${INSTALL} wspr ${PREFIX}/bin
+	${INSTALL} WsprMod/w.so ${PREFIX}/lib/python2.6/dist-packages/WsprMod/
 
 #uninstall:
 # FIXME: implement
