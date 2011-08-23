@@ -1,6 +1,14 @@
-#include <stdio.h>
-#include <portaudio.h>
-#include <string.h>
+#include "config.h" 
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#ifdef HAVE_LIBPORTAUDIO
+# include <portaudio.h>
+#endif
+#ifdef HAVE_STRING_H
+# include <string.h>
+#endif
 
 #define NUM_CHANNELS    (1)
 #define PA_SAMPLE_TYPE  paInt16
