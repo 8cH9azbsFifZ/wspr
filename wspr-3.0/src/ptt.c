@@ -1,5 +1,11 @@
-#include <windows.h>
-#include <stdio.h>
+#include "config.h"
+
+#ifdef HAVE_WINDOWS_H
+# include <windows.h>
+#endif
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
 
 int ptt_(int *nport, char *unused, int *ntx, int *iptt)
 {
