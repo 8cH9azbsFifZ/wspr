@@ -166,7 +166,6 @@ PACKAGE_TARNAME = wspr
 PACKAGE_URL = 
 PACKAGE_VERSION = 3.0
 PATH_SEPARATOR = :
-PREFIX = NONE
 PYTHON = /usr/bin/python
 RM = /bin/rm
 SED = /bin/sed

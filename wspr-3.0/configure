@@ -599,7 +599,6 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
-PREFIX
 EGREP
 GREP
 CPP
@@ -6291,8 +6290,7 @@ _ACEOF
   esac
 
 
-PREFIX="${prefix}"
-
+#AC_SUBST(PREFIX, "${prefix}")
 CPPFLAGS="${CPPFLAGS}"
 
 LDFLAGS="${LDFLAGS}"
