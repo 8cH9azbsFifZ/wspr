@@ -139,9 +139,9 @@ wwv:    $(OBJS6)
 	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
 
 install: WsprMod/w.so
-	${RM} -rf build/
-	#${PYTHON} setup.py install --prefix=${PREFIX}/
+#	${RM} -rf build/
 	${PYTHON} setup.py install
+#FIXME install stuff
 	${INSTALL} wspr ${PREFIX}/bin
 
 #uninstall:
