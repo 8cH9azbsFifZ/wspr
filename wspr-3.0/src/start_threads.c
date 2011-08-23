@@ -1,13 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
-#ifdef Win32
-   #include "pthread_w32.h"
-#else
-   #include <pthread.h>
+#incldue "config.h"
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
 #endif
-#include <inttypes.h>
-#include <time.h>
-#include <sys/time.h>
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+
+#ifdef Win32
+# include "pthread_w32.h"
+#else
+# ifdef HAVE_PTHREAD_H
+#  include <pthread.h>
+# endif
+#endif
+#ifdef HAVE_INTTYPES_H
+# include <inttypes.h>
+#endif
+#ifdef HAVE_TIME_H
+# include <time.h>
+#endif
+#ifdef HAVE_SYS_TIME_H
+# include <sys/time.h>
+#endif
 
 extern void wspr2_(int *iarg);
 extern void decode_(int *iarg);
