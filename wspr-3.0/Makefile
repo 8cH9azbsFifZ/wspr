@@ -183,6 +183,7 @@ ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_F77 = gfortran
 ac_ct_FC = gfortran
+ac_prefix_program = 
 am__include = include
 am__leading_dot = .
 am__quote = 
