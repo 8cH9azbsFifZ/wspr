@@ -105,7 +105,7 @@ AC_MSG_RESULT([
 Configuration summary:
   Version ..................... $VERSION
 
-  Prefix ...................... $ac_prefix
+  Prefix ...................... $AC_PREFIX
   Static linking .............. $ac_cv_static
   CPU optimizations ........... $ac_cv_opt
 ])
