@@ -666,6 +666,9 @@ m4trace:configure.ac:86: -1- m4_pattern_allow([^uint8_t$])
 m4trace:configure.ac:86: -1- AH_OUTPUT([uint8_t], [/* Define to the type of an unsigned integer type of width exactly 8 bits if
    such a type exists and the standard includes do not define it. */
 @%:@undef uint8_t])
+m4trace:configure.ac:88: -1- AC_SUBST([PREFIX])
+m4trace:configure.ac:88: -1- AC_SUBST_TRACE([PREFIX])
+m4trace:configure.ac:88: -1- m4_pattern_allow([^PREFIX$])
 m4trace:configure.ac:89: -1- AC_SUBST([CPPFLAGS], ["${CPPFLAGS}"])
 m4trace:configure.ac:89: -1- AC_SUBST_TRACE([CPPFLAGS])
 m4trace:configure.ac:89: -1- m4_pattern_allow([^CPPFLAGS$])
