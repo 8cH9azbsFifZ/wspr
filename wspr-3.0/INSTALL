@@ -7,7 +7,7 @@ To compile wspr you will need:
 * pymc ??
 * readline
 * ipython ??
-* nose ??
+* nose (numpy)
 * DateUtils
 * numpy (f2py)
 * python imaging
