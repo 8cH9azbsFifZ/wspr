@@ -1,4 +1,4 @@
-#incldue "config.h"
+#include "config.h"
 
 #ifdef HAVE_STDIO_H
 # include <stdio.h>
