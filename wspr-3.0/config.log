@@ -417,6 +417,16 @@ configure:6139: $? = 0
 configure:6139: result: yes
 configure:6139: checking for samplerate.h
 configure:6139: result: yes
+configure:6150: checking stdio.h usability
+configure:6150: gcc -c -g -O2  conftest.c >&5
+configure:6150: $? = 0
+configure:6150: result: yes
+configure:6150: checking stdio.h presence
+configure:6150: gcc -E  conftest.c
+configure:6150: $? = 0
+configure:6150: result: yes
+configure:6150: checking for stdio.h
+configure:6150: result: yes
 configure:6150: checking stdarg.h usability
 configure:6150: gcc -c -g -O2  conftest.c >&5
 configure:6150: $? = 0
@@ -519,7 +529,7 @@ configure:6150: checking for linux/ppdev.h
 configure:6150: result: yes
 configure:6150: checking dev/ppbus/ppi.h usability
 configure:6150: gcc -c -g -O2  conftest.c >&5
-conftest.c:73:27: error: dev/ppbus/ppi.h: No such file or directory
+conftest.c:74:27: error: dev/ppbus/ppi.h: No such file or directory
 configure:6150: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -546,6 +556,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -598,7 +609,7 @@ configure: failed program was:
 configure:6150: result: no
 configure:6150: checking dev/ppbus/ppi.h presence
 configure:6150: gcc -E  conftest.c
-conftest.c:40:27: error: dev/ppbus/ppi.h: No such file or directory
+conftest.c:41:27: error: dev/ppbus/ppi.h: No such file or directory
 configure:6150: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -625,6 +636,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -724,7 +736,7 @@ configure:6150: checking for linux/parport.h
 configure:6150: result: yes
 configure:6150: checking dev/ppbus/ppbconf.h usability
 configure:6150: gcc -c -g -O2  conftest.c >&5
-conftest.c:84:31: error: dev/ppbus/ppbconf.h: No such file or directory
+conftest.c:85:31: error: dev/ppbus/ppbconf.h: No such file or directory
 configure:6150: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -751,6 +763,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -814,7 +827,7 @@ configure: failed program was:
 configure:6150: result: no
 configure:6150: checking dev/ppbus/ppbconf.h presence
 configure:6150: gcc -E  conftest.c
-conftest.c:51:31: error: dev/ppbus/ppbconf.h: No such file or directory
+conftest.c:52:31: error: dev/ppbus/ppbconf.h: No such file or directory
 configure:6150: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -841,6 +854,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -876,7 +890,7 @@ configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6172: $? = 0
 configure:6172: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:89: error: size of array 'test_array' is negative
+conftest.c:90: error: size of array 'test_array' is negative
 configure:6172: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -903,6 +917,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -979,8 +994,8 @@ configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6183: $? = 0
 configure:6183: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:89: warning: integer overflow in expression
-conftest.c:89: error: size of array 'test_array' is negative
+conftest.c:90: warning: integer overflow in expression
+conftest.c:90: error: size of array 'test_array' is negative
 configure:6183: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -1007,6 +1022,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -1083,8 +1099,8 @@ configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6194: $? = 0
 configure:6194: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:89: warning: integer overflow in expression
-conftest.c:89: error: size of array 'test_array' is negative
+conftest.c:90: warning: integer overflow in expression
+conftest.c:90: error: size of array 'test_array' is negative
 configure:6194: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -1111,6 +1127,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -1187,7 +1204,7 @@ configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6205: $? = 0
 configure:6205: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:89: error: size of array 'test_array' is negative
+conftest.c:90: error: size of array 'test_array' is negative
 configure:6205: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -1214,6 +1231,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -1290,7 +1308,7 @@ configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6216: $? = 0
 configure:6216: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:87: error: expected expression before ')' token
+conftest.c:88: error: expected expression before ')' token
 configure:6216: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -1317,6 +1335,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -1390,7 +1409,7 @@ configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 configure:6227: $? = 0
 configure:6227: gcc -c -g -O2 -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:87: error: expected expression before ')' token
+conftest.c:88: error: expected expression before ')' token
 configure:6227: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -1417,6 +1436,7 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | #define HAVE_STDINT_H 1
 | #define HAVE_UNISTD_H 1
+| #define HAVE_STDIO_H 1
 | #define HAVE_STDARG_H 1
 | #define HAVE_FCNTL_H 1
 | #define HAVE_INTTYPES_H 1
@@ -1515,7 +1535,7 @@ configure:6375: $? = 0
 configure:6375: result: yes
 configure:6375: checking for strchr
 configure:6375: gcc -o conftest -g -O2 -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
-conftest.c:77: warning: conflicting types for built-in function 'strchr'
+conftest.c:78: warning: conflicting types for built-in function 'strchr'
 configure:6375: $? = 0
 configure:6375: result: yes
 configure:6512: creating ./config.status
@@ -1535,11 +1555,10 @@ generated by GNU Autoconf 2.67.  Invocation command line was
 
 on debian
 
-config.status:930: creating Makefile
-config.status:930: creating src/Makefile
-config.status:930: creating config.h
-config.status:1110: config.h is unchanged
-config.status:1158: executing depfiles commands
+config.status:931: creating Makefile
+config.status:931: creating src/Makefile
+config.status:931: creating config.h
+config.status:1159: executing depfiles commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1610,6 +1629,7 @@ ac_cv_header_stdarg_h=yes
 ac_cv_header_stdc=yes
 ac_cv_header_stddef_h=yes
 ac_cv_header_stdint_h=yes
+ac_cv_header_stdio_h=yes
 ac_cv_header_stdlib_h=yes
 ac_cv_header_string_h=yes
 ac_cv_header_strings_h=yes
@@ -1820,6 +1840,7 @@ target_vendor='pc'
 #define HAVE_INTTYPES_H 1
 #define HAVE_STDINT_H 1
 #define HAVE_UNISTD_H 1
+#define HAVE_STDIO_H 1
 #define HAVE_STDARG_H 1
 #define HAVE_FCNTL_H 1
 #define HAVE_INTTYPES_H 1
