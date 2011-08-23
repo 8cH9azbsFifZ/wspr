@@ -1662,24 +1662,24 @@ configure:6279: checking for uint8_t
 configure:6279: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 configure:6279: $? = 0
 configure:6279: result: yes
-configure:6307: checking for stdlib.h
-configure:6307: result: yes
-configure:6317: checking for GNU libc compatible malloc
-configure:6341: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6341: $? = 0
-configure:6341: ./conftest
-configure:6341: $? = 0
-configure:6351: result: yes
-configure:6375: checking for gettimeofday
-configure:6375: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
-configure:6375: $? = 0
-configure:6375: result: yes
-configure:6375: checking for strchr
-configure:6375: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6304: checking for stdlib.h
+configure:6304: result: yes
+configure:6314: checking for GNU libc compatible malloc
+configure:6338: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6338: $? = 0
+configure:6338: ./conftest
+configure:6338: $? = 0
+configure:6348: result: yes
+configure:6372: checking for gettimeofday
+configure:6372: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
+configure:6372: $? = 0
+configure:6372: result: yes
+configure:6372: checking for strchr
+configure:6372: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread -lsamplerate -lportaudio -lfftw3f  >&5
 conftest.c:80: warning: conflicting types for built-in function 'strchr'
-configure:6375: $? = 0
-configure:6375: result: yes
-configure:6511: creating ./config.status
+configure:6372: $? = 0
+configure:6372: result: yes
+configure:6508: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1701,7 +1701,7 @@ config.status:933: creating src/Makefile
 config.status:933: creating config.h
 config.status:1113: config.h is unchanged
 config.status:1161: executing depfiles commands
-configure:7846: result:
+configure:7843: result:
 Configuration summary:
   Version ..................... 
 

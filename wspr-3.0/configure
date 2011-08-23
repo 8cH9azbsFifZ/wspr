@@ -6292,11 +6292,8 @@ _ACEOF
 
 
 
-CPPFLAGS="${CPPFLAGS}"
 
-LDFLAGS="${LDFLAGS}"
 
-LIBS="${LIBS}"
 
 
 
