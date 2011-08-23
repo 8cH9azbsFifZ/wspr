@@ -1,5 +1,11 @@
-#include <stdio.h>
-#include <string.h>
+#include "config.h"
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#ifdef HAVE_STRING_H
+# include <string.h>
+#endif
 
 typedef struct _SYSTEMTIME
 {
