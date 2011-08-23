@@ -152,7 +152,7 @@ clean:
 	${RM} -f *.o *.pyc *.pyo WsprMod/*.pyc WsprMod/*.pyo \
 	    WsprMod/*.so w.so *~ \
 	    wsprcode fmt fmtave fcal fmeasure wspr0
-	${RM} -rf build/
+	${RM} -rf build/*
 
 distclean:
 	${RM} -f config.log config.status Makefile
