@@ -139,7 +139,7 @@ wwv:    $(OBJS6)
 	$(FC) -o wwv $(FFLAGS) $(OBJS6) -lportaudio -lsamplerate -lfftw3f
 
 install: WsprMod/w.so
-	${RM} -rf build/
+	${RM} -rf build/*
 	${PYTHON} setup.py install --prefix=${PREFIX}/
 	${INSTALL} wspr ${PREFIX}/bin
 
@@ -150,7 +150,7 @@ install: WsprMod/w.so
 .PHONY : clean
 clean:
 	${RM} -f *.o *.pyc *.pyo WsprMod/*.pyc WsprMod/*.pyo \
-	    WsprMod/w.so WsprMod/*.so w.so *~ \
+	    WsprMod/*.so w.so *~ \
 	    wsprcode fmt fmtave fcal fmeasure wspr0
 	${RM} -rf build/
 
