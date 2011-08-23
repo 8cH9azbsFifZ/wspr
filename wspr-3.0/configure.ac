@@ -99,5 +99,14 @@ AC_CHECK_FUNCS([gettimeofday strchr])
 AC_CONFIG_FILES([Makefile
                  src/Makefile])
 
-
 AC_OUTPUT
+
+AC_MSG_RESULT([
+Configuration summary:
+  Version ..................... $VERSION
+
+  Prefix ...................... $ac_prefix
+  Static linking .............. $ac_cv_static
+  CPU optimizations ........... $ac_cv_opt
+])
+
