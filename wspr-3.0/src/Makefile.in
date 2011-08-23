@@ -143,27 +143,6 @@ install: WsprMod/w.so
 	${PYTHON} setup.py install
 	${INSTALL} wspr ${PREFIX}/bin
 
-deb: wspr.py WsprMod/w.so WsprMod/g.py WsprMod/__init__.py \
-	WsprMod/advanced.py \
-	WsprMod/options.py WsprMod/palettes.py WsprMod/PmwBlt.py \
-	WsprMod/PmwColor.py WsprMod/Pmw.py DEB/DEBIAN/control \
-	hamlib_rig_numbers wsprrc fmt fmtave fcal fmeasure \
-	gocal 0230 DEB/WSPR/wspr
-	cp wspr.py wsprrc hamlib_rig_numbers wsprcode DEB/WSPR
-	cp fmt fmtave fcal fmeasure gocal 0230 DEB/WSPR
-	cp WsprMod/w.so DEB/WSPR/WsprMod
-	cp WsprMod/*.py DEB/WSPR/WsprMod
-	cp -pr DEB DEB1
-#FIXME: Remove this stuff
-	rm -rf DEB1/WSPR/save/.svn
-	rm -rf DEB1/WSPR/lib/.svn
-	rm -rf DEB1/WSPR/.svn
-	rm -rf DEB1/WSPR/WsprMod/.svn
-	rm -rf DEB1/.svn
-	rm -rf DEB1/DEBIAN/.svn
-	dpkg-deb --build DEB1 wspr_ver_rev_i386.deb
-	rm -rf DEB1
-
 .PHONY : clean
 clean:
 	${RM} -f *.o *.pyc *.pyo WsprMod/*.pyc WsprMod/*.pyo \

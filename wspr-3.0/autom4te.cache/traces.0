@@ -735,15 +735,3 @@ m4trace:configure.ac:102: -1- AC_SUBST_TRACE([abs_builddir])
 m4trace:configure.ac:102: -1- AC_SUBST_TRACE([abs_top_builddir])
 m4trace:configure.ac:102: -1- AC_SUBST_TRACE([INSTALL])
 m4trace:configure.ac:102: -1- AC_SUBST_TRACE([MKDIR_P])
-m4trace:configure.ac:104: -1- _m4_warn([obsolete], [The macro `AC_PREFIX' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/oldnames.m4:38: AC_PREFIX is expanded from...
-configure.ac:104: the top level])
-m4trace:configure.ac:104: -1- AC_SUBST([ac_prefix_program])
-m4trace:configure.ac:104: -1- AC_SUBST_TRACE([ac_prefix_program])
-m4trace:configure.ac:104: -1- m4_pattern_allow([^ac_prefix_program$])
-m4trace:configure.ac:104: -1- _m4_warn([obsolete], [The macro `AC_PREFIX' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/oldnames.m4:38: AC_PREFIX is expanded from...
-configure.ac:104: the top level])
-m4trace:configure.ac:104: -1- AC_SUBST([ac_prefix_program])
-m4trace:configure.ac:104: -1- AC_SUBST_TRACE([ac_prefix_program])
-m4trace:configure.ac:104: -1- m4_pattern_allow([^ac_prefix_program$])
