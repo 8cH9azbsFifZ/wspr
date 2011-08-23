@@ -1679,7 +1679,7 @@ configure:6376: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/l
 conftest.c:80: warning: conflicting types for built-in function 'strchr'
 configure:6376: $? = 0
 configure:6376: result: yes
-configure:6513: creating ./config.status
+configure:6512: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -1701,6 +1701,14 @@ config.status:933: creating src/Makefile
 config.status:933: creating config.h
 config.status:1113: config.h is unchanged
 config.status:1161: executing depfiles commands
+configure:7847: result:
+Configuration summary:
+  Version ..................... 
+
+  Prefix ...................... 
+  Static linking .............. 
+  CPU optimizations ........... 
+
 
 ## ---------------- ##
 ## Cache variables. ##
