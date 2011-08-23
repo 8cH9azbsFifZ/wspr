@@ -1,6 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "portaudio.h"
+#include "config.h"
+
+#ifdef HAVE_STDIO_H
+# include <stdio.h>
+#endif
+#ifdef HAVE_STDLIB_H
+# include <stdlib.h>
+#endif
+#ifdef HAVE_LIBPORTAUDIO
+# include "portaudio.h"
+#endif
 
 /* #define DITHER_FLAG     (paDitherOff)  */
 #define DITHER_FLAG     (0) /**/
