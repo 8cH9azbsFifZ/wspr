@@ -44,7 +44,7 @@
 #ifdef HAVE_STDLIB_H
 # include <stdlib.h>
 #endif
-#ifdef HAVE_LIBPORTAUDIO
+#ifdef HAVE_PORTAUDIO_H
 # include "portaudio.h"
 #endif
 
