@@ -5560,13 +5560,19 @@ CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
+<<<<<<< HEAD
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lfftw3f" >&5
+$as_echo_n "checking for main in -lfftw3f... " >&6; }
+if test "${ac_cv_lib_fftw3f_main+set}" = set; then :
+=======
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lfftw3" >&5
 $as_echo_n "checking for main in -lfftw3... " >&6; }
 if ${ac_cv_lib_fftw3_main+:} false; then :
+>>>>>>> 9462337fb078ce9d27914f4fad63e0f40580b193
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lfftw3  $LIBS"
+LIBS="-lfftw3f  $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -5580,22 +5586,28 @@ return main ();
 }
 _ACEOF
 if ac_fn_c_try_link "$LINENO"; then :
-  ac_cv_lib_fftw3_main=yes
+  ac_cv_lib_fftw3f_main=yes
 else
-  ac_cv_lib_fftw3_main=no
+  ac_cv_lib_fftw3f_main=no
 fi
 rm -f core conftest.err conftest.$ac_objext \
     conftest$ac_exeext conftest.$ac_ext
 LIBS=$ac_check_lib_save_LIBS
 fi
+<<<<<<< HEAD
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_fftw3f_main" >&5
+$as_echo "$ac_cv_lib_fftw3f_main" >&6; }
+if test "x$ac_cv_lib_fftw3f_main" = x""yes; then :
+=======
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_fftw3_main" >&5
 $as_echo "$ac_cv_lib_fftw3_main" >&6; }
 if test "x$ac_cv_lib_fftw3_main" = xyes; then :
+>>>>>>> 9462337fb078ce9d27914f4fad63e0f40580b193
   cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBFFTW3 1
+#define HAVE_LIBFFTW3F 1
 _ACEOF
 
-  LIBS="-lfftw3 $LIBS"
+  LIBS="-lfftw3f $LIBS"
 
 fi
 

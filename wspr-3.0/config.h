@@ -23,11 +23,17 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
+/* Define to 1 if you have the `fftw3f' library (-lfftw3f). */
+#define HAVE_LIBFFTW3F 1
+
 /* Define to 1 if you have the <libgen.h> header file. */
 #define HAVE_LIBGEN_H 1
 
 /* Define to 1 if you have the `portaudio' library (-lportaudio). */
 #define HAVE_LIBPORTAUDIO 1
+
+/* Define to 1 if you have the `samplerate' library (-lsamplerate). */
+#define HAVE_LIBSAMPLERATE 1
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
