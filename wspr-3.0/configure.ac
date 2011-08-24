@@ -49,9 +49,9 @@ CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
-AC_CHECK_LIB([fftw3], [main], [HAS_FFTW=1], [HAS_FFTW=0])
-AC_CHECK_LIB([portaudio], [main], [HAS_PORTAUDIO=1], [HAS_PORTAUDIO=0])
-AC_CHECK_LIB([samplerate], [main], [HAS_LIBSAMPLERATE=1], [HAS_LIBSAMPLERATE=0])
+AC_CHECK_LIB([fftw3], [main])
+AC_CHECK_LIB([portaudio], [main])
+AC_CHECK_LIB([samplerate], [main])
 
 # Checks for header files.
 AC_HEADER_STDC
@@ -109,7 +109,7 @@ if test "$HAS_FFTW" = "0"; then
 	echo "Error: You need a libfftw"
 	FAIL=1
 fi
-if test "$HAS_PORTAUDIO" = "0"; then
+if test "$HAVE_LIBPORTAUDIO" = "0"; then
 	echo "Error: You need portaudio"
 	FAIL=1
 fi

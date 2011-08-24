@@ -23,26 +23,20 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
-/* Define to 1 if you have the `fftw3' library (-lfftw3). */
-/* #undef HAVE_LIBFFTW3 */
-
 /* Define to 1 if you have the <libgen.h> header file. */
 #define HAVE_LIBGEN_H 1
 
 /* Define to 1 if you have the `portaudio' library (-lportaudio). */
-/* #undef HAVE_LIBPORTAUDIO */
-
-/* Define to 1 if you have the `samplerate' library (-lsamplerate). */
-/* #undef HAVE_LIBSAMPLERATE */
+#define HAVE_LIBPORTAUDIO 1
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <linux/parport.h> header file. */
-/* #undef HAVE_LINUX_PARPORT_H */
+#define HAVE_LINUX_PARPORT_H 1
 
 /* Define to 1 if you have the <linux/ppdev.h> header file. */
-/* #undef HAVE_LINUX_PPDEV_H */
+#define HAVE_LINUX_PPDEV_H 1
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
@@ -123,7 +117,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define to 1 if you have the <wait.h> header file. */
-/* #undef HAVE_WAIT_H */
+#define HAVE_WAIT_H 1
 
 /* Define to 1 if you have the <windows.h> header file. */
 /* #undef HAVE_WINDOWS_H */
