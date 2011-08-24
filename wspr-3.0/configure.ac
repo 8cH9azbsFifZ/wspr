@@ -44,9 +44,9 @@ OS=`uname`
 AC_SUBST(OS, "${OS}")
 
 # Some common path names to search
-CPPFLAGS="-I../ -I/usr/local/include ${CPPFLAGS}"
-CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
-LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
+CPPFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CPPFLAGS}"
+CFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CFLAGS}"
+LDFLAGS="-L/usr/local/lib -L/opt/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
 AC_CHECK_LIB([fftw3f], [main], [], [exit -1])
