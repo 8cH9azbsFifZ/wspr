@@ -1,5 +1,2 @@
- 0    2    2       0       0  Intel 82801AA-ICH: Intel 82801AA-ICH (hw:0,0)
- 1    2    0       0       1  Intel 82801AA-ICH: Intel 82801AA-ICH - MIC ADC (hw:0,1)
- 2    0    2       1       0  front
- 3  128  128       0       0  default
- 4    0    2       1       0  dmix
+ 0    2    0       0       1  Built-in Input
+ 1    0    2       1       0  Built-in Output
