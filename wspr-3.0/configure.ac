@@ -1,4 +1,4 @@
-AC_PREREQ([2.67])
+AC_PREREQ([2.61])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([src/padevsub.c])
 AC_CONFIG_HEADERS([config.h])
