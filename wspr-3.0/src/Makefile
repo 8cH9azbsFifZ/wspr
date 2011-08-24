@@ -39,7 +39,7 @@ wspr:	WsprMod/w.so
 	${FC} ${FFLAGS} -c $<
 
 OS=Darwin
-FC=
+FC=g95
 FC_LIB_PATH	+= 
 
 LDFLAGS	+= -L${FC_LIB_PATH}
