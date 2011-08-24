@@ -44,6 +44,7 @@ curl -o gfortran-42-5664.pkg http://r.research.att.com/gfortran-42-5664.pkg
  sudo port install py-numpy py25-tkinter py25-dateutil py25-pil 
 * Install fftw3 
 curl -o fftw-3.2.2.tar.gz http://www.fftw.org/fftw-3.2.2.tar.gz
+- source is also located under src/deps/fftw-3.2.2
 tar xvfz fftw-3.2.2.tar.gz
 cd fftw-3.2.2 
 ./configure --enable-float CC="gcc -arch i386 -arch x86_64" CXX="g++ -arch -i386 -arch x86_64" CPP="gcc -E" CXXPP="g++ -E" 
@@ -55,7 +56,7 @@ sudo make install
 		sudo port contents fftw-3-single
 * Install libsamplerate
 sudo port install libsamplerate
-or
+or alternatively
 curl -o libsamplerate-0.1.7.tar.gz http://www.mega-nerd.com/SRC/libsamplerate-0.1.7.tar.gz
 # build yourself
 
