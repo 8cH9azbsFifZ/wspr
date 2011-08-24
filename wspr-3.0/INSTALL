@@ -20,6 +20,10 @@ MAC OSX
 * Install xcode (1)
 * Install portaudio (2)
 * Install gfortran (or g95)
+sudo port install g95
+or
+curl -o gfortran-42-5664.pkg http://r.research.att.com/gfortran-42-5664.pkg
+# install from finder / cli: sudo installer -pkg 'gfortran-42-5664.pkg' -target '/'
 * Install Fortran2Python
  sudo port install py-numpy py25-tkinter py25-dateutil py25-pil libsamplerate
 * Install fftw3
