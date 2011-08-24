@@ -46,7 +46,7 @@ AC_SUBST(OS, "${OS}")
 # Some common path names to search
 CPPFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CPPFLAGS}"
 CFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CFLAGS}"
-LDFLAGS="-L./ -L/usr/lib -L/usr/local/lib -L/opt/local/lib ${LDFLAGS}"
+LDFLAGS="-L/usr/lib -L/usr/local/lib -L/opt/local/lib ${LDFLAGS}"
 FC_LIB_PATH="-L/usr/lib -L/usr/local/lib -L/opt/local/lib ${FC_LIB_PATH}"
 
 # Checks for libraries.
