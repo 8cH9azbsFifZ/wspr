@@ -46,11 +46,11 @@ AC_SUBST(OS, "${OS}")
 
 # Checks for libraries.
 # FIXME: Replace `main' with a function in `-lfftw3f':
-AC_CHECK_LIB([fftw3f], [main])
+AC_CHECK_LIB([fftw3f], [main], [HAS_FFTW=1], [HAS_FFTW=0])
 # FIXME: Replace `main' with a function in `-lportaudio':
-AC_CHECK_LIB([portaudio], [main])
+AC_CHECK_LIB([portaudio], [main], [HAS_PORTAUDIO=1], [HAS_PORTAUDIO=0])
 # FIXME: Replace `main' with a function in `-lsamplerate':
-AC_CHECK_LIB([samplerate], [main])
+AC_CHECK_LIB([samplerate], [main], [HAS_LIBSAMPLERATE=1], [HAS_LIBSAMPLERATE=0])
 
 # Checks for header files.
 AC_HEADER_STDC
@@ -105,3 +105,22 @@ AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_FILES([src/setup.py], [chmod +x src/setup.py])
 
 AC_OUTPUT
+
+# Show if essential dependencies fail
+FAIL=0
+if test "$HAS_FFTW" = "0"; then
+	echo "Error: You need a libfftw"
+	FAIL=1
+fi
+if test "$HAS_PORTAUDIO" = "0"; then
+	echo "Error: You need portaudio"
+	FAIL=1
+fi
+if test "$HAS_LIBSAMPLERATE" = "0"; then
+	echo "Error: You need libsamplerate"
+	FAIL=1
+fi
+if test "$FAIL" = "1"; then
+	rm Makefile
+	exit 1
+fi

@@ -483,18 +483,6 @@ m4trace:configure.ac:41: -1- m4_pattern_allow([^VERSION$])
 m4trace:configure.ac:44: -1- AC_SUBST([OS], ["${OS}"])
 m4trace:configure.ac:44: -1- AC_SUBST_TRACE([OS])
 m4trace:configure.ac:44: -1- m4_pattern_allow([^OS$])
-m4trace:configure.ac:49: -1- AH_OUTPUT([HAVE_LIBFFTW3F], [/* Define to 1 if you have the `fftw3f\' library (-lfftw3f). */
-@%:@undef HAVE_LIBFFTW3F])
-m4trace:configure.ac:49: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBFFTW3F])
-m4trace:configure.ac:49: -1- m4_pattern_allow([^HAVE_LIBFFTW3F$])
-m4trace:configure.ac:51: -1- AH_OUTPUT([HAVE_LIBPORTAUDIO], [/* Define to 1 if you have the `portaudio\' library (-lportaudio). */
-@%:@undef HAVE_LIBPORTAUDIO])
-m4trace:configure.ac:51: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBPORTAUDIO])
-m4trace:configure.ac:51: -1- m4_pattern_allow([^HAVE_LIBPORTAUDIO$])
-m4trace:configure.ac:53: -1- AH_OUTPUT([HAVE_LIBSAMPLERATE], [/* Define to 1 if you have the `samplerate\' library (-lsamplerate). */
-@%:@undef HAVE_LIBSAMPLERATE])
-m4trace:configure.ac:53: -1- AC_DEFINE_TRACE_LITERAL([HAVE_LIBSAMPLERATE])
-m4trace:configure.ac:53: -1- m4_pattern_allow([^HAVE_LIBSAMPLERATE$])
 m4trace:configure.ac:56: -1- AC_SUBST([CPP])
 m4trace:configure.ac:56: -1- AC_SUBST_TRACE([CPP])
 m4trace:configure.ac:56: -1- m4_pattern_allow([^CPP$])

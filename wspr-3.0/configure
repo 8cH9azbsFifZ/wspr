@@ -5588,12 +5588,9 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_fftw3f_main" >&5
 $as_echo "$ac_cv_lib_fftw3f_main" >&6; }
 if test "x$ac_cv_lib_fftw3f_main" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBFFTW3F 1
-_ACEOF
-
-  LIBS="-lfftw3f $LIBS"
-
+  HAS_FFTW=1
+else
+  HAS_FFTW=0
 fi
 
 # FIXME: Replace `main' with a function in `-lportaudio':
@@ -5628,12 +5625,9 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_portaudio_main" >&5
 $as_echo "$ac_cv_lib_portaudio_main" >&6; }
 if test "x$ac_cv_lib_portaudio_main" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBPORTAUDIO 1
-_ACEOF
-
-  LIBS="-lportaudio $LIBS"
-
+  HAS_PORTAUDIO=1
+else
+  HAS_PORTAUDIO=0
 fi
 
 # FIXME: Replace `main' with a function in `-lsamplerate':
@@ -5668,12 +5662,9 @@ fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_samplerate_main" >&5
 $as_echo "$ac_cv_lib_samplerate_main" >&6; }
 if test "x$ac_cv_lib_samplerate_main" = xyes; then :
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBSAMPLERATE 1
-_ACEOF
-
-  LIBS="-lsamplerate $LIBS"
-
+  HAS_LIBSAMPLERATE=1
+else
+  HAS_LIBSAMPLERATE=0
 fi
 
 
@@ -7991,3 +7982,22 @@ if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
 $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
 fi
 
+
+# Show if essential dependencies fail
+FAIL=0
+if test "$HAS_FFTW" = "0"; then
+	echo "Error: You need a libfftw"
+	FAIL=1
+fi
+if test "$HAS_PORTAUDIO" = "0"; then
+	echo "Error: You need portaudio"
+	FAIL=1
+fi
+if test "$HAS_LIBSAMPLERATE" = "0"; then
+	echo "Error: You need libsamplerate"
+	FAIL=1
+fi
+if test "$FAIL" = "1"; then
+	rm Makefile
+	exit 1
+fi

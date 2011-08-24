@@ -30,7 +30,7 @@
 #define HAVE_LIBGEN_H 1
 
 /* Define to 1 if you have the `portaudio' library (-lportaudio). */
-#define HAVE_LIBPORTAUDIO 1
+/* #undef HAVE_LIBPORTAUDIO */
 
 /* Define to 1 if you have the `samplerate' library (-lsamplerate). */
 /* #undef HAVE_LIBSAMPLERATE */
