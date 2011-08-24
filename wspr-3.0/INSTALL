@@ -21,7 +21,11 @@ MAC OSX
 * Install portaudio (2)
 * Install gfortran (or g95)
 * Install Fortran2Python
- sudo port install py-numpy
+ sudo port install py-numpy py25-tkinter py25-dateutil py25-pil libsamplerate
+
+automake --add-missing
+autoconf
+./configure
 
 (1) http://developer.apple.com/support/mac/tools
 (2) http://www.portaudio.com/download.html
