@@ -58,7 +58,7 @@ AC_CHECK_LIB([samplerate], [main], [], [exit -1])
 AC_HEADER_STDC
 AC_HEADER_DIRENT
 AC_HEADER_TIME
-AC_CHECK_HEADERS([samplerate.h pthread.h windows.h stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h])
+AC_CHECK_HEADERS([portaudio.h samplerate.h pthread.h windows.h stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h])
 
 LIBS=" -lpthread ${LIBS}"
 FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\
