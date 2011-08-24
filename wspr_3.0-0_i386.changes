@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 23 Aug 2011 19:16:52 +0100
+Source: wspr
+Binary: wspr
+Architecture: source i386
+Version: 3.0-0
+Distribution: unstable
+Urgency: low
+Maintainer: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Changed-By: Dr. Gerolf Ziegenhain <g@ziegenhain.com>
+Description: 
+ wspr       - Weak Signal Propagation Reporter
+Changes: 
+ wspr (3.0-0) unstable; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1: 
+ eb28a675a6a385226cbea540664d26f58edd2d3f 517 wspr_3.0-0.dsc
+ 82ceaef62ad4fa36056a37f282bacb551e211993 2959533 wspr_3.0-0.tar.gz
+ 1021d689c788f2e3191e9881815358213bab95e9 1328 wspr_3.0-0_i386.deb
+Checksums-Sha256: 
+ 3b8e425afe4ff2166c82272841af5481406cac3fe82a046fea03f27417c50122 517 wspr_3.0-0.dsc
+ feadc4ae7f05bd6655e812f590a739fe15b00103d6f49be9764e1c2f725cf603 2959533 wspr_3.0-0.tar.gz
+ 58193dc2314aac13dfff617e971c0ba238fa0d2d700cb9a810e2f486ede322d7 1328 wspr_3.0-0_i386.deb
+Files: 
+ 1f1699239ab2f5164a366796dfe23285 517 hamradio extra wspr_3.0-0.dsc
+ 5cbd5aa269c1a1d765bb855d393616e5 2959533 hamradio extra wspr_3.0-0.tar.gz
+ fa64376a1e15ad3fdeb19b8131c6a21f 1328 hamradio extra wspr_3.0-0_i386.deb
