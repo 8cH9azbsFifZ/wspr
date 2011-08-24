@@ -101,22 +101,3 @@ AC_CONFIG_FILES([Makefile src/Makefile])
 AC_CONFIG_FILES([src/setup.py], [chmod +x src/setup.py])
 
 AC_OUTPUT
-
-# Show if essential dependencies fail
-FAIL=0
-if test "$HAS_FFTW" = "0"; then
-	echo "Error: You need a libfftw"
-	FAIL=1
-fi
-if test "$HAVE_LIBPORTAUDIO" = "0"; then
-	echo "Error: You need portaudio"
-	FAIL=1
-fi
-if test "$HAS_LIBSAMPLERATE" = "0"; then
-	echo "Error: You need libsamplerate"
-	FAIL=1
-fi
-if test "$FAIL" = "1"; then
-	rm Makefile
-	exit 1
-fi
