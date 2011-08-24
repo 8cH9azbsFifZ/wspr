@@ -41,11 +41,16 @@ or
 curl -o gfortran-42-5664.pkg http://r.research.att.com/gfortran-42-5664.pkg
 # install from finder / cli: sudo installer -pkg 'gfortran-42-5664.pkg' -target '/'
 * Install Fortran2Python
- sudo port install py-numpy py25-tkinter py25-dateutil py25-pil libsamplerate
+ sudo port install py-numpy py25-tkinter py25-dateutil py25-pil 
 * Install fftw3
 sudo port install fftw-3-single
 # make sure libfftw3f.a exists
 sudo port contents fftw-3-single
+* Install libsamplerate
+sudo port install libsamplerate
+or
+curl -o libsamplerate-0.1.7.tar.gz http://www.mega-nerd.com/SRC/libsamplerate-0.1.7.tar.gz
+# build yourself
 
 
 (1) http://developer.apple.com/support/mac/tools
