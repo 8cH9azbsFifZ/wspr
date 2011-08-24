@@ -120,7 +120,7 @@ fmeasure: fmeasure.f90
 	$(FC) -o fmeasure fmeasure.f90
 
 wspr0:	$(OBJS1)
-	$(FC) -o wspr0 $(FFLAGS) $(OBJS1) $(LIBS)
+	$(FC) $(FC_LIB_PATH) -o wspr0 $(FFLAGS) $(OBJS1) $(LIBS)
 
 OBJS4 = hftoa.o write_wav.o sound.o fil1.o averms.o getutc.o gmtime2.o
 
