@@ -45,7 +45,7 @@
 # include <stdlib.h>
 #endif
 #ifdef HAVE_PORTAUDIO_H
-# include "portaudio.h"
+# include <portaudio.h>
 #endif
 
 #define SAMPLE_RATE  (12000)
