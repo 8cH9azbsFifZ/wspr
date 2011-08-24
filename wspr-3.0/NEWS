@@ -1,0 +1,6 @@
+This is a fork of wspr.  It provides a new build engine using automake and a debian package.
+
+Current status:
+* compile on debian: ok
+* debian package: wip
+* compile on mac osx: wip
