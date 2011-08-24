@@ -1,3 +1,8 @@
 *.o
 wspr-3.0/autom4te.cache/*
-Makefile
+wspr-3.0/config.h
+wspr-3.0/config.log
+wspr-3.0/config.status
+wspr-3.0/src/Makefile
+wspr-3.0/Makefile
+
