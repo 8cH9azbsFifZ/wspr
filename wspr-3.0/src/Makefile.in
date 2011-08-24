@@ -42,7 +42,7 @@ OS=@OS@
 FC=@FC@
 FC_LIB_PATH	+= @FC_LIB_PATH@
 
-LDFLAGS	+= -L${FC_LIB_PATH}
+LDFLAGS	+= ${FC_LIB_PATH}
 
 PYTHON	?= @PYTHON@
 F2PY	= @F2PY@
@@ -107,7 +107,7 @@ WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	${CP} w.so WsprMod/w.so
 
 fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
-	$(FC) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
+	$(FC) $(FC_LIB_PATH) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
 	sound.o ${LIBS}
 
 fmtave: fmtave.f90
