@@ -107,7 +107,7 @@ WsprMod/w.so:	${OBJS2C} $(SRCS2C) $(SRCS2F90) $(SRCS2F77) acom1.f90
 	${CP} w.so WsprMod/w.so
 
 fmt: fmt.f90 fil1.f90 four2a.f peakup.f db.f sound.o 
-	$(FC) $(FC_LIB_PATH) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
+	$(FC) -o fmt fmt.f90 fil1.f90 four2a.f peakup.f db.f \
 	sound.o $(LIBS)
 
 fmtave: fmtave.f90
@@ -120,25 +120,25 @@ fmeasure: fmeasure.f90
 	$(FC) -o fmeasure fmeasure.f90
 
 wspr0:	$(OBJS1)
-	$(FC) $(FC_LIB_PATH) -o wspr0 $(FFLAGS) $(OBJS1) $(LIBS)
+	$(FC) -o wspr0 $(FFLAGS) $(OBJS1) $(LIBS)
 
 OBJS4 = hftoa.o write_wav.o sound.o fil1.o averms.o getutc.o gmtime2.o
 
 hftoa:  $(OBJS4)
-	$(FC) $(FC_LIB_PATH) -o hftoa $(FFLAGS) $(OBJS4) $(LIBS)
+	$(FC) -o hftoa $(FFLAGS) $(OBJS4) $(LIBS)
 
 OBJS5 = ccf.o read_wav.o averms.o four2a.o thnix_stub.o db.o ffa.o \
         fold1pps.o resample.o
 
 ccf:    $(OBJS5)
-	$(FC) $(FC_LIB_PATH) -o ccf $(FFLAGS) $(OBJS5) $(LIBS)
+	$(FC) -o ccf $(FFLAGS) $(OBJS5) $(LIBS)
 
 OBJS6 = wwv.o read_wav.o averms.o db.o ffa.o fold1pps.o getutc.o \
 	gmtime2.o sound.o resample.o calobs.o four2a.o clean.o \
 	pctile.o sort.o ssort.o
 
 wwv:    $(OBJS6)
-	$(FC) $(FC_LIB_PATH) -o wwv $(FFLAGS) $(OBJS6) $(LIBS)
+	$(FC) -o wwv $(FFLAGS) $(OBJS6) $(LIBS)
 
 check:
 	echo "No check..."
