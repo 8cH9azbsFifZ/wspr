@@ -1,6 +1,3 @@
-# todo
-# insert have_config_h check in all c files
-
 AC_PREREQ([2.67])
 AC_INIT([wspr], [3.0], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([src/padevsub.c])
