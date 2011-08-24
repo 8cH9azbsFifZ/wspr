@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3
 Primary memory available: 4.00 gigabytes
-Default processor set: 86 tasks, 435 threads, 4 processors
-Load average: 0.55, Mach factor: 3.44
+Default processor set: 88 tasks, 438 threads, 4 processors
+Load average: 1.17, Mach factor: 2.82
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -323,11 +323,11 @@ configure:5511: checking for f2py
 configure:5529: found /opt/local/bin/f2py
 configure:5541: result: /opt/local/bin/f2py
 configure:5551: checking OS
-configure:5560: checking for main in -lfftw3f
-configure:5579: gcc -o conftest -g -O2   conftest.c -lfftw3f   >&5
-ld: library not found for -lfftw3f
+configure:5563: checking for main in -lfftw3
+configure:5582: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c -lfftw3   >&5
+ld: library not found for -lfftw3
 collect2: ld returned 1 exit status
-configure:5579: $? = 1
+configure:5582: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -348,16 +348,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5588: result: no
-configure:5597: checking for main in -lportaudio
-configure:5616: gcc -o conftest -g -O2   conftest.c -lportaudio   >&5
-configure:5616: $? = 0
-configure:5625: result: yes
-configure:5634: checking for main in -lsamplerate
-configure:5653: gcc -o conftest -g -O2   conftest.c -lsamplerate   >&5
+configure:5591: result: no
+configure:5599: checking for main in -lportaudio
+configure:5618: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c -lportaudio   >&5
+configure:5618: $? = 0
+configure:5627: result: yes
+configure:5635: checking for main in -lsamplerate
+configure:5654: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c -lsamplerate   >&5
 ld: library not found for -lsamplerate
 collect2: ld returned 1 exit status
-configure:5653: $? = 1
+configure:5654: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -378,13 +378,13 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:5662: result: no
-configure:5677: checking how to run the C preprocessor
-configure:5708: gcc -E  conftest.c
-configure:5708: $? = 0
-configure:5722: gcc -E  conftest.c
+configure:5663: result: no
+configure:5678: checking how to run the C preprocessor
+configure:5709: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:5709: $? = 0
+configure:5723: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:11:28: error: ac_nonexistent.h: No such file or directory
-configure:5722: $? = 1
+configure:5723: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -397,12 +397,12 @@ configure: failed program was:
 | #define VERSION "3.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:5747: result: gcc -E
-configure:5767: gcc -E  conftest.c
-configure:5767: $? = 0
-configure:5781: gcc -E  conftest.c
+configure:5748: result: gcc -E
+configure:5768: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:5768: $? = 0
+configure:5782: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:11:28: error: ac_nonexistent.h: No such file or directory
-configure:5781: $? = 1
+configure:5782: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -415,70 +415,70 @@ configure: failed program was:
 | #define VERSION "3.0"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
-configure:5810: checking for grep that handles long lines and -e
-configure:5868: result: /usr/bin/grep
-configure:5873: checking for egrep
-configure:5935: result: /usr/bin/grep -E
-configure:5940: checking for ANSI C header files
-configure:5960: gcc -c -g -O2  conftest.c >&5
-configure:5960: $? = 0
-configure:6033: gcc -o conftest -g -O2   conftest.c  >&5
-configure:6033: $? = 0
-configure:6033: ./conftest
-configure:6033: $? = 0
-configure:6044: result: yes
-configure:6055: checking for dirent.h that defines DIR
-configure:6074: gcc -c -g -O2  conftest.c >&5
-configure:6074: $? = 0
-configure:6082: result: yes
-configure:6095: checking for library containing opendir
-configure:6126: gcc -o conftest -g -O2   conftest.c  >&5
-configure:6126: $? = 0
-configure:6143: result: none required
-configure:6210: checking whether time.h and sys/time.h may both be included
-configure:6230: gcc -c -g -O2  conftest.c >&5
-configure:6230: $? = 0
-configure:6237: result: yes
-configure:6250: checking for sys/types.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for sys/stat.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for stdlib.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for string.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for memory.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for strings.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for inttypes.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for stdint.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6250: checking for unistd.h
-configure:6250: gcc -c -g -O2  conftest.c >&5
-configure:6250: $? = 0
-configure:6250: result: yes
-configure:6262: checking samplerate.h usability
-configure:6262: gcc -c -g -O2  conftest.c >&5
+configure:5811: checking for grep that handles long lines and -e
+configure:5869: result: /usr/bin/grep
+configure:5874: checking for egrep
+configure:5936: result: /usr/bin/grep -E
+configure:5941: checking for ANSI C header files
+configure:5961: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:5961: $? = 0
+configure:6034: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  >&5
+configure:6034: $? = 0
+configure:6034: ./conftest
+configure:6034: $? = 0
+configure:6045: result: yes
+configure:6056: checking for dirent.h that defines DIR
+configure:6075: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6075: $? = 0
+configure:6083: result: yes
+configure:6096: checking for library containing opendir
+configure:6127: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  >&5
+configure:6127: $? = 0
+configure:6144: result: none required
+configure:6211: checking whether time.h and sys/time.h may both be included
+configure:6231: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6231: $? = 0
+configure:6238: result: yes
+configure:6251: checking for sys/types.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for sys/stat.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for stdlib.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for string.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for memory.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for strings.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for inttypes.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for stdint.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6251: checking for unistd.h
+configure:6251: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6251: $? = 0
+configure:6251: result: yes
+configure:6263: checking samplerate.h usability
+configure:6263: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:56:24: error: samplerate.h: No such file or directory
-configure:6262: $? = 1
+configure:6263: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -536,11 +536,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <samplerate.h>
-configure:6262: result: no
-configure:6262: checking samplerate.h presence
-configure:6262: gcc -E  conftest.c
+configure:6263: result: no
+configure:6263: checking samplerate.h presence
+configure:6263: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:23:24: error: samplerate.h: No such file or directory
-configure:6262: $? = 1
+configure:6263: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -565,23 +565,23 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | /* end confdefs.h.  */
 | #include <samplerate.h>
-configure:6262: result: no
-configure:6262: checking for samplerate.h
-configure:6262: result: no
-configure:6273: checking pthread.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking pthread.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for pthread.h
-configure:6273: result: yes
-configure:6273: checking windows.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6263: result: no
+configure:6263: checking for samplerate.h
+configure:6263: result: no
+configure:6274: checking pthread.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking pthread.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for pthread.h
+configure:6274: result: yes
+configure:6274: checking windows.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:57:21: error: windows.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -640,11 +640,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <windows.h>
-configure:6273: result: no
-configure:6273: checking windows.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking windows.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:24:21: error: windows.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -670,123 +670,123 @@ configure: failed program was:
 | #define HAVE_PTHREAD_H 1
 | /* end confdefs.h.  */
 | #include <windows.h>
-configure:6273: result: no
-configure:6273: checking for windows.h
-configure:6273: result: no
-configure:6273: checking stdio.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking stdio.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for stdio.h
-configure:6273: result: yes
-configure:6273: checking stdarg.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking stdarg.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for stdarg.h
-configure:6273: result: yes
-configure:6273: checking fcntl.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking fcntl.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for fcntl.h
-configure:6273: result: yes
-configure:6273: checking for inttypes.h
-configure:6273: result: yes
-configure:6273: checking limits.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking limits.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for limits.h
-configure:6273: result: yes
-configure:6273: checking stddef.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking stddef.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for stddef.h
-configure:6273: result: yes
-configure:6273: checking for stdint.h
-configure:6273: result: yes
-configure:6273: checking for stdlib.h
-configure:6273: result: yes
-configure:6273: checking for string.h
-configure:6273: result: yes
-configure:6273: checking sys/ioctl.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/ioctl.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/ioctl.h
-configure:6273: result: yes
-configure:6273: checking sys/param.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/param.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/param.h
-configure:6273: result: yes
-configure:6273: checking sys/time.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/time.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/time.h
-configure:6273: result: yes
-configure:6273: checking time.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking time.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for time.h
-configure:6273: result: yes
-configure:6273: checking for unistd.h
-configure:6273: result: yes
-configure:6273: checking sys/resource.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/resource.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/resource.h
-configure:6273: result: yes
-configure:6273: checking linux/ppdev.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for windows.h
+configure:6274: result: no
+configure:6274: checking stdio.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking stdio.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for stdio.h
+configure:6274: result: yes
+configure:6274: checking stdarg.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking stdarg.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for stdarg.h
+configure:6274: result: yes
+configure:6274: checking fcntl.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking fcntl.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for fcntl.h
+configure:6274: result: yes
+configure:6274: checking for inttypes.h
+configure:6274: result: yes
+configure:6274: checking limits.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking limits.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for limits.h
+configure:6274: result: yes
+configure:6274: checking stddef.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking stddef.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for stddef.h
+configure:6274: result: yes
+configure:6274: checking for stdint.h
+configure:6274: result: yes
+configure:6274: checking for stdlib.h
+configure:6274: result: yes
+configure:6274: checking for string.h
+configure:6274: result: yes
+configure:6274: checking sys/ioctl.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/ioctl.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/ioctl.h
+configure:6274: result: yes
+configure:6274: checking sys/param.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/param.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/param.h
+configure:6274: result: yes
+configure:6274: checking sys/time.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/time.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/time.h
+configure:6274: result: yes
+configure:6274: checking time.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking time.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for time.h
+configure:6274: result: yes
+configure:6274: checking for unistd.h
+configure:6274: result: yes
+configure:6274: checking sys/resource.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/resource.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/resource.h
+configure:6274: result: yes
+configure:6274: checking linux/ppdev.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:72:25: error: linux/ppdev.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -860,11 +860,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <linux/ppdev.h>
-configure:6273: result: no
-configure:6273: checking linux/ppdev.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking linux/ppdev.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:39:25: error: linux/ppdev.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -905,13 +905,13 @@ configure: failed program was:
 | #define HAVE_SYS_RESOURCE_H 1
 | /* end confdefs.h.  */
 | #include <linux/ppdev.h>
-configure:6273: result: no
-configure:6273: checking for linux/ppdev.h
-configure:6273: result: no
-configure:6273: checking dev/ppbus/ppi.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for linux/ppdev.h
+configure:6274: result: no
+configure:6274: checking dev/ppbus/ppi.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:72:27: error: dev/ppbus/ppi.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -985,11 +985,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <dev/ppbus/ppi.h>
-configure:6273: result: no
-configure:6273: checking dev/ppbus/ppi.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking dev/ppbus/ppi.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:39:27: error: dev/ppbus/ppi.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1030,37 +1030,37 @@ configure: failed program was:
 | #define HAVE_SYS_RESOURCE_H 1
 | /* end confdefs.h.  */
 | #include <dev/ppbus/ppi.h>
-configure:6273: result: no
-configure:6273: checking for dev/ppbus/ppi.h
-configure:6273: result: no
-configure:6273: checking for sys/stat.h
-configure:6273: result: yes
-configure:6273: checking for sys/ioctl.h
-configure:6273: result: yes
-configure:6273: checking termios.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking termios.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for termios.h
-configure:6273: result: yes
-configure:6273: checking sys/wait.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/wait.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/wait.h
-configure:6273: result: yes
-configure:6273: checking wait.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for dev/ppbus/ppi.h
+configure:6274: result: no
+configure:6274: checking for sys/stat.h
+configure:6274: result: yes
+configure:6274: checking for sys/ioctl.h
+configure:6274: result: yes
+configure:6274: checking termios.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking termios.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for termios.h
+configure:6274: result: yes
+configure:6274: checking sys/wait.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/wait.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/wait.h
+configure:6274: result: yes
+configure:6274: checking wait.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:76:18: error: wait.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1138,11 +1138,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <wait.h>
-configure:6273: result: no
-configure:6273: checking wait.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking wait.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:43:18: error: wait.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1187,47 +1187,47 @@ configure: failed program was:
 | #define HAVE_SYS_WAIT_H 1
 | /* end confdefs.h.  */
 | #include <wait.h>
-configure:6273: result: no
-configure:6273: checking for wait.h
-configure:6273: result: no
-configure:6273: checking libgen.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking libgen.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for libgen.h
-configure:6273: result: yes
-configure:6273: checking sys/syslog.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking sys/syslog.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for sys/syslog.h
-configure:6273: result: yes
-configure:6273: checking errno.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking errno.h presence
-configure:6273: gcc -E  conftest.c
-configure:6273: $? = 0
-configure:6273: result: yes
-configure:6273: checking for errno.h
-configure:6273: result: yes
-configure:6273: checking for sys/resource.h
-configure:6273: result: yes
-configure:6273: checking for inttypes.h
-configure:6273: result: yes
-configure:6273: checking linux/parport.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for wait.h
+configure:6274: result: no
+configure:6274: checking libgen.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking libgen.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for libgen.h
+configure:6274: result: yes
+configure:6274: checking sys/syslog.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking sys/syslog.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for sys/syslog.h
+configure:6274: result: yes
+configure:6274: checking errno.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking errno.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
+configure:6274: $? = 0
+configure:6274: result: yes
+configure:6274: checking for errno.h
+configure:6274: result: yes
+configure:6274: checking for sys/resource.h
+configure:6274: result: yes
+configure:6274: checking for inttypes.h
+configure:6274: result: yes
+configure:6274: checking linux/parport.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:81:27: error: linux/parport.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1310,11 +1310,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <linux/parport.h>
-configure:6273: result: no
-configure:6273: checking linux/parport.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking linux/parport.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:48:27: error: linux/parport.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1364,13 +1364,13 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | /* end confdefs.h.  */
 | #include <linux/parport.h>
-configure:6273: result: no
-configure:6273: checking for linux/parport.h
-configure:6273: result: no
-configure:6273: checking dev/ppbus/ppbconf.h usability
-configure:6273: gcc -c -g -O2  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for linux/parport.h
+configure:6274: result: no
+configure:6274: checking dev/ppbus/ppbconf.h usability
+configure:6274: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c:81:31: error: dev/ppbus/ppbconf.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1453,11 +1453,11 @@ configure: failed program was:
 | # include <unistd.h>
 | #endif
 | #include <dev/ppbus/ppbconf.h>
-configure:6273: result: no
-configure:6273: checking dev/ppbus/ppbconf.h presence
-configure:6273: gcc -E  conftest.c
+configure:6274: result: no
+configure:6274: checking dev/ppbus/ppbconf.h presence
+configure:6274: gcc -E -I../ -I/usr/local/include  conftest.c
 conftest.c:48:31: error: dev/ppbus/ppbconf.h: No such file or directory
-configure:6273: $? = 1
+configure:6274: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1507,16 +1507,16 @@ configure: failed program was:
 | #define HAVE_INTTYPES_H 1
 | /* end confdefs.h.  */
 | #include <dev/ppbus/ppbconf.h>
-configure:6273: result: no
-configure:6273: checking for dev/ppbus/ppbconf.h
-configure:6273: result: no
-configure:6296: checking for int16_t
-configure:6296: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6296: $? = 0
-configure:6296: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6274: result: no
+configure:6274: checking for dev/ppbus/ppbconf.h
+configure:6274: result: no
+configure:6293: checking for int16_t
+configure:6293: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6293: $? = 0
+configure:6293: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:86: error: size of array 'test_array' is negative
-configure:6296: $? = 1
+configure:6293: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1609,15 +1609,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6296: result: yes
-configure:6307: checking for int32_t
-configure:6307: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6307: $? = 0
-configure:6307: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6293: result: yes
+configure:6304: checking for int32_t
+configure:6304: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6304: $? = 0
+configure:6304: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:86: warning: integer overflow in expression
 conftest.c:86: error: size of array 'test_array' is negative
-configure:6307: $? = 1
+configure:6304: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1710,15 +1710,15 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6307: result: yes
-configure:6318: checking for int64_t
-configure:6318: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6318: $? = 0
-configure:6318: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6304: result: yes
+configure:6315: checking for int64_t
+configure:6315: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6315: $? = 0
+configure:6315: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:86: warning: integer overflow in expression
 conftest.c:86: error: size of array 'test_array' is negative
-configure:6318: $? = 1
+configure:6315: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1811,14 +1811,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6318: result: yes
-configure:6329: checking for int8_t
-configure:6329: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6329: $? = 0
-configure:6329: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6315: result: yes
+configure:6326: checking for int8_t
+configure:6326: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6326: $? = 0
+configure:6326: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:86: error: size of array 'test_array' is negative
-configure:6329: $? = 1
+configure:6326: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -1911,14 +1911,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6329: result: yes
-configure:6340: checking for pid_t
-configure:6340: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6340: $? = 0
-configure:6340: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6326: result: yes
+configure:6337: checking for pid_t
+configure:6337: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6337: $? = 0
+configure:6337: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:84: error: expected expression before ')' token
-configure:6340: $? = 1
+configure:6337: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -2008,14 +2008,14 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6340: result: yes
-configure:6351: checking for size_t
-configure:6351: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6351: $? = 0
-configure:6351: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6337: result: yes
+configure:6348: checking for size_t
+configure:6348: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6348: $? = 0
+configure:6348: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:84: error: expected expression before ')' token
-configure:6351: $? = 1
+configure:6348: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "wspr"
@@ -2105,41 +2105,41 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:6351: result: yes
-configure:6362: checking for uint16_t
-configure:6362: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6362: $? = 0
-configure:6362: result: yes
-configure:6374: checking for uint32_t
-configure:6374: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6374: $? = 0
-configure:6374: result: yes
-configure:6388: checking for uint64_t
-configure:6388: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6388: $? = 0
-configure:6388: result: yes
-configure:6402: checking for uint8_t
-configure:6402: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
-configure:6402: $? = 0
-configure:6402: result: yes
-configure:6435: checking for stdlib.h
-configure:6435: result: yes
-configure:6445: checking for GNU libc compatible malloc
-configure:6469: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
-configure:6469: $? = 0
-configure:6469: ./conftest
-configure:6469: $? = 0
-configure:6479: result: yes
-configure:6503: checking for gettimeofday
-configure:6503: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
-configure:6503: $? = 0
-configure:6503: result: yes
-configure:6503: checking for strchr
-configure:6503: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
+configure:6348: result: yes
+configure:6359: checking for uint16_t
+configure:6359: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6359: $? = 0
+configure:6359: result: yes
+configure:6371: checking for uint32_t
+configure:6371: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6371: $? = 0
+configure:6371: result: yes
+configure:6385: checking for uint64_t
+configure:6385: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6385: $? = 0
+configure:6385: result: yes
+configure:6399: checking for uint8_t
+configure:6399: gcc -c -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  conftest.c >&5
+configure:6399: $? = 0
+configure:6399: result: yes
+configure:6432: checking for stdlib.h
+configure:6432: result: yes
+configure:6442: checking for GNU libc compatible malloc
+configure:6466: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
+configure:6466: $? = 0
+configure:6466: ./conftest
+configure:6466: $? = 0
+configure:6476: result: yes
+configure:6500: checking for gettimeofday
+configure:6500: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
+configure:6500: $? = 0
+configure:6500: result: yes
+configure:6500: checking for strchr
+configure:6500: gcc -o conftest -I../ -I/usr/local/include -g -O2 -I../ -I/usr/local/include  -L/usr/local/lib  conftest.c  -lpthread  >&5
 conftest.c:74: warning: conflicting types for built-in function 'strchr'
-configure:6503: $? = 0
-configure:6503: result: yes
-configure:6652: creating ./config.status
+configure:6500: $? = 0
+configure:6500: result: yes
+configure:6649: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -2252,7 +2252,7 @@ ac_cv_header_unistd_h=yes
 ac_cv_header_wait_h=no
 ac_cv_header_windows_h=no
 ac_cv_host=x86_64-apple-darwin10.8.0
-ac_cv_lib_fftw3f_main=no
+ac_cv_lib_fftw3_main=no
 ac_cv_lib_portaudio_main=yes
 ac_cv_lib_samplerate_main=no
 ac_cv_objext=o

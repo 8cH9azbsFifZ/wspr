@@ -43,13 +43,14 @@ AC_MSG_CHECKING([OS])
 OS=`uname`
 AC_SUBST(OS, "${OS}")
 
+# Some common path names to search
+CPPFLAGS="-I../ -I/usr/local/include ${CPPFLAGS}"
+CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
+LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
-# FIXME: Replace `main' with a function in `-lfftw3f':
-AC_CHECK_LIB([fftw3f], [main], [HAS_FFTW=1], [HAS_FFTW=0])
-# FIXME: Replace `main' with a function in `-lportaudio':
+AC_CHECK_LIB([fftw3], [main], [HAS_FFTW=1], [HAS_FFTW=0])
 AC_CHECK_LIB([portaudio], [main], [HAS_PORTAUDIO=1], [HAS_PORTAUDIO=0])
-# FIXME: Replace `main' with a function in `-lsamplerate':
 AC_CHECK_LIB([samplerate], [main], [HAS_LIBSAMPLERATE=1], [HAS_LIBSAMPLERATE=0])
 
 # Checks for header files.
@@ -59,10 +60,6 @@ AC_HEADER_TIME
 AC_CHECK_HEADER([samplerate.h], [HAS_SAMPLERATE_H=1], [HAS_SAMPLERATE_H=0])
 AC_CHECK_HEADERS([pthread.h windows.h stdio.h stdarg.h fcntl.h inttypes.h limits.h stddef.h stdint.h stdlib.h string.h sys/ioctl.h sys/param.h sys/time.h time.h unistd.h sys/resource.h linux/ppdev.h dev/ppbus/ppi.h sys/stat.h sys/ioctl.h termios.h sys/wait.h wait.h libgen.h sys/syslog.h errno.h sys/resource.h inttypes.h linux/parport.h dev/ppbus/ppbconf.h])
 
-# Dirty hack FIXME
-CPPFLAGS="-I../ -I/usr/local/include ${CPPFLAGS}"
-CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
-LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 LIBS=" -lpthread ${LIBS}"
 FFLAGS_GFORTRAN="${FFLAGS} -fno-range-check -ffixed-line-length-none\
                         -Wall -fbounds-check -fno-second-underscore -fPIC"
