@@ -49,7 +49,7 @@ CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
-AC_CHECK_LIB([fftw3], [main])
+AC_CHECK_LIB([fftw3f], [main])
 AC_CHECK_LIB([portaudio], [main])
 AC_CHECK_LIB([samplerate], [main])
 
