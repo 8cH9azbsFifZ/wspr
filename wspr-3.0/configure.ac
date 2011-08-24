@@ -47,6 +47,7 @@ AC_SUBST(OS, "${OS}")
 CPPFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CPPFLAGS}"
 CFLAGS="-I../ -I/usr/local/include -I/opt/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib -L/opt/local/lib ${LDFLAGS}"
+FC_LIB_PATH="-L/usr/local/lib -L/opt/local/lib ${FC_LIB_PATH}"
 
 # Checks for libraries.
 AC_CHECK_LIB([fftw3f], [main], [], [exit -1])
