@@ -10,3 +10,5 @@ wspr-3.0/Makefile
 wspr-3.0/src/hftoa
 wspr-3.0/src/wwv
 wspr-3.0/src/ccf
+wspr-3.0/src/w.so
+wspr-3.0/src/WsprMod/w.so

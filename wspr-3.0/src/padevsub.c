@@ -5,7 +5,7 @@
 #ifdef HAVE_STDIO_H
 # include <stdio.h>
 #endif
-#ifdef HAVE_LIBPORTAUDIO
+#ifdef HAVE_PORTAUDIO_H
 # include <portaudio.h>
 #endif
 #ifdef HAVE_STRING_H
