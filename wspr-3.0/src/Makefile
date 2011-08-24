@@ -3,11 +3,11 @@ CP ?= /bin/cp
 RM	?= /bin/rm
 RM	?= /bin/rmdir
 MKDIR ?= /bin/mkdir
-INSTALL ?= /usr/bin/install -c
+INSTALL ?= /opt/local/bin/ginstall -c
 CC ?= gcc
 FFLAGS	= -g -O2
 LDFLAGS	= -L/usr/local/lib 
-LIBS	=  -lpthread -lsamplerate -lportaudio -lfftw3f  
+LIBS	=  -lpthread -lportaudio  
 CPPFLAGS = -I../ -I/usr/local/include 
 CFLAGS	= -I../ -I/usr/local/include -g -O2
 PREFIX	= /usr/local
@@ -38,14 +38,14 @@ wspr:	WsprMod/w.so
 %.o: %.F90
 	${FC} ${FFLAGS} -c $<
 
-OS=Linux
-FC=gfortran
+OS=Darwin
+FC=
 FC_LIB_PATH	+= 
 
 LDFLAGS	+= -L${FC_LIB_PATH}
 
-PYTHON	?= /usr/bin/python
-F2PY	= /usr/bin/f2py
+PYTHON	?= /opt/local/bin/python
+F2PY	= /opt/local/bin/f2py
 
 OBJS1 = wspr0.o wspr0_tx.o sound.o ptt_unix.o gmtime2.o wfile5.o \
 	cs_stubs.o genmept.o wqencode.o wqdecode.o inter_mept.o \
