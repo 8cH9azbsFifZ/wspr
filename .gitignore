@@ -9,3 +9,4 @@ wspr-3.0/Makefile
 
 wspr-3.0/src/hftoa
 wspr-3.0/src/wwv
+wspr-3.0/src/ccf
