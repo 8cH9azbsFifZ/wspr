@@ -49,9 +49,9 @@ CFLAGS="-I../ -I/usr/local/include ${CFLAGS}"
 LDFLAGS="-L/usr/local/lib ${LDFLAGS}"
 
 # Checks for libraries.
-AC_CHECK_LIB([fftw3f], [main])
-AC_CHECK_LIB([portaudio], [main])
-AC_CHECK_LIB([samplerate], [main])
+AC_CHECK_LIB([fftw3f], [main], [], [exit -1])
+AC_CHECK_LIB([portaudio], [main], [], [exit -1])
+AC_CHECK_LIB([samplerate], [main], [], [exit -1])
 
 # Checks for header files.
 AC_HEADER_STDC
