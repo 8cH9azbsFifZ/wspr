@@ -1,4 +1,15 @@
+All Architectures
+=================
+You must prepare the autotools:
+autoconf
+automake --add-missing
+./configure
+make
+
+
+
 To compile wspr you will need:
+==============================
 * libfftw
 * portaudio
 * gfortran or g95
@@ -13,6 +24,11 @@ To compile wspr you will need:
 * python imaging
 * libsamplerate
 * hamlib
+
+
+Linux
+=====
+
 
 
 MAC OSX
@@ -31,9 +47,6 @@ sudo port install fftw-3-single
 # make sure libfftw3f.a exists
 sudo port contents fftw-3-single
 
-autoconf
-automake --add-missing
-./configure
 
 (1) http://developer.apple.com/support/mac/tools
 (2) http://www.portaudio.com/download.html
