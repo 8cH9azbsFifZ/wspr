@@ -7,3 +7,5 @@ wspr-3.0/config.status
 wspr-3.0/src/Makefile
 wspr-3.0/Makefile
 
+wspr-3.0/src/hftoa
+wspr-3.0/src/wwv
