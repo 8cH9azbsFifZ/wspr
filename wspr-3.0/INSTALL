@@ -60,6 +60,10 @@ or alternatively
 curl -o libsamplerate-0.1.7.tar.gz http://www.mega-nerd.com/SRC/libsamplerate-0.1.7.tar.gz
 # build yourself
 
+For generation of binary image:
+* Install py2app:
+sudo port install py25-py2app
+
 
 (1) http://developer.apple.com/support/mac/tools
 (2) http://www.portaudio.com/download.html
