@@ -3,6 +3,7 @@ from Tkinter import *
 import Pmw
 import g
 import math
+import os
 
 def done():
     root.withdraw()
@@ -93,7 +94,11 @@ MyCall=StringVar()
 MyGrid=StringVar()
 
 try:
-    f=open('audio_caps','r')
+	 if sys.platform=="darwin":
+        capsfilename=os.path.expanduser('~/Library/Application Support/WSPR/audio_caps')
+    else:
+        capsfilename='audio_caps'
+    f=open(capsfilename,'r')
     s=f.readlines()
     f.close
     t="Input Devices:\n"

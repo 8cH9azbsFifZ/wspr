@@ -1,5 +1,6 @@
 import g
 from tkrep import *
+import os
 
 ptt_port=IntVar()
 CatPort=StringVar()
@@ -55,7 +56,11 @@ MyCall=StringVar()
 MyGrid=StringVar()
 
 try:
-    f=open('audio_caps','r')
+    if sys.platform=="darwin":
+        capsfilename=os.path.expanduser('~/Library/Application Support/WSPR/audio_caps')
+    else:
+        capsfilename='audio_caps'
+    f=open(capsfilename,'r')
     s=f.readlines()
     f.close
     t="Input Devices:\n"
