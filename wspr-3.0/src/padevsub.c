@@ -32,6 +32,7 @@ int padevsub_(int *numdev, int *ndefin, int *ndefout, int nchin[],
   PaStreamParameters inputParameters;
   PaStreamParameters outputParameters;
   FILE *fp;
+  char audiocapsPath[MAXPATHLEN];
 
   Pa_Initialize();
   numDevices = Pa_GetDeviceCount();
@@ -55,7 +56,13 @@ int padevsub_(int *numdev, int *ndefin, int *ndefout, int nchin[],
     *ndefout = 0;
   }
 
-  fp=fopen("audio_caps","w");
+#ifdef __APPLE__ && __MACH__
+  snprintf(audiocapsPath, MAXPATHLEN, "%s/Library/Application Support/WSPR/audio_caps", getenv("HOME"));
+#else
+  strcat(audiocapsPath, "audio_caps");
+#endif
+  fp=fopen(audiocapsPath,"w");
+
   for( i=0; i < numDevices; i++ )  {
     pdi = Pa_GetDeviceInfo(i);
     nchin[i]=pdi->maxInputChannels;
