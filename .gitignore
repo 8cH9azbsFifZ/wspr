@@ -9,6 +9,7 @@ wspr-3.0/Makefile
 
 wspr-3.0/src/hftoa
 wspr-3.0/src/wspr.log
+wspr-3.0/src/setup.py.files.log
 wspr-3.0/src/wwv
 wspr-3.0/src/ccf
 wspr-3.0/src/w.so
