@@ -35,7 +35,7 @@ print "******************************************************************"
 print "WSPR Version " + Version + ", by K1JT"
 print "Run date:   " + time.asctime(time.gmtime()) + " UTC"
 if sys.platform=="darwin":
-	os.environ['PATH'] = os.environ['PATH'] + ':/usr/local/bin:.'
+    os.environ['PATH'] = os.environ['PATH'] + ':/usr/local/bin:.'
 
 
 #See if we are running in Windows
@@ -1073,7 +1073,7 @@ def update():
     try:
         if sys.platform=='darwin':
             pixmappath=appdir+'/pixmap.dat'
-		  else:
+        else:
             pixmappath='pixmap.dat'
         modpixmap=os.stat(pixmappath)[8]
         if modpixmap!=modpixmap0:
