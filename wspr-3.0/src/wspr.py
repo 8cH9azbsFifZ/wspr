@@ -34,6 +34,9 @@ Version="3.00_r" + "$Rev: 2436 $"[6:-2]
 print "******************************************************************"
 print "WSPR Version " + Version + ", by K1JT"
 print "Run date:   " + time.asctime(time.gmtime()) + " UTC"
+if sys.platform=="darwin":
+	os.environ['PATH'] = os.environ['PATH'] + ':/usr/local/bin:.'
+
 
 #See if we are running in Windows
 g.Win32=0
@@ -49,7 +52,12 @@ else:
     except:
         pass
 root_geom=""
-appdir=os.getcwd()
+if sys.platform=="darwin":
+	appdir=os.path.expanduser('~/Library/Application Support/WSPR')
+	if not os.path.exists(appdir):
+		os.mkdir(appdir,0700)
+else:
+	appdir=os.getcwd()
 w.acom1.nappdir=len(appdir)
 w.acom1.appdir=(appdir+(' '*80))[:80]
 i1,i2=w.audiodev(0,2)
@@ -1063,9 +1071,13 @@ def update():
 
 # Display the waterfall
     try:
-        modpixmap=os.stat('pixmap.dat')[8]
+        if sys.platform=='darwin':
+            pixmappath=appdir+'/pixmap.dat'
+		  else:
+            pixmappath='pixmap.dat'
+        modpixmap=os.stat(pixmappath)[8]
         if modpixmap!=modpixmap0:
-            f=open('pixmap.dat','rb')
+            f=open(pixmappath,'rb')
             a=array.array('h')
             a.fromfile(f,NX*NY)
             f.close()
@@ -1730,7 +1742,11 @@ try:
 except:
     pass
 try:
-    os.remove('pixmap.dat')
+    if sys.platform=='darwin':
+        pixmappath=appdir+'/pixmap.dat'
+    else:
+        pixmappath='pixmap.dat'
+    os.remove(pixmappath);
 except:
     pass
 
