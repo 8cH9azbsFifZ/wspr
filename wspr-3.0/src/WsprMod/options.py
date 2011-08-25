@@ -94,7 +94,7 @@ MyCall=StringVar()
 MyGrid=StringVar()
 
 try:
-	 if sys.platform=="darwin":
+    if sys.platform=="darwin":
         capsfilename=os.path.expanduser('~/Library/Application Support/WSPR/audio_caps')
     else:
         capsfilename='audio_caps'
