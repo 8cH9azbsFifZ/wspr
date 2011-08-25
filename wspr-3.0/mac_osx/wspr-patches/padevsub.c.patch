@@ -1,0 +1,34 @@
+Index: padevsub.c
+===================================================================
+--- padevsub.c	(revision 2331)
++++ padevsub.c	(working copy)
+@@ -1,4 +1,6 @@
+ #include <stdio.h>
++#include <stdlib.h>
++#include <sys/param.h>
+ #include <portaudio.h>
+ #include <string.h>
+ 
+@@ -16,6 +18,7 @@
+   PaStreamParameters inputParameters;
+   PaStreamParameters outputParameters;
+   FILE *fp;
++  char audiocapsPath[MAXPATHLEN];
+ 
+   Pa_Initialize();
+   numDevices = Pa_GetDeviceCount();
+@@ -39,7 +42,13 @@
+     *ndefout = 0;
+   }
+ 
+-  fp=fopen("audio_caps","w");
++#ifdef __APPLE__ && __MACH__
++  snprintf(audiocapsPath, MAXPATHLEN, "%s/Library/Application Support/WSPR/audio_caps", getenv("HOME"));
++#else
++  strcat(audiocapsPath, "audio_caps");
++#endif
++  fp=fopen(audiocapsPath,"w");
++
+   for( i=0; i < numDevices; i++ )  {
+     pdi = Pa_GetDeviceInfo(i);
+     nchin[i]=pdi->maxInputChannels;
