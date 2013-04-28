@@ -1,3 +1,0 @@
-#!/bin/sh
-PREFIX=/usr/local/bin
-python -O $PREFIX/wspr.py
