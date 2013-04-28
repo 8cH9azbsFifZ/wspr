@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>WSJT Home Page</title>
+    <meta name="description" content="Software for Amateur Radio
+      Weak-Signal Communication">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="home.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <table cellpadding="10" width="100%">
+      <tbody>
+        <tr>
+          <td valign="top" width="20%"> <a href="WSJT_1.JPG"><img
+                src="WSJT_3.JPG" alt="" border="2"></a></td>
+          <td>
+            <h1><big><big><span style="font-family: Georgia;"><span
+                      style="font-family: Verdana;">Program Development</span><br>
+                  </span></big></big></h1>
+            <h2><span style="font-family: Verdana;"></span><br>
+            </h2>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr style="width: 97%; height: 3px;"> <span class="small"> </span>
+    <table cellpadding="20" width="100%">
+      <tbody>
+        <tr>
+          <!--first column for left-hand menu--><td valign="top"
+            width="5%"> <br>
+            <a href="index.html">Home</a><br>
+            <a href="wsjt.html">WSJT</a><br>
+            <a href="map65.html">MAP65</a><br>
+            <a href="wspr.html">WSPR</a><br>
+            <a href="simjt.html">SimJT</a><br>
+            <a href="devel.html">Program&nbsp;Development</a><br>
+            <a href="refs.html">References</a><br>
+          </td>
+          <!--second column for main content--> <td valign="top"
+            width="80%">
+            <h1>Operating Systems</h1>
+            WSJT, MAP65, and WSPR can be compiled for Windows, Linux,
+            FreeBSD, Macintosh OS/X, and most other UNIX-like operating
+            systems. The download links on pages for each program
+            retrieve pre-compiled installation packages for Microsoft
+            Windows, and in some cases also for Ubuntu and other
+            Debian-based 32-bit Linux distributions.&nbsp; Users of
+            other operating systems or distributions must compile the
+            programs from source code.&nbsp; <br>
+            <h1>Source Code</h1>
+            WSJT, MAP65, MAP65-IQ, and WSPR are open source programs
+            distributed under terms of the <font style="font-family:
+              Helvetica,Arial,sans-serif;"><font size="3"><span
+                  style="font-weight: 400;">GNU General Public License.</span></font></font>
+            Source code for SimJT is available on request.&nbsp; KVASD
+            (a soft-decision Reed Solomon decoder for the JT65 mode) is
+            distributed only in executable form because of licensing
+            restrictions.<br>
+            <br>
+            The graphical user interfaces (GUIs) for WSJT and WSPR are
+            written in Python.&nbsp; Most of the number-crunching in
+            these programs is done in Fortran, and some system-level
+            functions are implemented in C. <br>
+            <br>
+            Version 2 of MAP65 represents the most recent (April 2012)
+            shift in WSJT-related programming practices.&nbsp; The MAP65
+            GUI is written in C++ using the open-source Qt
+            framework.&nbsp; As with WSJT and WSPR, most of the
+            number-crunching is done in Fortran.<br>
+            <br>
+            Anyone interested in the communication problems addressed by
+            WSJT, MAP65, and WSPR is invited to study, adapt, modify, or
+            enhance the code and contribute to further development of
+            the programs.&nbsp; Source code is maintained under the
+            version control program Subversion ("svn") in a <font
+              style="font-family: Helvetica,Arial,sans-serif;"><font
+                size="3"><span style="font-weight: 400;">public
+                  open-source repository at <a
+                    href="http://developer.berlios.de/projects/wsjt/">Berlios</a><span
+                    style="text-decoration: underline;"></span>.&nbsp;
+                  For updates and other information on the continuing
+                  development of WSJT, MAP65, and WSPR, you are invited
+                  to subscribe to the <a
+                    href="https://lists.berlios.de/mailman/listinfo/wsjt-devel">WSJT
+
+                    developers email list</a>. <br>
+                </span></font></font><font style="font-family:
+              Helvetica,Arial,sans-serif;"><font size="3"><span
+                  style="font-weight: 400;"></span></font></font>
+            <h1>Explicit Downloading Instructions</h1>
+            Present and past versions of the source code for WSJT,
+            MAP65, MAP65-IQ, and WSPR may be downloaded by using svn
+            commands.&nbsp; For example, the latest revisions of source
+            code for can be "checked out" with the commands<br>
+            <br>
+            svn co <span class="moz-txt-link-freetext">svn://svn.berlios.de/wsjt/trunk</span><span
+              class="moz-txt-link-freetext"><br>
+              svn co svn://svn.berlios.de/wsjt/branches/map65<br>
+            </span>svn co <span class="moz-txt-link-freetext">svn://svn.berlios.de/wsjt/branches/wspr</span><font
+              style="font-family: Helvetica,Arial,sans-serif;"><font
+                size="3"><span style="font-weight: 400;"></span></font></font><br>
+            <br>
+            You will need to understand svn in order to use the
+            source-code repository effectively.<br>
+            <h1>Compiling<br>
+            </h1>
+            To compile WSJT and WSPR on a unix-like system (Linux,
+            FreeBSD, Macintosh OS X, ...) you may need to install some
+            or all of the following packages:<br>
+            <ul>
+              <li>subversion</li>
+              <li>python2.x-dev</li>
+              <li>python-numpy<br>
+              </li>
+              <li>python-imaging-tk</li>
+              <li>python-pmw</li>
+              <li>libportaudio2</li>
+              <li>libportaudio-dev</li>
+              <li>libsamplerate0-dev</li>
+              <li>libfftw3-dev<br>
+              </li>
+              <li>gfortran or g95<br>
+              </li>
+            </ul>
+            To compile the programs for Windows you can use the MinGW
+            system and g95.&nbsp; You will also need the python packages
+            listed above.<br>
+            <br>
+            Compiling MAP65 requires Qt rather than Python.&nbsp; Full
+            instructions for building MAP65 and its dependencies will be
+            posted soon.<br>
+            <h1><small>Acknowledgement</small></h1>
+            <small>The soft-decision Reed-Solomon decoder used in WSJT
+              and MAP65 is based on an algorithm developed by R. Koetter
+              and A. Vardy and protected under United States Patent
+              number 6,634,007.&nbsp; It uses code licensed from
+              CodeVector Technologies, LLC.</small><br>
+            <br>
+            <div style="text-align: left;"> </div>
+            <p><span class="small"></span></p>
+            <div style="text-align: left;"> </div>
+            <div style="text-align: center;"><span class="small"><a
+                  href="http://physics.princeton.edu/pulsar/K1JT/">Home</a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a
+                  href="mailto:k1jt@arrl.net">Contact K1JT</a> </span><br>
+              <span class="small"> </span><br>
+              <span class="small"> <font size="-1"> ©2001-2012 by Joe
+                  Taylor, K1JT</font></span></div>
+            <p><span class="small"> </span></p>
+          </td>
+          <!--third column empty--> <td valign="top" width="10%"> <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
