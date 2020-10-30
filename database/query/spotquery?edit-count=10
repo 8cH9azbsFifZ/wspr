@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Spot Database Query | WSPRnet</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/drupal/misc/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/drupal/sites/wsprnet.org/files/css/css_bb406f6ce0a9ceb2c2b043491e678ff6.css" />
+    <script type="text/javascript"> </script>
+      <style type="text/css">
+    #page {
+      width : 100%;
+    }
+    </style>
+        <style type="text/css">
+    body.sidebar-left #main {
+      margin-left: -210px;
+    }
+    body.sidebars #main {
+      margin-left: -210px;
+    }
+    body.sidebar-left #squeeze {
+      margin-left: 210px;
+    }
+    body.sidebars #squeeze {
+      margin-left: 210px;
+    }
+    #sidebar-left {
+      width: 210px;
+    }
+    </style>
+        <style type="text/css">
+    body.sidebar-right #main {
+      margin-right: -210px;
+    }
+    body.sidebars #main {
+      margin-right: -210px;
+    }
+    body.sidebar-right #squeeze {
+      margin-right: 210px;
+    }
+    body.sidebars #squeeze {
+      margin-right: 210px;
+    }
+    #sidebar-right {
+      width: 210px;
+    }
+    </style>
+        <style type="text/css">
+    body {
+      font-family : Arial, Verdana, sans-serif;
+    }
+    </style>
+        <!--[if IE]>
+<style type="text/css" media="all">@import "/drupal/sites/all/themes/newsflash/css/ie.css";</style>
+<![endif]-->
+    <script type="text/javascript" src="http://wsprnet.org/drupal/sites/all/themes/newsflash/js/pickstyle.js"></script>
+</head>
+<body class="sidebar-left">
+  <div id="page">
+    <div id="header" class="clear-block">
+      <div id="logo-title">
+                              <a href="/drupal/" title="Home"> <img src="/drupal/sites/wsprnet.org/files/logo.jpg" alt="Home" id="logo" /> </a>
+                        </div><!-- /logo-title -->
+      <div id="name-and-slogan">
+                  <h1 class='site-name'> <a href="/drupal/" title="Home"> WSPRnet </a> </h1>
+                          <div class='site-slogan'> Weak Signal Propagation Reporter Network </div>
+              </div><!-- /name-and-slogan -->
+                          <div id="primarymenu">
+                  <ul class="links primary-links"><li class="menu-242 first"><a href="/drupal/wsprnet/activity" title="List of stations currently active by band">Activity</a></li>
+<li class="menu-204"><a href="/drupal/wsprnet/map" title="Map of recently heard WSPR spots">Map</a></li>
+<li class="menu-273"><a href="/drupal/wsprnet/spots" title="WSPR spot database">Database</a></li>
+<li class="menu-297"><a href="/drupal/wsprnet/stats" title="Spot Database Statistics">Stats</a></li>
+<li class="menu-206"><a href="/drupal/forum" title="Form for discussion of WSPR activities">Forum</a></li>
+<li class="menu-208 last"><a href="http://wsprnet.org/drupal/downloads" title="Information about downloads of WSPR software and data.">Downloads</a></li>
+</ul>                           
+                </div>
+                </div><!-- /header -->
+            <div id="middlecontainer">
+              <div id="sidebar-left"><div class="block block-user" id="block-user-0">
+  <h2 class="title">User login</h2>  <div class="content"><form action="/drupal/wsprnet/spotquery?destination=wsprnet%2Fspotquery%3Fedit-count%3D10"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required" />
+</div>
+<div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  class="form-text required" />
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Log in"  class="form-submit" />
+<div class="item-list"><ul><li class="first"><a href="/drupal/user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="/drupal/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input type="hidden" name="form_build_id" id="form-6a45a3090c2cca407b0f40c2546184e2" value="form-6a45a3090c2cca407b0f40c2546184e2"  />
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+</div></div>
+<div class="block block-block" id="block-block-3">
+  <h2 class="title">Propagation Activities</h2>  <div class="content"><p><Strong>160m Summer Project</strong><br />
+<Strong>Friday SS to Monday SR</strong><br />
+<a href="http://wsprnet.org/drupal/node/2742" title="http://wsprnet.org/drupal/node/2742">http://wsprnet.org/drupal/node/2742</a></p>
+<!--<Strong><font color="red">6 July 15m and 80m</font></Strong>--><!--<Strong><font color="red">6 July 15m and 80m</font></Strong>--><!--<Strong><font color="red">7 July 15m and 80m QRPp</font></Strong>--><!--<Strong><font color="red">7 July 15m and 80m QRPp</font></Strong>--><!--13 July 17m and 60m--><!--13 July 17m and 60m--><!--14 July 17m and 60m QRPp--><!--14 July 17m and 60m QRPp--><!--20 July 20m and 40m--><!--20 July 20m and 40m--><!--21 July 20m and 40m QRPp--><!--21 July 20m and 40m QRPp--><!--QRPp for the Thursday session
+means 500mW or lower.--><!--QRPp for the Thursday session
+means 500mW or lower.--><!--Extend operating period on low
+bands (160,80,60,40) to 
+include local SR/SS, grayline etc.--><!--Extend operating period on low
+bands (160,80,60,40) to 
+include local SR/SS, grayline etc.--><!--If unable to TX on a particular
+band please consider providing
+reception reports.--><!--If unable to TX on a particular
+band please consider providing
+reception reports.--><!--More info here
+http://wsprnet.org/drupal/node/2017--><!--More info here
+http://wsprnet.org/drupal/node/2017--></div></div>
+<div class="block block-wsprnet" id="block-wsprnet-0">
+  <h2 class="title">Spot Count</h2>  <div class="content">66,145,770 total spots<br>77,365 in the last 24 hours<br>4,351 in the last hour</div></div>
+<div class="block block-block" id="block-block-2">
+  <h2 class="title">Frequencies</h2>  <div class="content"><p>USB dial (MHz): 0.5024, 1.8366, 3.5926, 5.2872, 7.0386, 10.1387, 14.0956, 18.1046, 21.0946, 24.9246, 28.1246, 50.293, 70.0286, 144.489</p>
+</div></div>
+<div class="block block-user" id="block-user-3">
+  <h2 class="title">Who's online</h2>  <div class="content">There are currently <em>56 users</em> and <em>53 guests</em> online.<div class="item-list"><h3>Online users</h3><ul><li class="first">4X6IZ</li>
+<li>G8VDQ</li>
+<li>DH5RAE</li>
+<li>DJ0CC</li>
+<li>kd4sgn</li>
+<li>KC6KGE</li>
+<li>G6WZA</li>
+<li>g4enz</li>
+<li>JG1KGS</li>
+<li>G3THQ</li>
+<li>K1UTI</li>
+<li>RX3DHR</li>
+<li>M1ACJ</li>
+<li>DH5RAE</li>
+<li>DL6NL</li>
+<li>G6LUG</li>
+<li>G8BVJ</li>
+<li>G0IZM</li>
+<li>M0JMO</li>
+<li>F1EXL</li>
+<li>n7vvx</li>
+<li>KF7O</li>
+<li>n3pu</li>
+<li>VK1HW</li>
+<li>oz1msm</li>
+<li>m0xpd</li>
+<li>ON7AN</li>
+<li>2e1rdx</li>
+<li>MM0BFF</li>
+<li>KA7GEK</li>
+<li>G8DRE</li>
+<li>W4DJW</li>
+<li>on7kb</li>
+<li>CX2ABP</li>
+<li>LA3JJ</li>
+<li>WD8DCJ</li>
+<li>DF4PV</li>
+<li>G8VOI</li>
+<li>OH4HMR</li>
+<li>M0GZG</li>
+<li>g8huh</li>
+<li>m0pgx</li>
+<li>JG1KGS</li>
+<li>NN6RF</li>
+<li>M0GWI</li>
+<li>LA6TPA</li>
+<li>F6FGH</li>
+<li>WB3ANQ</li>
+<li>PD0JMH</li>
+<li>VK6ST</li>
+<li>KC9QPO</li>
+<li>VE6GEL</li>
+<li>DL8BBY</li>
+<li>PA0O</li>
+<li>KC9SNI</li>
+<li class="last">VK3JNI</li>
+</ul></div></div></div>
+ </div>
+            <div id="main">
+        <div id="squeeze">
+                              <div id="squeeze-content">
+            <div id="inner-content">
+                           <h1 class="title">Spot Database Query</h1>
+              <div class="tabs"></div>
+                                          <form action="/drupal/wsprnet/spotquery?edit-count=10"  accept-charset="UTF-8" method="post" id="wsprnet-spotquery-form">
+<div><div class="form-item" id="edit-band-wrapper">
+ <label for="edit-band">Band: </label>
+ <select name="band" class="form-select" id="edit-band" ><option value="All" selected="selected">All</option><option value="0">LF/VLF</option><option value="1">160m</option><option value="3">80m</option><option value="5">60m</option><option value="7">40m</option><option value="10">30m</option><option value="14">20m</option><option value="18">17m</option><option value="21">15m</option><option value="24">12m</option><option value="28">10m</option><option value="50">6m</option><option value="144">2m</option></select>
+ <div class="description">Show only spots on this band.</div>
+</div>
+<div class="form-item" id="edit-count-wrapper">
+ <label for="edit-count">Count: </label>
+ <input type="text" maxlength="5" name="count" id="edit-count" size="5" value="50" class="form-text" />
+ <div class="description">Maximum number of spots to show</div>
+</div>
+<div class="form-item" id="edit-call-wrapper">
+ <label for="edit-call">Call: </label>
+ <input type="text" maxlength="10" name="call" id="edit-call" size="10" value="" class="form-text" />
+ <div class="description">Only show spots of this callsign</div>
+</div>
+<div class="form-item" id="edit-reporter-wrapper">
+ <label for="edit-reporter">Reporter: </label>
+ <input type="text" maxlength="10" name="reporter" id="edit-reporter" size="10" value="" class="form-text" />
+ <div class="description">Only show spots reported by this call.  If same as "Call", then show spots of this call OR heard by this call.</div>
+</div>
+<div class="form-item" id="edit-timelimit-wrapper">
+ <label for="edit-timelimit">In last: </label>
+ <select name="timelimit" class="form-select" id="edit-timelimit" ><option value="3600">Hour</option><option value="43200">12 Hours</option><option value="86400" selected="selected">24 Hours</option><option value="604800">Week</option><option value="1209600">Two Weeks</option></select>
+ <div class="description">Consider spots only of this recent time period</div>
+</div>
+<div class="form-item" id="edit-sortby-wrapper">
+ <label for="edit-sortby">Sort by: </label>
+ <select name="sortby" class="form-select" id="edit-sortby" ><option value="date" selected="selected">Timestamp</option><option value="callsign">Call</option><option value="reporter">Reporter</option><option value="mhz">Frequency</option><option value="db">SNR</option><option value="power">Power</option><option value="distance">Distance</option><option value="grid">Grid</option><option value="distance/pow(10,(power-30.0)/10.0)">km/Watt</option></select>
+ <div class="description">Field to sort by</div>
+</div>
+<div class="form-item" id="edit-sortrev-wrapper">
+ <label class="option" for="edit-sortrev"><input type="checkbox" name="sortrev" id="edit-sortrev" value="1"  checked="checked"  class="form-checkbox" /> Reverse</label>
+ <div class="description">Check to reverse sort order</div>
+</div>
+<div class="form-item" id="edit-unique-wrapper">
+ <label class="option" for="edit-unique"><input type="checkbox" name="unique" id="edit-unique" value="1"   class="form-checkbox" /> Unique</label>
+ <div class="description">Check to show only unique call/reporter combinations</div>
+</div>
+<input type="submit" name="op" id="edit-submit" value="Update"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-39afc00d42ed10e0f5a906df312da5e5" value="form-39afc00d42ed10e0f5a906df312da5e5"  />
+<input type="hidden" name="form_id" id="edit-wsprnet-spotquery-form" value="wsprnet_spotquery_form"  />
+
+</div></form>
+ 
+                                        </div><!-- /inner-content -->
+          </div><!-- /squeeze-content -->
+        </div><!-- /squeeze -->
+      </div><!-- /main -->
+          </div><!-- /middle-container -->
+    <div style="clear:both"></div>
+            <div id="footer">
+              <div id="footer-region"><div class="block block-system" id="block-system-0">
+    <div class="content"><a href="http://drupal.org"><img src="/drupal/misc/powered-blue-80x15.png" alt="Powered by Drupal, an open source content management system" title="Powered by Drupal, an open source content management system" width="80" height="15" /></a></div></div>
+</div>
+                    <div id="footer-message">Downloads and more information about WSPR program and the MEPT_JT mode, as well as other modes by Joe Taylor (K1JT), can be found at the <a href='http://physics.princeton.edu/pulsar/K1JT/'>WSJT Home Page</a>.</div>
+            <br />
+            <a href="http://www.roopletheme.com" title="RoopleTheme!"><img src="/drupal/sites/all/themes/newsflash/images/blue/RoopleThemeLogo.png" alt="RoopleTheme!"/></a>
+    </div><!-- /footer -->
+  <div style="clear:both"></div>
+    </div> <!-- /page -->
+</body>
+</html>
